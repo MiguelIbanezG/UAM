@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/e0.sch/e0.xst" -ofn "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/e0.sch/e0.syr" 
+xst -intstyle ise -ifn "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/e0.sch/e0.xst" -ofn "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/e0.sch/e0.syr" 

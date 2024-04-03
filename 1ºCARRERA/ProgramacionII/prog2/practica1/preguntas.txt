@@ -1,0 +1,38 @@
+1. El siguiente shell script compila y enlaza todos los ficheros .c del directorio en el que esté, produciendo un ejecutable resultado:
+	
+	#!/bin/bash
+		gcc -o resultado *.c
+
+2. La opción a) no es correcta ya que usa sizeof(Node) en el fichero main cuando en ese fichero no está definida la estructura de Node y por tanto no se conoce su tamaño.
+	La opción b) tampoco es correcta ya que inicializa el puntero a node n1 pero no le asigna un nodo y luego llama a la función node_destroy(n1) siendo n1 un puntero que apunta a un valor sin inicializar, además usa node_ini(n) y n no está definido.
+	La opción c) es también errónea por los mismos motivos que la b).
+
+3. No ya que hay que modificar el valor de nDest y no se está pasando como puntero.
+
+4. No es imprescindible el puntero Node *, pero se usa por comodidad, ya que una variable de tipo Node siempre va a ser un puntero 
+   y porque supone un ahorro de tiempo y memoria pasar y trabajar con una direccion en vez de tener que copiar todos los datos de un nodo cada vez que se utiliza una función.
+
+5. Como ya no devuelve un puntero a nodo, habría que copiar directamente la información en el nodo de destino, en vez de crear una copia dentro de la función:
+
+	STATUS node_copy(const Node* nSource, Node* nDest){
+		//se comprueban posibles errores
+		
+		if(!nDest) return ERROR;
+		if(!nSource) return ERROR;
+			
+		nSource->id=nDest->id;
+    		nSource->nConnect=nDest->nConnect;
+    		strncpy(nSource->name,nDest->name,strlen(nDest->name)+1);
+	
+		return OK;
+	
+	
+	}
+
+   En el caso de: STATUS node_copy(constNode* nSource, Node** nDest) tambien sería valido pero no puedes igualar directamente las caracteríasticas de ambos nodos ya que uno es un objeto que 
+   almacena la direccion de un Node y otro es un puntero a una direccion de un objeto que a su vez guarda la direccion de un Node. Ademas habría que reservar memoria de forma específica ya que las funciones
+   diseñadas no tienen en cuenta este aspecto.
+
+
+6. No deberían ser funciones publicas porque dan por hecho una determinada estructura de Graph y unas determinadas macros, por lo que no se amoldan a cualquier programa. Si las macros no están definidas y las estructuras acordes 
+   a las de las funciones el proyecto no compilará. 

@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main (){
+
+    double imc, altura, peso;
+    
+    printf("Introduzca su altura (cm): ");
+    scanf("%lf", &altura);
+            
+    printf("Introduzca su peso (kg): ");
+    scanf("%lf", &peso); 
+    
+    imc = (10000 * peso) / (altura * altura);
+            
+    printf("Su IMC es %lf", imc);
+    
+    return 0;
+          
+   
+}
+

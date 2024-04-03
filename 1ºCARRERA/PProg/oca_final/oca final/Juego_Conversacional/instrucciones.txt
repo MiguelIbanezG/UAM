@@ -1,0 +1,35 @@
+take NOTA
+inspect NOTA
+drop NOTA
+move north
+m east
+t $
+m south
+t DT
+t TAR
+m north
+m weast
+m weast
+m south
+open seguridad with TAR
+m south
+t LIN
+m u
+take PAL
+m d 
+m north
+t PR
+m south
+m u 
+t TAL
+d $
+m d 
+m e 
+open alcantarilla with TAL
+m d 
+to LIN
+to MO
+open salida with MO
+m east
+
+Fin del juego

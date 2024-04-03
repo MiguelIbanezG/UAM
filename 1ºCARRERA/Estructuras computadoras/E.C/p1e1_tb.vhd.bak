@@ -1,0 +1,29 @@
+library IEEE;
+use IEEE.std_logic_1164.ALL;
+use IEEE.std_logic_arith.ALL;
+use IEEE.std_logic_unsigned.ALL;
+entity P1e1_tb is
+end P1e1_tb;
+
+architecture Practica of P1e1_tb is
+component P1e1
+	port(
+	A : in std_logic;
+	B : in std_logic;
+	C : in std_logic;
+	S : out std_logic 
+	Q : out std_logic
+	);
+end component;
+
+-- Entradas
+signal sigA : std_logic := '0';
+signal sigB : std_logic := '0';
+signal sigC : std_logic := '0';
+
+-- Salidas
+signal Q : std_logic;
+signal S : std_logic;
+
+constant ESPERA : time := 10 ns;
+

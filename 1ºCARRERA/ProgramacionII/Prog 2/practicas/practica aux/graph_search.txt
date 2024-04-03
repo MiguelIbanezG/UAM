@@ -1,0 +1,25 @@
+input : Graph: G
+Vertex: 𝑣𝑓, From vertex
+Vertex: 𝑣𝑡, To vertex
+output: Status, st
+
+1 set all vertex Label as WHITE
+2 st = OK
+3 s = stack_init ()
+4 vertex_setLabel (𝑣𝑓, BLACK)
+5 stack_push (s, 𝑣𝑓)
+6 while stack_isEmpty (s) ≡ False & st ≡ OK do
+7 𝑣𝑜 = stack_pop (s)
+8 if 𝑣𝑜 ≡ 𝑣𝑡 then
+9 st = END
+10 else
+11 forall v ∈ AdjacentEdges (𝑣𝑜) do
+12 if vertex_getLabel (𝑣) ≡ WHITE then
+13 vertex_setLabel (𝑣, BLACK)
+14 stack_push (s, 𝑣)
+15 end
+16 end
+17 end
+18 end
+19 stack_free (s)
+20 return st

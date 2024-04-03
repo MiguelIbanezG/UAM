@@ -1,0 +1,35 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/DD/p3ej3_tb_isim_beh.exe -prj C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/DD/p3ej3_tb_beh.prj work.p3ej3_tb 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/DD/p3ej3.vhf" into library work
+Parsing VHDL file "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/DD/../../../../../Downloads/Testbench 3/p3ej3_tb.vhd" into library work
+Parsing VHDL file "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/DD/p3ej2.vhf" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture and2b1_v of entity AND2B1 [and2b1_default]
+Compiling architecture or2_v of entity OR2 [or2_default]
+Compiling architecture and2_v of entity AND2 [and2_default]
+Compiling architecture behavioral of entity M2_1_MXILINX_p3ej3 [m2_1_mxilinx_p3ej3_default]
+Compiling architecture xor2_v of entity XOR2 [xor2_default]
+Compiling architecture fdce_v of entity FDCE [\FDCE('0')\]
+Compiling architecture behavioral of entity FTCLEX_MXILINX_p3ej3 [\FTCLEX_MXILINX_p3ej3('0')\]
+Compiling architecture and4b2_v of entity AND4B2 [and4b2_default]
+Compiling architecture behavioral of entity CD4CLE_MXILINX_p3ej3 [cd4cle_mxilinx_p3ej3_default]
+Compiling architecture and4_v of entity AND4 [and4_default]
+Compiling architecture inv_v of entity INV [inv_default]
+Compiling architecture vcc_v of entity VCC [vcc_default]
+Compiling architecture gnd_v of entity GND [gnd_default]
+Compiling architecture behavioral of entity p3ej3 [p3ej3_default]
+Compiling architecture behavioral of entity p3ej3_tb
+Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 33 VHDL Units
+Built simulation executable C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/DD/p3ej3_tb_isim_beh.exe
+Fuse Memory Usage: 49908 KB
+Fuse CPU Usage: 812 ms

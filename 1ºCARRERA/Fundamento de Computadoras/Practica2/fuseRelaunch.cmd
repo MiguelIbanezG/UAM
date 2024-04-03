@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Practica2/P2EJ2_tb_isim_beh.exe" -prj "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Practica2/P2EJ2_tb_beh.prj" "work.P2EJ2_tb" 

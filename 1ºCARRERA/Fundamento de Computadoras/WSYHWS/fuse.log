@@ -1,0 +1,37 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/WSYHWS/p3ej2_tb_isim_beh.exe -prj C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/WSYHWS/p3ej2_tb_beh.prj work.p3ej2_tb 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/WSYHWS/p3ej2.vhf" into library work
+Parsing VHDL file "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/WSYHWS/../../../../../Downloads/Testbench 3/p3ej2_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture and2b1_v of entity AND2B1 [and2b1_default]
+Compiling architecture or2_v of entity OR2 [or2_default]
+Compiling architecture and2_v of entity AND2 [and2_default]
+Compiling architecture behavioral of entity M2_1_MXILINX_p3ej2 [m2_1_mxilinx_p3ej2_default]
+Compiling architecture xor2_v of entity XOR2 [xor2_default]
+Compiling architecture fdce_v of entity FDCE [\FDCE('0')\]
+Compiling architecture behavioral of entity FTCLEX_MXILINX_p3ej2 [\FTCLEX_MXILINX_p3ej2('0')\]
+Compiling architecture and2b2_v of entity AND2B2 [and2b2_default]
+Compiling architecture behavioral of entity M2_1B1_MXILINX_p3ej2 [m2_1b1_mxilinx_p3ej2_default]
+Compiling architecture vcc_v of entity VCC [vcc_default]
+Compiling architecture and4_v of entity AND4 [and4_default]
+Compiling architecture and4b4_v of entity AND4B4 [and4b4_default]
+Compiling architecture and3_v of entity AND3 [and3_default]
+Compiling architecture and3b3_v of entity AND3B3 [and3b3_default]
+Compiling architecture behavioral of entity CB4CLED_MXILINX_p3ej2 [cb4cled_mxilinx_p3ej2_default]
+Compiling architecture gnd_v of entity GND [gnd_default]
+Compiling architecture behavioral of entity p3ej2 [p3ej2_default]
+Compiling architecture behavioral of entity p3ej2_tb
+Time Resolution for simulation is 1ps.
+Waiting for 6 sub-compilation(s) to finish...
+Compiled 39 VHDL Units
+Built simulation executable C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/WSYHWS/p3ej2_tb_isim_beh.exe
+Fuse Memory Usage: 50144 KB
+Fuse CPU Usage: 656 ms

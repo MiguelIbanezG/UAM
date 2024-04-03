@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main(){
+
+int numero,n1,n2,n3,n4,n5,n6,n7,n8,n9, n10;
+
+printf("Introduce un numero entre 1 y 9: ");
+scanf("%d", &numero);
+n1 = numero * 1;
+n2 = numero * 2;
+n3 = numero * 3;
+n4 = numero * 4;
+n5 = numero * 5;
+n6 = numero * 6;
+n7 = numero * 7;
+n8 = numero * 8;
+n9 = numero * 9;
+n10 = numero * 10;
+
+printf("%d x 1 = %d\n", numero, n1);
+printf("%d x 2 = %d\n", numero, n2);
+printf("%d x 3 = %d\n", numero, n3);
+printf("%d x 4 = %d\n", numero, n4);
+printf("%d x 5 = %d\n", numero, n5);
+printf("%d x 6 = %d\n", numero, n6);
+printf("%d x 7 = %d\n", numero, n7);
+printf("%d x 8 = %d\n", numero, n8);
+printf("%d x 9 = %d\n", numero, n9);
+printf("%d x 10 = %d\n", numero, n10);
+
+return 0;
+
+
+}

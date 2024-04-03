@@ -1,0 +1,29 @@
+Command line:
+   p3ej3_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50354
+
+Wed Nov 11 22:09:33 2020
+
+
+ Elaboration Time: 0.078125 sec
+
+ Current Memory Usage: 5160.6 Meg
+
+ Total Signals          : 458
+ Total Nets             : 127
+ Total Signal Drivers   : 102
+ Total Blocks           : 95
+ Total Primitive Blocks : 75
+ Total Processes        : 101
+ Total Traceable Variables  : 30
+ Total Scalar Nets and Variables : 627
+Total Line Count : 135
+
+ Total Simulation Time: 0.078125 sec
+
+ Current Memory Usage: 5160.6 Meg
+
+Wed Nov 11 22:09:45 2020
+

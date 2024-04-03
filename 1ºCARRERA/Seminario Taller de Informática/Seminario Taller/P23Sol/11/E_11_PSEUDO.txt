@@ -1,0 +1,26 @@
+BEGIN
+Declaration of variables:
+DEFINE N_employees as ENTIRE
+DEFINE N_hours as ENTIRE
+DEFINE N_days as ENTIRE
+DEFINE priceperhour as ENTIRE
+DEFINE salary as ENTIRE
+DEFINE budget=0 as ENTIRE
+DEFINE i as ENTIRE
+WRITE (the number of employees)
+  READ(N_employees)
+WRITE (price per hour)
+  READ(priceperhour)
+ALGORITHM:
+     LOOP FOR
+CONDITION i=0,i<N_employees
+	WRITE (number of days work)
+            READ(N_days)
+	WRITE ( number oF  hours per day)
+            READ(N_days)
+	salary=N_days*N_hours*priceperhour
+	WRITE(salary of employee number, i+1)
+	budget=budget+salary
+	i++
+WRITE(budget)
+END

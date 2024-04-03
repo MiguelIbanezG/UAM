@@ -1,0 +1,537 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/migue/OneDrive/Documentos/E.C
+Ealumips
+Z0 w1557046148
+Z1 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dC:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es
+Z6 8C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroQuintana/ALUMIPS.vhd
+Z7 FC:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroQuintana/ALUMIPS.vhd
+l0
+L20
+VUV_RC:Fa1kG871RkN5I4D1
+!s100 1KB8gONAKP;1c2GJ4;9<D3
+Z8 OV;C;10.5b;63
+33
+Z9 !s110 1620121511
+!i10b 1
+Z10 !s108 1620121511.000000
+Z11 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroQuintana/ALUMIPS.vhd|
+Z12 !s107 C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroQuintana/ALUMIPS.vhd|
+!i113 1
+Z13 o-work work -2008 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Apractica
+R1
+R2
+R3
+R4
+DEx4 work 7 alumips 0 22 UV_RC:Fa1kG871RkN5I4D1
+l33
+L30
+VP=AZKb]znfOJj<m7RI07H0
+!s100 U7EiFRB4_iM3hEAm]gWL62
+R8
+33
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Ememdatamips
+Z15 w1587374636
+Z16 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R3
+R4
+R5
+Z17 8C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MemDataMIPS.vhd
+Z18 FC:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MemDataMIPS.vhd
+l0
+L15
+VlXJmd2:I32jdiG:GT6b_i3
+!s100 jiCXc69E1:G`_UTPGDb<=0
+R8
+33
+Z19 !s110 1620121510
+!i10b 1
+Z20 !s108 1620121510.000000
+Z21 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MemDataMIPS.vhd|
+Z22 !s107 C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MemDataMIPS.vhd|
+!i113 1
+R13
+R14
+Asimple
+R16
+R3
+R4
+DEx4 work 11 memdatamips 0 22 lXJmd2:I32jdiG:GT6b_i3
+l33
+L26
+VBfAP]nO3U@]@VMY=K@<9m2
+!s100 <_6MD>??DjK@Q?iH`iC<K2
+R8
+33
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R13
+R14
+Ememdataplantilla
+Z23 w1556093520
+R2
+Z24 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R3
+R4
+R5
+Z25 8C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MemDataPlantilla.vhd
+Z26 FC:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MemDataPlantilla.vhd
+l0
+L21
+VT^LJKDLG>EH>OoP@hRCEf0
+!s100 n^8jf[Q`adTbP9QoUf2T;1
+R8
+33
+R9
+!i10b 1
+R10
+Z27 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MemDataPlantilla.vhd|
+Z28 !s107 C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MemDataPlantilla.vhd|
+!i113 1
+R13
+R14
+Asimple
+R2
+R24
+R3
+R4
+DEx4 work 16 memdataplantilla 0 22 T^LJKDLG>EH>OoP@hRCEf0
+l39
+L32
+V;^J1d6k;@E@>R@[KMEVK42
+!s100 <PijlJCG@c]Yco1C8HKn^1
+R8
+33
+R9
+!i10b 1
+R10
+R27
+R28
+!i113 1
+R13
+R14
+Ememprogmips
+Z29 w1586371471
+R16
+R3
+R4
+R5
+Z30 8C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MemProgMIPS.vhd
+Z31 FC:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MemProgMIPS.vhd
+l0
+L14
+V7oZ<[bN<<7;GdT1M>[:8G2
+!s100 9B7GTnMjndnK_DmA@S`8@3
+R8
+33
+R9
+!i10b 1
+R20
+Z32 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MemProgMIPS.vhd|
+Z33 !s107 C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MemProgMIPS.vhd|
+!i113 1
+R13
+R14
+Asimple
+R16
+R3
+R4
+DEx4 work 11 memprogmips 0 22 7oZ<[bN<<7;GdT1M>[:8G2
+l23
+L21
+ViD=mbn0`oIE7^N^di7N[z2
+!s100 <NL6OkCBb<<33Nc4nOzbW1
+R8
+33
+R9
+!i10b 1
+R20
+R32
+R33
+!i113 1
+R13
+R14
+Ememprogplantilla
+Z34 w1554249474
+R24
+R2
+R3
+R4
+R5
+Z35 8C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MemProgPlantilla.vhd
+Z36 FC:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MemProgPlantilla.vhd
+l0
+L20
+V?7RTCO[MZLK]5mE=1=1Sz1
+!s100 VHEcWXD4UH`SzUXXlmSS32
+R8
+33
+R9
+!i10b 1
+R10
+Z37 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MemProgPlantilla.vhd|
+Z38 !s107 C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MemProgPlantilla.vhd|
+!i113 1
+R13
+R14
+Asimple
+R24
+R2
+R3
+R4
+DEx4 work 16 memprogplantilla 0 22 ?7RTCO[MZLK]5mE=1=1Sz1
+l29
+L27
+VTL85Pde<ZY;T?njUaWgUC2
+!s100 kV_>0iAjkF?a5T51RVhKR1
+R8
+33
+R9
+!i10b 1
+R10
+R37
+R38
+!i113 1
+R13
+R14
+Emicromips
+w1556994702
+R24
+R2
+R3
+R4
+R5
+8C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroMIPS.vhd
+FC:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroMIPS.vhd
+l0
+L19
+V^TfoZ0EeUg9Ecn;nSdSPK3
+!s100 SbJgQzhUAdCf[WgFBhb^C0
+R8
+33
+R9
+!i10b 1
+R10
+!s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroMIPS.vhd|
+!s107 C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroMIPS.vhd|
+!i113 1
+R13
+R14
+Emicromipstb
+Z39 w1586370948
+R16
+R3
+R4
+R5
+Z40 8C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MicroMIPSTb.vhd
+Z41 FC:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MicroMIPSTb.vhd
+l0
+L15
+V^=A1T[dBZ8H@<:ah0G;2R3
+!s100 ?[3`Vm8aUDim]4dM8g[PL0
+R8
+33
+R9
+!i10b 1
+R10
+Z42 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MicroMIPSTb.vhd|
+Z43 !s107 C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MicroMIPSTb.vhd|
+!i113 1
+R13
+R14
+Atest
+R16
+R3
+R4
+DEx4 work 11 micromipstb 0 22 ^=A1T[dBZ8H@<:ah0G;2R3
+l73
+L18
+V<fUjWDAJkK>P0bBU6U]ZK1
+!s100 0OmAG4;8TK^afio<kGbSI1
+R8
+33
+R9
+!i10b 1
+R10
+R42
+R43
+!i113 1
+R13
+R14
+Emicromipsvectorestb
+Z44 w1586370529
+R16
+R3
+R4
+R5
+Z45 8C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MicroMIPSVectoresTb.vhd
+Z46 FC:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MicroMIPSVectoresTb.vhd
+l0
+L15
+VOiM:ZZL?fd2M6GLn^zBgV0
+!s100 U;Y5^TCiiBd_iLHzG67Of3
+R8
+33
+R9
+!i10b 1
+R10
+Z47 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MicroMIPSVectoresTb.vhd|
+Z48 !s107 C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MicroMIPSVectoresTb.vhd|
+!i113 1
+R13
+R14
+Atest
+R16
+R3
+R4
+DEx4 work 19 micromipsvectorestb 0 22 OiM:ZZL?fd2M6GLn^zBgV0
+l73
+L18
+VFZ_Mk^F;g@kV3l[[Oe6=M2
+!s100 7LfTEZKiI1OzX1[;FaNZl3
+R8
+33
+R9
+!i10b 1
+R10
+R47
+R48
+!i113 1
+R13
+R14
+Emux2a1_32
+Z49 w1556095794
+R24
+R2
+R3
+R4
+R5
+Z50 8C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/mux2a1_32.vhd
+Z51 FC:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/mux2a1_32.vhd
+l0
+L6
+VfFzJ6XMf;GE8N^BFkE4jf2
+!s100 JjPGjGd`_6?HZI6kNYdOD1
+R8
+33
+Z52 !s110 1620121512
+!i10b 1
+Z53 !s108 1620121512.000000
+Z54 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/mux2a1_32.vhd|
+Z55 !s107 C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/mux2a1_32.vhd|
+!i113 1
+R13
+R14
+Amux
+R24
+R2
+R3
+R4
+DEx4 work 9 mux2a1_32 0 22 fFzJ6XMf;GE8N^BFkE4jf2
+l16
+L15
+V_;LaeMQ>dZ@<^IELdK_AZ1
+!s100 XEhI>PjcRO8<QEgO7Ca8B3
+R8
+33
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 1
+R13
+R14
+Emux2a1_5
+Z56 w1556095782
+R24
+R2
+R3
+R4
+R5
+Z57 8C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/mux2a1_5.vhd
+Z58 FC:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/mux2a1_5.vhd
+l0
+L6
+VhXlPk;H:e?PGAQiQH=j]P2
+!s100 fL87KX:jk42F@PkPC=8Fi2
+R8
+33
+R52
+!i10b 1
+R10
+Z59 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/mux2a1_5.vhd|
+Z60 !s107 C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/mux2a1_5.vhd|
+!i113 1
+R13
+R14
+Amux
+R24
+R2
+R3
+R4
+DEx4 work 8 mux2a1_5 0 22 hXlPk;H:e?PGAQiQH=j]P2
+l16
+L15
+V=>EQiZJF<0OLDLCWeC2Ed1
+!s100 U`HogM5]8L^UTFe33a8gi2
+R8
+33
+R52
+!i10b 1
+R10
+R59
+R60
+!i113 1
+R13
+R14
+Eregsmips
+R0
+R2
+R24
+R3
+R4
+R5
+Z61 8C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroQuintana/RegsMIPS.vhd
+Z62 FC:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroQuintana/RegsMIPS.vhd
+l0
+L20
+VWP`7FQ?Z3QfMEnbN1nc5?0
+!s100 LJQTSeORh221@Pl1ImODd3
+R8
+33
+R9
+!i10b 1
+R10
+Z63 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroQuintana/RegsMIPS.vhd|
+Z64 !s107 C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroQuintana/RegsMIPS.vhd|
+!i113 1
+R13
+R14
+Apractica
+R2
+R24
+R3
+R4
+DEx4 work 8 regsmips 0 22 WP`7FQ?Z3QfMEnbN1nc5?0
+l46
+L34
+V<I<CIQo[MEEgEH;bNQKRn0
+!s100 T>ZdFh]31:7B`[=VgOz4d0
+R8
+33
+R9
+!i10b 1
+R10
+R63
+R64
+!i113 1
+R13
+R14
+Eunidadcontrol
+Z65 w1620120952
+R16
+R3
+R4
+R5
+Z66 8C:\Users\migue\OneDrive\Documentos\E.C\UnidadControl.vhd
+Z67 FC:\Users\migue\OneDrive\Documentos\E.C\UnidadControl.vhd
+l0
+L6
+V0:6W9jVOlf54KTC`kodNl2
+!s100 TG[MC54ed2KhFIaZC@H2?2
+R8
+33
+R9
+!i10b 1
+R10
+Z68 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:\Users\migue\OneDrive\Documentos\E.C\UnidadControl.vhd|
+Z69 !s107 C:\Users\migue\OneDrive\Documentos\E.C\UnidadControl.vhd|
+!i113 1
+R13
+R14
+Afunc
+R16
+R3
+R4
+DEx4 work 13 unidadcontrol 0 22 0:6W9jVOlf54KTC`kodNl2
+l32
+L30
+Va8JC;TZ_R;@mTahPH1<530
+!s100 UhkloLh>k=QJI>;Z1dzCK0
+R8
+33
+R9
+!i10b 1
+R10
+R68
+R69
+!i113 1
+R13
+R14
+Eunidadcontroltb
+Z70 w1586370442
+R16
+R3
+R4
+R5
+Z71 8C:\Users\migue\OneDrive\Documentos\E.C\PR4_es\PR4_es\UnidadControlTb.vhd
+Z72 FC:\Users\migue\OneDrive\Documentos\E.C\PR4_es\PR4_es\UnidadControlTb.vhd
+l0
+L14
+V1i`BF`HPaBObl68d[8:4L3
+!s100 1zN4X8K95SW7aLNW13VBn0
+R8
+33
+R9
+!i10b 1
+R10
+Z73 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:\Users\migue\OneDrive\Documentos\E.C\PR4_es\PR4_es\UnidadControlTb.vhd|
+Z74 !s107 C:\Users\migue\OneDrive\Documentos\E.C\PR4_es\PR4_es\UnidadControlTb.vhd|
+!i113 1
+R13
+R14
+Abehavior
+R16
+R3
+R4
+DEx4 work 15 unidadcontroltb 0 22 1i`BF`HPaBObl68d[8:4L3
+l123
+L17
+VbLmC5^zH:Z1@f6F_;^B8L0
+!s100 j30MBMIb?DoY5Vj[?ed1m2
+R8
+33
+R9
+!i10b 1
+R10
+R73
+R74
+!i113 1
+R13
+R14

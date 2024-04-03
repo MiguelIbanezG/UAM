@@ -1,0 +1,26 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Practica/P1EJ2b_tb_isim_beh.exe -prj C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Practica/P1EJ2b_tb_beh.prj work.P1EJ2b_tb 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Practica/p1ej2b.vhf" into library work
+Parsing VHDL file "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Practica/../p1ej2b_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture or2_v of entity OR2 [or2_default]
+Compiling architecture or3_v of entity OR3 [or3_default]
+Compiling architecture and4_v of entity AND4 [and4_default]
+Compiling architecture inv_v of entity INV [inv_default]
+Compiling architecture behavioral of entity p1ej2b [p1ej2b_default]
+Compiling architecture behavioral of entity p1ej2b_tb
+Time Resolution for simulation is 1ps.
+Compiled 17 VHDL Units
+Built simulation executable C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Practica/P1EJ2b_tb_isim_beh.exe
+Fuse Memory Usage: 51120 KB
+Fuse CPU Usage: 1125 ms

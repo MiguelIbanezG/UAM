@@ -1,0 +1,43 @@
+Título: Ejercicio Cuestiones, práctica 3, programación 2   
+Autores: Sergio Hidalgo y Miguel Ibáñez  
+    
+    1- Por definición, en las colas, el primer elemento a extraer es el primer elemento que ha 
+ingresado en la misma y en las pilas, es el último. En algunos casos, con colas se muestra
+menos recorrido debido a su capacidad para obtener tanto el primer dato de la cola, como el 
+último, sin necesidad de extraerlo de la misma. En definitiva, se ha observardo que, 
+dependidendo de como se implemente el TAD en cuestion, se muestra más recorrido o menos, 
+antes de llegar al vertex de destino.                      
+
+    2- Para mejorar la eficiencia del graph, implementando listas, se pueden
+sustituir las conexiones de cada vertex en la matriz, por una lista de las mismas.
+De esta manera se accede a las conexiones adyacentes desde el vertex actual y no hace 
+falta buscarlo de nuevo en la matriz, como es el caso del TAD graph actual. La principal
+desventaja es que para ver las conexiones de un vertex, se han de sacar las mismas de la lista
+de conexiones.
+
+Ejemplo:
+
+struct _Graph
+{
+    Vertex *vertices[MAX_VTX];          /*!<Array with the graph vertices */
+    List *connections;                  /*!<Adjacency matrix */
+    int num_vertices;                   /*!<Total number of vertices */
+    int num_edges;                      /*!<Total number of edges */
+};
+
+    Se podría cambiar la matríz de vertex por una lista, permitiendo una búsqueda más
+rápida de los vertex en el graph, no obstante, se presenta el mismo problema que al implementar
+las conexiones en la lista.
+
+Ejemplo:
+
+struct _Graph
+{
+    List *vertices;                                     /*!<Array with the graph vertices */
+    Bool connections[MAX_VTX][MAX_VTX];                 /*!<Adjacency matrix */
+    int num_vertices;                                   /*!<Total number of vertices */
+    int num_edges;                                      /*!<Total number of edges */
+};
+
+    Si tras sacar el elemento de la lista, se vuelve a colocar en el sitio que le corresponde
+(con la función "list_pushInOrder"), no se perdería funcionalidad alguna.

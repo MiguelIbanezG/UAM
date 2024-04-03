@@ -1,0 +1,41 @@
+void hanoi(int N, pila A, pila B, pila C){
+	
+	if(N == 1){
+	print A -> B
+	return
+	}
+
+
+	hanoi(N-1,A,C,B)
+	print A->B
+	hanoi(N-1,C,B,A) 
+}
+
+//Sin recursión de cola, recursión tras la que no se usan más las variables de la recursión.
+
+void hanoi(int N, pila A, pila B, pila C){
+	ini:
+	if(N == 1){
+		print A -> B
+		return
+		}
+
+	hanoi(N-1,A,C,B)
+	print A -> B
+	N = N-1
+	D = A
+	A = C
+	C = D
+	goto ini
+	}
+
+//estructurado(sin goto)
+
+void hanoi(int N, pila A, pila B, pila C){
+	while N!=0
+	hanoi(N-1,A,C,B)
+	print A->B
+	N = N-1
+	D = A
+	A = C
+	C = D

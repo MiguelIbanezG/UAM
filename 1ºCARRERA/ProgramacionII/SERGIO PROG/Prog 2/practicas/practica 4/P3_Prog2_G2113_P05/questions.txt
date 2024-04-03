@@ -1,0 +1,12 @@
+Título: Ejercicio Cuestiones, práctica 4, programación 2   
+Autores: Sergio Hidalgo y Miguel Ibáñez          
+        
+    1- Define las funciones privadas que adaptan el TAD vertex para su uso en el árbol, a partir de la linea 87
+define las funciones que cargan y leen los datos del archivo que compondrá los elementos del árbol.
+En el main se abre el archivo y reserva la memoria de los vertex, después, se guardan variables como el tiempo
+en segundos, según lo que se ha tardado en cargar el arbol y extraer el max, min y eliminar 1 elemento.
+
+    2- En bal el tiempo de busqueda es menor, debido a que el árbol está equilibrado (balanced) y esto
+resulta en una búsqueda más efectiva.
+
+    3- Si, su tamaño y el algoritmo de ordenacion que se usa para colocar los elementos en el arbol.

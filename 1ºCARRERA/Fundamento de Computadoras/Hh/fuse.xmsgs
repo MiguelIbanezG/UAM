@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="1156" delta="unknown" >"C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Hh/../../../Testbench 4/p4ej1_tb.vhd" Line 43: Formal port &lt;<arg fmt="%s" index="1">RI</arg>&gt; does not exist in entity &lt;<arg fmt="%s" index="2">p4ej1</arg>&gt;.  Please compare the definition of block &lt;<arg fmt="%s" index="3">p4ej1</arg>&gt; to its component declaration and its instantion to detect the mismatch.
+</msg>
+
+<msg type="error" file="Simulator" num="777" delta="unknown" >Static elaboration of top level VHDL design unit <arg fmt="%s" index="1">p4ej1_tb</arg> in library <arg fmt="%s" index="2">work</arg> failed
+</msg>
+
+</messages>
+

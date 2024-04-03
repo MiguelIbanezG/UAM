@@ -1,0 +1,32 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Pract/P2EJ1b_tb_isim_beh.exe -prj C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Pract/P2EJ1b_tb_beh.prj work.P2EJ1b_tb 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Pract/p2ej1b.vhf" into library work
+Parsing VHDL file "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Pract/../../../../../Downloads/Testbench 2/p2ej1b_tb.vhd" into library work
+Parsing VHDL file "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Pract/p2ej1a.vhf" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture vcc_v of entity VCC [vcc_default]
+Compiling architecture and3_v of entity AND3 [and3_default]
+Compiling architecture and3b1_v of entity AND3B1 [and3b1_default]
+Compiling architecture or2_v of entity OR2 [or2_default]
+Compiling architecture behavioral of entity M2_1E_MXILINX_p2ej1b [m2_1e_mxilinx_p2ej1b_default]
+Compiling architecture muxf5_v of entity MUXF5 [muxf5_default]
+Compiling architecture behavioral of entity M4_1E_MXILINX_p2ej1b [m4_1e_mxilinx_p2ej1b_default]
+Compiling architecture gnd_v of entity GND [gnd_default]
+Compiling architecture behavioral of entity p2ej1b [p2ej1b_default]
+Compiling architecture behavioral of entity p2ej1b_tb
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 25 VHDL Units
+Built simulation executable C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Pract/P2EJ1b_tb_isim_beh.exe
+Fuse Memory Usage: 51216 KB
+Fuse CPU Usage: 1843 ms

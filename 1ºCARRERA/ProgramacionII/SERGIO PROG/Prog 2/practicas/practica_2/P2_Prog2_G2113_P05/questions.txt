@@ -1,0 +1,9 @@
+//Por Sergio Hidalgo y Miguel Ibáñez
+
+1-
+    Habría que trabajar sobre las ids de los vertex y comparar con todas las ids cada vez
+    que se realizase la busqueda.
+
+2-
+    Se mira el vertex y su último vecino, por lo que el grafo se recorre entero, dado que Toledo
+    solo es vecino de Madrid y esta en primera posición, no en la última.

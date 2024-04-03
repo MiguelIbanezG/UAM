@@ -1,0 +1,17 @@
+.text 
+
+main: lw $at, dato2
+	sll $v0, $at, 8
+	lw $v1, dato3
+	or $a0, $0, 5
+	sw $a0 , dato1
+final: j final
+
+.data 
+
+res2: .word 0
+
+dato1: .word 0x00000000
+dato2: .word 0x0000ceba
+dato3: .word 0x00000005
+

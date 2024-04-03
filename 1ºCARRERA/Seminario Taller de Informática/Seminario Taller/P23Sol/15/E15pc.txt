@@ -1,0 +1,33 @@
+START
+DATA:
+Declaration of:
+-Variables:
+Rows
+Columns
+-Indexers:
+i=0
+j=0
+ALGORITHM:
+
+Declaration of variables:
+	matrix1[columns][rows] 
+matrix2[columns][rows]
+matrix3[columns][rows]
+
+While i<rows:
+	While j<columns:
+		Write in matrix1[i][j] 			
+		j++
+	i++
+
+While i<rows:
+	While j<columns:
+		Write in matrix2[i][j]			
+		j++
+	i++
+While i<rows:
+	While j<columns:
+		matrix3[i][j] = matrix1[i][j] + matrix2[i][j]			
+		j++
+	i++
+END

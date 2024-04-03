@@ -1,0 +1,11 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Hh/p4ej1_tb_isim_beh.exe -prj C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Hh/p4ej1_tb_beh.prj work.p4ej1_tb 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Hh/p4ej1.vhf" into library work
+Parsing VHDL file "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Hh/../../../Testbench 4/p4ej1_tb.vhd" into library work
+Parsing VHDL file "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Hh/p3ej2.vhf" into library work
+Starting static elaboration
+ERROR:HDLCompiler:1156 - "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Hh/../../../Testbench 4/p4ej1_tb.vhd" Line 43: Formal port <RI> does not exist in entity <p4ej1>.  Please compare the definition of block <p4ej1> to its component declaration and its instantion to detect the mismatch.
+ERROR:Simulator:777 - Static elaboration of top level VHDL design unit p4ej1_tb in library work failed

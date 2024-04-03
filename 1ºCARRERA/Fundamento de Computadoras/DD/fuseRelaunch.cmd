@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/DD/p3ej3_tb_isim_beh.exe" -prj "C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/DD/p3ej3_tb_beh.prj" "work.p3ej3_tb" 

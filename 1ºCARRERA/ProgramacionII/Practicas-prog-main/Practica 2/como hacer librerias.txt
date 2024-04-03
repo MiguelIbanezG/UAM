@@ -1,0 +1,2 @@
+gcc -Wall -pedantic -ansi -c -g p2_e1a.c -I./
+gcc -Wall -ansi -pedantic -o p2_e1a p2_e1a.o -L./ -lstack_fDoble

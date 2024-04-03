@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "vertex.h": "c",
+        "bstree.h": "c",
+        "stdio.h": "c"
+    }
+}

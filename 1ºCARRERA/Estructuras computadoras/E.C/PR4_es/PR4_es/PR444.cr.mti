@@ -1,0 +1,128 @@
+C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/mux2a1_32.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/mux2a1_32.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity mux2a1_32
+-- Compiling architecture mux of mux2a1_32
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MemDataPlantilla.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MemDataPlantilla.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity MemDataPlantilla
+-- Compiling architecture Simple of MemDataPlantilla
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MemProgMIPS.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MemProgMIPS.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MemProgMIPS
+-- Compiling architecture Simple of MemProgMIPS
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroQuintana/RegsMIPS.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroQuintana/RegsMIPS.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity RegsMIPS
+-- Compiling architecture Practica of RegsMIPS
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MicroMIPSTb.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MicroMIPSTb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MicroMIPSTb
+-- Compiling architecture Test of MicroMIPSTb
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroQuintana/ALUMIPS.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroQuintana/ALUMIPS.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling entity ALUMIPS
+-- Compiling architecture Practica of ALUMIPS
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MicroMIPSVectoresTb.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MicroMIPSVectoresTb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MicroMIPSVectoresTb
+-- Compiling architecture Test of MicroMIPSVectoresTb
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/UnidadControlTb.vhd {1 {vcom -work work -2008 -explicit -stats=none {C:\Users\migue\OneDrive\Documentos\E.C\PR4_es\PR4_es\UnidadControlTb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity UnidadControlTb
+-- Compiling architecture behavior of UnidadControlTb
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MemProgPlantilla.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MemProgPlantilla.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity MemProgPlantilla
+-- Compiling architecture Simple of MemProgPlantilla
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/E.C/UnidadControl.vhd {1 {vcom -work work -2008 -explicit -stats=none {C:\Users\migue\OneDrive\Documentos\E.C\UnidadControl.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity UnidadControl
+-- Compiling architecture Func of UnidadControl
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/mux2a1_5.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/mux2a1_5.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity mux2a1_5
+-- Compiling architecture mux of mux2a1_5
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroMIPS.vhd {0 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroMIPS.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity MicroMIPS
+-- Compiling architecture BestMicroEver of MicroMips
+** Error: C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroMIPS.vhd(200): Cannot drive signal 'MemProgData' of mode IN.
+** Error: C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroMIPS.vhd(262): Cannot drive signal 'MemDataDataRead' of mode IN.
+** Error: C:/Users/migue/OneDrive/Documentos/Primero/Primero/estructuras/P4/MicroMIPS.vhd(315): VHDL Compiler exiting
+
+} {10.0 13.0} {}} C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MemDataMIPS.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/E.C/PR4_es/PR4_es/MemDataMIPS.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MemDataMIPS
+-- Compiling architecture Simple of MemDataMIPS
+
+} {} {}}

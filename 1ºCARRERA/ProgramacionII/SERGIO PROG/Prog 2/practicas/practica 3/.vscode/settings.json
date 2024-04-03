@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "string.h": "c",
+        "stack_fdoble.h": "c",
+        "delivery.h": "c",
+        "types.h": "c",
+        "stdio.h": "c",
+        "queue.h": "c",
+        "stdlib.h": "c"
+    }
+}

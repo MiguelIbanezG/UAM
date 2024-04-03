@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "vertex.h": "c",
+        "string.h": "c",
+        "stack_fdoble.h": "c",
+        "stdlib.h": "c",
+        "file_utils.h": "c"
+    }
+}

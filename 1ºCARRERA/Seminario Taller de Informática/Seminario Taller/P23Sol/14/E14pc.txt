@@ -1,0 +1,23 @@
+START
+DATA:
+Declaration of:
+-Variables:
+Array [4][4]
+Counter=0
+-Indexers:
+i=0
+j=0
+-Array initialization:
+While i<4:
+	While j<4:
+		Write in array[i][j] while array[i][j] is in range
+		j++
+	i++
+ALGORITHM:
+While i<4:
+	While j<4:
+		If array[i][j] = 0 :
+			Counter++
+		j++
+	i++
+END

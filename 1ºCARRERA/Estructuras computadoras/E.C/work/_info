@@ -1,0 +1,1162 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modeltech_pe_edu_10.4a/examples
+Ealu
+Z0 w1615467274
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/migue/OneDrive/Documentos/E.C
+Z5 8C:/Users/migue/OneDrive/Documentos/E.C/ALU.vhd
+Z6 FC:/Users/migue/OneDrive/Documentos/E.C/ALU.vhd
+l0
+L14
+VE?dmke3KmzS9PX?S0d9S80
+!s100 QlgAd7]Qc^ei`P=BG_WQG1
+Z7 OV;C;10.5b;63
+33
+Z8 !s110 1615890235
+!i10b 1
+Z9 !s108 1615890235.000000
+Z10 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/ALU.vhd|
+Z11 !s107 C:/Users/migue/OneDrive/Documentos/E.C/ALU.vhd|
+!i113 1
+Z12 o-work work -2008 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Aexamen
+R1
+R2
+R3
+DEx4 work 3 alu 0 22 E?dmke3KmzS9PX?S0d9S80
+l26
+L24
+VC@RoOl8T;m48D1HLMH8_a0
+!s100 bV727b60HBF8Zb9elza_n2
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ealumips
+Z14 w1577385676
+R1
+R2
+R3
+R4
+Z15 8C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/ALUMIPSSOLUCION.vhd
+Z16 FC:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/ALUMIPSSOLUCION.vhd
+l0
+L14
+VaKlOG1^N2=0989fQb0ob^2
+!s100 o`mHamaiknjnWF;42HLI61
+R7
+33
+Z17 !s110 1620845918
+!i10b 1
+Z18 !s108 1620845917.000000
+Z19 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/ALUMIPSSOLUCION.vhd|
+Z20 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/ALUMIPSSOLUCION.vhd|
+!i113 1
+R12
+R13
+Apractica
+R1
+R2
+R3
+DEx4 work 7 alumips 0 22 aKlOG1^N2=0989fQb0ob^2
+l26
+L24
+V0mMzIcPGPI<k_T2RhT7FA3
+!s100 POMFGE]FGao>HFMk>AfX;0
+R7
+33
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Ealumipstb
+Z21 w1580316927
+R1
+R2
+R3
+R4
+Z22 8C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/ALUMIPSTb.vhd
+Z23 FC:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/ALUMIPSTb.vhd
+l0
+L23
+V^9Q2<8FPlIhAJz:>RIO^00
+!s100 ^@=UQ>:Ah:U:?K2kgMcD;0
+R7
+33
+Z24 !s110 1615890226
+!i10b 1
+Z25 !s108 1615890226.000000
+Z26 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/ALUMIPSTb.vhd|
+Z27 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/ALUMIPSTb.vhd|
+!i113 1
+R12
+R13
+Apractica
+R1
+R2
+R3
+DEx4 work 9 alumipstb 0 22 ^9Q2<8FPlIhAJz:>RIO^00
+l167
+L26
+VPoWeH:iVGZUTHBGLB_^PN2
+!s100 dC^=bieji:@S<RI;CS]631
+R7
+33
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R12
+R13
+Econtador
+Z28 w1580307834
+R1
+R2
+R3
+R4
+Z29 8C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Contador.vhd
+Z30 FC:/Users/migue/OneDrive/Documentos/E.C/ES Files/Contador.vhd
+l0
+L21
+Vh1V@Cn4MzhRTgRcl2aNK02
+!s100 @NJ:<7;nPDE[XYQP4DJMB0
+R7
+33
+Z31 !s110 1615890232
+!i10b 1
+Z32 !s108 1615890232.000000
+Z33 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Contador.vhd|
+Z34 !s107 C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Contador.vhd|
+!i113 1
+R12
+R13
+Apractica
+R1
+R2
+R3
+DEx4 work 8 contador 0 22 h1V@Cn4MzhRTgRcl2aNK02
+l33
+L31
+VkJ2SAF>eFc7fHE@1G?f<C1
+!s100 4KOmA@IgZz1Ad;fBBT@B50
+R7
+33
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R12
+R13
+Edeco3a8
+Z35 w1615307019
+R1
+R2
+R3
+R4
+Z36 8C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Deco2a4.vhd
+Z37 FC:/Users/migue/OneDrive/Documentos/E.C/ES Files/Deco2a4.vhd
+l0
+L21
+VTQczmz7W<WLm>QSdTzG`^2
+!s100 6iR^[?_7D`;6lnoFfKBSe3
+R7
+33
+R31
+!i10b 1
+R32
+Z38 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Deco2a4.vhd|
+Z39 !s107 C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Deco2a4.vhd|
+!i113 1
+R12
+R13
+Apractica
+R1
+R2
+R3
+DEx4 work 7 deco3a8 0 22 TQczmz7W<WLm>QSdTzG`^2
+l33
+L31
+VY]@WO8XK^F?QWhHIDSjdb3
+!s100 4d[adSX]31<9BgHoJHA`W2
+R7
+33
+R31
+!i10b 1
+R32
+R38
+R39
+!i113 1
+R12
+R13
+Edeco3a8regtb
+Z40 w1580298934
+R1
+R2
+R3
+R4
+Z41 8C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Deco3a8RegTb.vhd
+Z42 FC:/Users/migue/OneDrive/Documentos/E.C/ES Files/Deco3a8RegTb.vhd
+l0
+L19
+VzcD?j;82i22YLja39b<B93
+!s100 <4g4Ic:mnSlZTlXHYX^db0
+R7
+33
+Z43 !s110 1615890231
+!i10b 1
+Z44 !s108 1615890231.000000
+Z45 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Deco3a8RegTb.vhd|
+Z46 !s107 C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Deco3a8RegTb.vhd|
+!i113 1
+R12
+R13
+Asimulacion
+R1
+R2
+R3
+DEx4 work 12 deco3a8regtb 0 22 zcD?j;82i22YLja39b<B93
+l52
+L22
+V6^VPRYTP^h1T84_Qe1eH[1
+!s100 bX]<C[ch1=;:iWeMlBzGh3
+R7
+33
+R43
+!i10b 1
+R44
+R45
+R46
+!i113 1
+R12
+R13
+Egpr
+Z47 w1615890048
+R1
+R2
+R3
+R4
+Z48 8C:/Users/migue/OneDrive/Documentos/E.C/GPR.vhd
+Z49 FC:/Users/migue/OneDrive/Documentos/E.C/GPR.vhd
+l0
+L18
+V7X:?1lBaSGXfUS@DP1D6?3
+!s100 WhDM1:c7=F148Cih?069Q2
+R7
+33
+Z50 !s110 1615890233
+!i10b 1
+R32
+Z51 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/GPR.vhd|
+Z52 !s107 C:/Users/migue/OneDrive/Documentos/E.C/GPR.vhd|
+!i113 1
+R12
+R13
+Aexamen
+R1
+R2
+R3
+DEx4 work 3 gpr 0 22 7X:?1lBaSGXfUS@DP1D6?3
+l43
+L32
+V=Y@;_RCGmRC8gGzD:PX=m2
+!s100 JAM2@TLcUKKU?Le;_h=zR2
+R7
+33
+R50
+!i10b 1
+R32
+R51
+R52
+!i113 1
+R12
+R13
+Egpr_tb
+Z53 w1615540156
+R1
+R2
+R3
+R4
+Z54 8C:/Users/migue/OneDrive/Documentos/E.C/GPR_Tb.vhd
+Z55 FC:/Users/migue/OneDrive/Documentos/E.C/GPR_Tb.vhd
+l0
+L14
+VUniFNMkKAn7?JGmo@^L8?2
+!s100 k2bhl;:_=0_aWTV12F_hU1
+R7
+33
+R50
+!i10b 1
+Z56 !s108 1615890233.000000
+Z57 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/GPR_Tb.vhd|
+Z58 !s107 C:/Users/migue/OneDrive/Documentos/E.C/GPR_Tb.vhd|
+!i113 1
+R12
+R13
+Aexamen
+R1
+R2
+R3
+DEx4 work 6 gpr_tb 0 22 UniFNMkKAn7?JGmo@^L8?2
+l42
+L17
+VWaU06`Kzf5_BVn6A3?WPS3
+!s100 [eEX5zmIcTRj36[XA<jZQ3
+R7
+33
+R50
+!i10b 1
+R56
+R57
+R58
+!i113 1
+R12
+R13
+Ememdatamips
+Z59 w1620124391
+R1
+R2
+R3
+R4
+Z60 8C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemDataMIPSSOLUCION.vhd
+Z61 FC:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemDataMIPSSOLUCION.vhd
+l0
+L15
+VlXJmd2:I32jdiG:GT6b_i3
+!s100 jiCXc69E1:G`_UTPGDb<=0
+R7
+33
+R17
+!i10b 1
+Z62 !s108 1620845918.000000
+Z63 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemDataMIPSSOLUCION.vhd|
+Z64 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemDataMIPSSOLUCION.vhd|
+!i113 1
+R12
+R13
+Asimple
+R1
+R2
+R3
+DEx4 work 11 memdatamips 0 22 lXJmd2:I32jdiG:GT6b_i3
+l33
+L26
+VBfAP]nO3U@]@VMY=K@<9m2
+!s100 <_6MD>??DjK@Q?iH`iC<K2
+R7
+33
+R17
+!i10b 1
+R62
+R63
+R64
+!i113 1
+R12
+R13
+Ememdatavectores
+Z65 w1620124412
+R1
+R2
+R3
+R4
+Z66 8C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemDataVectoresSOLUCION.vhd
+Z67 FC:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemDataVectoresSOLUCION.vhd
+l0
+L18
+Vgj_e;;kRLz=HT08DZz13[0
+!s100 RUnnZbmFG3SSmkz4`Q=go3
+R7
+33
+R17
+!i10b 1
+R62
+Z68 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemDataVectoresSOLUCION.vhd|
+Z69 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemDataVectoresSOLUCION.vhd|
+!i113 1
+R12
+R13
+Asimple
+R1
+R2
+R3
+DEx4 work 15 memdatavectores 0 22 gj_e;;kRLz=HT08DZz13[0
+l36
+L29
+VHighd8]ha6^7@=9PX`_Y43
+!s100 >e:z574MMzZBXN6n6=h<00
+R7
+33
+R17
+!i10b 1
+R62
+R68
+R69
+!i113 1
+R12
+R13
+Ememprog
+Z70 w1615467251
+R1
+R2
+R3
+R4
+Z71 8C:/Users/migue/OneDrive/Documentos/E.C/MemProg.vhd
+Z72 FC:/Users/migue/OneDrive/Documentos/E.C/MemProg.vhd
+l0
+L14
+VU=^]TlVS6XRfc6;g0U85N2
+!s100 67LZ2_SH^UU:jT3D3]g000
+R7
+33
+R50
+!i10b 1
+R56
+Z73 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/MemProg.vhd|
+Z74 !s107 C:/Users/migue/OneDrive/Documentos/E.C/MemProg.vhd|
+!i113 1
+R12
+R13
+Aexamen
+R1
+R2
+R3
+DEx4 work 7 memprog 0 22 U=^]TlVS6XRfc6;g0U85N2
+l23
+L21
+V8:HSRVCznS6JRI[S:WEiR0
+!s100 0_4KkH96n5T^AY3h[NUTI2
+R7
+33
+R50
+!i10b 1
+R56
+R73
+R74
+!i113 1
+R12
+R13
+Ememprogmips
+Z75 w1620124583
+R1
+R2
+R3
+R4
+Z76 8C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemProgMIPSSOLUCION.vhd
+Z77 FC:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemProgMIPSSOLUCION.vhd
+l0
+L14
+V7oZ<[bN<<7;GdT1M>[:8G2
+!s100 9B7GTnMjndnK_DmA@S`8@3
+R7
+33
+R17
+!i10b 1
+R62
+Z78 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemProgMIPSSOLUCION.vhd|
+Z79 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemProgMIPSSOLUCION.vhd|
+!i113 1
+R12
+R13
+Asimple
+R1
+R2
+R3
+DEx4 work 11 memprogmips 0 22 7oZ<[bN<<7;GdT1M>[:8G2
+l23
+L21
+VjhfD>GjNoaLMM=2BmZ`KS0
+!s100 KcPbSQ3hmAW9l0mlZSi>V0
+R7
+33
+R17
+!i10b 1
+R62
+R78
+R79
+!i113 1
+R12
+R13
+Ememprogvectores
+Z80 w1586425574
+R1
+R2
+R3
+R4
+Z81 8C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemProgVectoresSOLUCION.vhd
+Z82 FC:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemProgVectoresSOLUCION.vhd
+l0
+L19
+V5TJZ74:2T<6^SFE>McXl02
+!s100 lZQnK@`H7ad64[GRilE:j1
+R7
+33
+R17
+!i10b 1
+R62
+Z83 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemProgVectoresSOLUCION.vhd|
+Z84 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemProgVectoresSOLUCION.vhd|
+!i113 1
+R12
+R13
+Asimple
+R1
+R2
+R3
+DEx4 work 15 memprogvectores 0 22 5TJZ74:2T<6^SFE>McXl02
+l28
+L26
+V_9kaDC1WJS=KXK:m[le@^1
+!s100 af7J:?`[02a<kiL6ORZg_0
+R7
+33
+R17
+!i10b 1
+R62
+R83
+R84
+!i113 1
+R12
+R13
+Emicromips
+Z85 w1586538734
+R1
+R2
+R3
+R4
+Z86 8C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSSOLUCION.vhd
+Z87 FC:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSSOLUCION.vhd
+l0
+L15
+VWhLHaF>mi6eg9U55UB7fz2
+!s100 @VA?c00hm_M0ES;8ba?8J0
+R7
+33
+R17
+!i10b 1
+R62
+Z88 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSSOLUCION.vhd|
+Z89 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSSOLUCION.vhd|
+!i113 1
+R12
+R13
+Atest
+R1
+R2
+R3
+DEx4 work 9 micromips 0 22 WhLHaF>mi6eg9U55UB7fz2
+l83
+L27
+VZNPRM_VY>MPJ^SH<jBWcF1
+!s100 Y742<^@31<4O0EFc;jafl1
+R7
+33
+R17
+!i10b 1
+R62
+R88
+R89
+!i113 1
+R12
+R13
+Emicromipstb
+Z90 w1577012638
+R1
+R2
+R3
+R4
+Z91 8C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSTbSOLUCION.vhd
+Z92 FC:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSTbSOLUCION.vhd
+l0
+L15
+V^=A1T[dBZ8H@<:ah0G;2R3
+!s100 ?[3`Vm8aUDim]4dM8g[PL0
+R7
+33
+R17
+!i10b 1
+R62
+Z93 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSTbSOLUCION.vhd|
+Z94 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSTbSOLUCION.vhd|
+!i113 1
+R12
+R13
+Atest
+R1
+R2
+R3
+DEx4 work 11 micromipstb 0 22 ^=A1T[dBZ8H@<:ah0G;2R3
+l73
+L18
+V<fUjWDAJkK>P0bBU6U]ZK1
+!s100 0OmAG4;8TK^afio<kGbSI1
+R7
+33
+R17
+!i10b 1
+R62
+R93
+R94
+!i113 1
+R12
+R13
+Emicromipsvectorestb
+Z95 w1586425026
+R1
+R2
+R3
+R4
+Z96 8C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSVectoresTbSOLUCION.vhd
+Z97 FC:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSVectoresTbSOLUCION.vhd
+l0
+L15
+VOiM:ZZL?fd2M6GLn^zBgV0
+!s100 U;Y5^TCiiBd_iLHzG67Of3
+R7
+33
+R17
+!i10b 1
+R62
+Z98 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSVectoresTbSOLUCION.vhd|
+Z99 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSVectoresTbSOLUCION.vhd|
+!i113 1
+R12
+R13
+Atest
+R1
+R2
+R3
+DEx4 work 19 micromipsvectorestb 0 22 OiM:ZZL?fd2M6GLn^zBgV0
+l73
+L18
+VFZ_Mk^F;g@kV3l[[Oe6=M2
+!s100 7LfTEZKiI1OzX1[;FaNZl3
+R7
+33
+R17
+!i10b 1
+R62
+R98
+R99
+!i113 1
+R12
+R13
+Emicrosimple
+Z100 w1615892229
+R1
+R2
+R3
+R4
+Z101 8C:/Users/migue/OneDrive/Documentos/E.C/MicroSimple.vhd
+Z102 FC:/Users/migue/OneDrive/Documentos/E.C/MicroSimple.vhd
+l0
+L17
+VlGHSLAcU?RQ1hfR6O[CfG1
+!s100 J?UF`_<_F?z[Clam:hWQM3
+R7
+33
+!s110 1615892236
+!i10b 1
+!s108 1615892236.000000
+Z103 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/MicroSimple.vhd|
+Z104 !s107 C:/Users/migue/OneDrive/Documentos/E.C/MicroSimple.vhd|
+!i113 1
+R12
+R13
+Aexamen
+R1
+R2
+R3
+DEx4 work 11 microsimple 0 22 lGHSLAcU?RQ1hfR6O[CfG1
+l85
+L23
+VQ;eW=`@a@6H8`^Pi6o2K@0
+!s100 lj<DgAZG5LDc]QF98VTf:2
+R7
+33
+Z105 !s110 1615890234
+!i10b 1
+R56
+R103
+R104
+!i113 1
+R12
+R13
+Emicrosimple_tb
+Z106 w1602504832
+R1
+R2
+R3
+R4
+Z107 8C:/Users/migue/OneDrive/Documentos/E.C/MicroSimple_Tb.vhd
+Z108 FC:/Users/migue/OneDrive/Documentos/E.C/MicroSimple_Tb.vhd
+l0
+L14
+VXQlU@:c52b>f694NaEiYN3
+!s100 @`4PJSblA2Rd_RWiTZ1z=2
+R7
+33
+R105
+!i10b 1
+Z109 !s108 1615890234.000000
+Z110 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/MicroSimple_Tb.vhd|
+Z111 !s107 C:/Users/migue/OneDrive/Documentos/E.C/MicroSimple_Tb.vhd|
+!i113 1
+R12
+R13
+Aexamen
+R1
+R2
+R3
+DEx4 work 14 microsimple_tb 0 22 XQlU@:c52b>f694NaEiYN3
+l35
+L17
+V>;afV]Vg=iVQ>]3ifjNhK2
+!s100 VFTDdJR2_c[Q7Q^:k@O@;2
+R7
+33
+R105
+!i10b 1
+R109
+R110
+R111
+!i113 1
+R12
+R13
+Emicrosuma
+Z112 w1613482006
+R1
+R2
+R3
+R4
+Z113 8C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/MicroSuma.vhd
+Z114 FC:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/MicroSuma.vhd
+l0
+L14
+VD>aogjZiLnbMjMbgec`LK2
+!s100 3Ni@iX5L:4RYh_b3[VA1Z2
+R7
+33
+R24
+!i10b 1
+R25
+Z115 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/MicroSuma.vhd|
+Z116 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/MicroSuma.vhd|
+!i113 1
+R12
+R13
+Apractica
+R1
+R2
+R3
+DEx4 work 9 microsuma 0 22 D>aogjZiLnbMjMbgec`LK2
+l56
+L23
+V=kM6=i<cc8L3Ul6@^Scd=3
+!s100 GS9S=9XnZYYBC62?Z1BVk0
+R7
+33
+R24
+!i10b 1
+R25
+R115
+R116
+!i113 1
+R12
+R13
+Emicrosumatb
+Z117 w1580315203
+R1
+R2
+R3
+R4
+Z118 8C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/MicroSumaTb.vhd
+Z119 FC:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/MicroSumaTb.vhd
+l0
+L19
+VB]6dE>Afa?VQ0fSA8zV0e1
+!s100 [5>AhV8T0]izCo;zgGNHG2
+R7
+33
+R24
+!i10b 1
+R25
+Z120 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/MicroSumaTb.vhd|
+Z121 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/MicroSumaTb.vhd|
+!i113 1
+R12
+R13
+Atest
+R1
+R2
+R3
+DEx4 work 11 microsumatb 0 22 B]6dE>Afa?VQ0fSA8zV0e1
+l58
+L22
+VHDgWc:kJSREDCi3DfhVS>1
+!s100 >]`XCHUm_WZk43d2jD:<I1
+R7
+33
+R24
+!i10b 1
+R25
+R120
+R121
+!i113 1
+R12
+R13
+Ep1e1
+Z122 w1613474710
+Z123 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z124 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+R4
+Z125 8C:/Users/migue/OneDrive/Documentos/E.C/P1e1.vhd
+Z126 FC:/Users/migue/OneDrive/Documentos/E.C/P1e1.vhd
+l0
+L5
+VhcPnaG`SQ75JdXTV;l9iJ2
+!s100 7IF_=;d4mW?CRH^GYY9QP2
+R7
+33
+Z127 !s110 1613476534
+!i10b 1
+Z128 !s108 1613476534.000000
+Z129 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/P1e1.vhd|
+Z130 !s107 C:/Users/migue/OneDrive/Documentos/E.C/P1e1.vhd|
+!i113 1
+R12
+R13
+Ametodo1
+R123
+R124
+R2
+R3
+DEx4 work 4 p1e1 0 22 hcPnaG`SQ75JdXTV;l9iJ2
+l16
+L14
+VCc[C4=;D2:Zh@T5]aAfVo1
+!s100 j1UP3IR_i>CfKL9H7EH8F1
+R7
+33
+R127
+!i10b 1
+R128
+R129
+R130
+!i113 1
+R12
+R13
+Ep1e1_tb
+Z131 w1613474237
+R123
+R124
+R2
+R3
+R4
+Z132 8C:/Users/migue/OneDrive/Documentos/E.C/p1e1_tb.vhd
+Z133 FC:/Users/migue/OneDrive/Documentos/E.C/p1e1_tb.vhd
+l0
+L5
+Vk54mTbI@5]NY<kBdUH?;m3
+!s100 [SJe5lcm_IN7if9zYgM^`0
+R7
+32
+R127
+!i10b 1
+R128
+Z134 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/p1e1_tb.vhd|
+Z135 !s107 C:/Users/migue/OneDrive/Documentos/E.C/p1e1_tb.vhd|
+!i113 1
+Z136 o-work work -2002 -explicit
+R13
+Apractica
+R123
+R124
+R2
+R3
+DEx4 work 7 p1e1_tb 0 22 k54mTbI@5]NY<kBdUH?;m3
+l24
+L8
+V7<zcBDDH`MAKAX>VK2]Fh3
+!s100 [8JUK[m7U:0;=Ec[4@oRk3
+R7
+32
+R127
+!i10b 1
+R128
+R134
+R135
+!i113 1
+R136
+R13
+Eregistro
+Z137 w1614078151
+R1
+R2
+R3
+R4
+Z138 8C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Registro.vhd
+Z139 FC:/Users/migue/OneDrive/Documentos/E.C/ES Files/Registro.vhd
+l0
+L24
+V?`[Yon=@P@7`Jo4H=Ci[m3
+!s100 U1KUjQUe8mXG7oVSc1^Y40
+R7
+33
+R31
+!i10b 1
+R32
+Z140 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Registro.vhd|
+Z141 !s107 C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Registro.vhd|
+!i113 1
+R12
+R13
+Apractica
+R1
+R2
+R3
+DEx4 work 8 registro 0 22 ?`[Yon=@P@7`Jo4H=Ci[m3
+l36
+L34
+V`c_a>NDNTIR>Og[Uije?N0
+!s100 g]zK>cUP7BW4^HT[VN5Ce0
+R7
+33
+R31
+!i10b 1
+R32
+R140
+R141
+!i113 1
+R12
+R13
+Eregsmips
+Z142 w1577366946
+R1
+R2
+R3
+R4
+Z143 8C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/RegsMIPSSOLUCION.vhd
+Z144 FC:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/RegsMIPSSOLUCION.vhd
+l0
+L13
+V1P0mBT@O0lY`Uk;5Z]ITL3
+!s100 Webk@03KYcGD3QA^hSg2N3
+R7
+33
+R17
+!i10b 1
+R62
+Z145 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/RegsMIPSSOLUCION.vhd|
+Z146 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/RegsMIPSSOLUCION.vhd|
+!i113 1
+R12
+R13
+Apractica
+R1
+R2
+R3
+DEx4 work 8 regsmips 0 22 1P0mBT@O0lY`Uk;5Z]ITL3
+l37
+L27
+VIXc=WPcJ_ej?ENQ@7@@`c0
+!s100 J^0`5a2ZSzOeKCn0R^ZKO0
+R7
+33
+R17
+!i10b 1
+R62
+R145
+R146
+!i113 1
+R12
+R13
+Eregsmipstb
+Z147 w1580315771
+R1
+R2
+R3
+R4
+Z148 8C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/RegsMIPSTb.vhd
+Z149 FC:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/RegsMIPSTb.vhd
+l0
+L18
+V3jZFX2GWF8?KJK1eXYQ?G0
+!s100 oQdiG5TXVVJ64@`O6^=OO2
+R7
+33
+Z150 !s110 1615890230
+!i10b 1
+Z151 !s108 1615890230.000000
+Z152 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/RegsMIPSTb.vhd|
+Z153 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/RegsMIPSTb.vhd|
+!i113 1
+R12
+R13
+Apractica
+R1
+R2
+R3
+DEx4 work 10 regsmipstb 0 22 3jZFX2GWF8?KJK1eXYQ?G0
+l48
+L21
+V3Q7C`9G]U:al[47`g>caa2
+!s100 [V^<XKPg2[JX?aZ[>H9L81
+R7
+33
+R150
+!i10b 1
+R151
+R152
+R153
+!i113 1
+R12
+R13
+Erutapc
+Z154 w1615467462
+R1
+R2
+R3
+R4
+Z155 8C:/Users/migue/OneDrive/Documentos/E.C/RutaPC.vhd
+Z156 FC:/Users/migue/OneDrive/Documentos/E.C/RutaPC.vhd
+l0
+L15
+VjXEX5Q`LIl;ZVd0EldgUR0
+!s100 Qh4d;S_L`>i^TTm:nQldo3
+R7
+33
+R105
+!i10b 1
+R109
+Z157 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/RutaPC.vhd|
+Z158 !s107 C:/Users/migue/OneDrive/Documentos/E.C/RutaPC.vhd|
+!i113 1
+R12
+R13
+Aexamen
+R1
+R2
+R3
+DEx4 work 6 rutapc 0 22 jXEX5Q`LIl;ZVd0EldgUR0
+l28
+L23
+V?eQaG]D7Y0LEeGNaCm33S0
+!s100 >V0cmiccPkV[[KE<0UkYo1
+R7
+33
+R105
+!i10b 1
+R109
+R157
+R158
+!i113 1
+R12
+R13
+Eunidadcontrol
+Z159 w1586372550
+R1
+R2
+R3
+R4
+Z160 8C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/UnidadControlSOLUCION.vhd
+Z161 FC:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/UnidadControlSOLUCION.vhd
+l0
+L14
+VgBYRXLVSbiD3jeLc3o6]X2
+!s100 ]<N>CZ:;NC;5SIl1IBjz61
+R7
+33
+R17
+!i10b 1
+R62
+Z162 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/UnidadControlSOLUCION.vhd|
+Z163 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/UnidadControlSOLUCION.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 13 unidadcontrol 0 22 gBYRXLVSbiD3jeLc3o6]X2
+l38
+L37
+Vm>7TbC2:OT=BEM4eL9Je01
+!s100 JD6:jOMk:=8_E?DzaB?zA2
+R7
+33
+R17
+!i10b 1
+R62
+R162
+R163
+!i113 1
+R12
+R13
+Eunidadcontroltb
+Z164 w1586370442
+R1
+R2
+R3
+R4
+Z165 8C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/UnidadControlTbSOLUCION.vhd
+Z166 FC:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/UnidadControlTbSOLUCION.vhd
+l0
+L14
+V1i`BF`HPaBObl68d[8:4L3
+!s100 1zN4X8K95SW7aLNW13VBn0
+R7
+33
+R17
+!i10b 1
+R62
+Z167 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/UnidadControlTbSOLUCION.vhd|
+Z168 !s107 C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/UnidadControlTbSOLUCION.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+Z169 DEx4 work 15 unidadcontroltb 0 22 1i`BF`HPaBObl68d[8:4L3
+l123
+L17
+Z170 VbLmC5^zH:Z1@f6F_;^B8L0
+Z171 !s100 j30MBMIb?DoY5Vj[?ed1m2
+R7
+33
+R17
+!i10b 1
+R62
+R167
+R168
+!i113 1
+R12
+R13

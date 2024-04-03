@@ -1,0 +1,28 @@
+######################################################################
+-- Asignatura: Estructura de computadores
+## Fichero: Desemsamblar.txt
+## Descripción: Programa que realiza operaciones con datos de memoria
+-- Fichero de apoyo para: Práctica: 3. Ejercicio: 1
+######################################################################
+
+
+################# Segmento de código #################
+
+ Address    Code        
+
+0x00000000  0x8c012008  
+0x00000004  0x00011200  
+0x00000008  0x8c03200c  
+0x0000000c  0x00432025  
+0x00000010  0x20050005      
+0x00000014  0xac042004  
+0x00000018  0x08000006  
+
+################# Segmento de datos #################
+
+ Address    Code        
+
+00002000 000000000
+00002004 000000000
+00002008 00000ceba
+0000200C 000000005

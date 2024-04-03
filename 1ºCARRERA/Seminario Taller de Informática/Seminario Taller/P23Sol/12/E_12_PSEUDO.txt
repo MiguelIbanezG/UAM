@@ -1,0 +1,17 @@
+BEGIN
+DEFINE MAX as 10
+Declaration of variables:
+DEFINE number as ENTIRE
+DEFINE sum=0 as ENTIRE
+DEFINE i as ENTIRE
+
+
+ALGORITHM:
+     LOOP FOR
+CONDITIONI i=0 i<MAX
+	WRITE (ask for number i+1)
+            READ(number)
+	sum=sum+number
+	i++
+WRITE(sum)
+END

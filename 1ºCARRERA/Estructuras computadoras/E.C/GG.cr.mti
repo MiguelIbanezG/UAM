@@ -1,0 +1,136 @@
+{C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Deco3a8RegTb.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Deco3a8RegTb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Deco3a8RegTb
+-- Compiling architecture Simulacion of Deco3a8RegTb
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/E.C/GPR_Tb.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/E.C/GPR_Tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity GPR_Tb
+-- Compiling architecture Examen of GPR_Tb
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/MicroSuma.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/MicroSuma.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MicroSuma
+-- Compiling architecture Practica of MicroSuma
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/ALUMIPSTb.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/ALUMIPSTb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALUMIPSTb
+-- Compiling architecture Practica of ALUMIPSTb
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/RegsMIPS.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/RegsMIPS.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RegsMIPS
+-- Compiling architecture Practica of RegsMIPS
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/E.C/ALU.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/E.C/ALU.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALU
+-- Compiling architecture Examen of ALU
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/MicroSumaTb.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/MicroSumaTb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MicroSumaTb
+-- Compiling architecture Test of MicroSumaTb
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/E.C/RutaPC.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/E.C/RutaPC.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RutaPC
+-- Compiling architecture examen of RutaPC
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/E.C/MemProg.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/E.C/MemProg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MemProg
+-- Compiling architecture examen of MemProg
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/RegsMIPSTb.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/RegsMIPSTb.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RegsMIPSTb
+-- Compiling architecture Practica of RegsMIPSTb
+
+} {} {}} C:/Users/migue/OneDrive/Documentos/E.C/MicroSimple_Tb.vhd {1 {vcom -work work -2008 -explicit -stats=none C:/Users/migue/OneDrive/Documentos/E.C/MicroSimple_Tb.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MicroSimple_Tb
+-- Compiling architecture examen of MicroSimple_Tb
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Registro.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Registro.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Registro
+-- Compiling architecture Practica of Registro
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/ALUMIPS.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Soluciones PR2/ALUMIPS.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALUMIPS
+-- Compiling architecture Practica of ALUMIPS
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Contador.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Contador.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Contador
+-- Compiling architecture Practica of Contador
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Deco2a4.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/ES Files/Deco2a4.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Deco3a8
+-- Compiling architecture Practica of Deco3a8
+
+} {} {}}

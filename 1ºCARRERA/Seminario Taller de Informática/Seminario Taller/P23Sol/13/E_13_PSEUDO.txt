@@ -1,0 +1,14 @@
+BEGIN
+DEFINE MAX as 6
+Declaration of variables:
+DEFINE vector[MAX] as STRING
+DEFINE i as ENTIRE
+WRITE (vector-6 elements)
+  READ(vector)
+WRITE (New vector:)
+ALGORITHM:
+     LOOP FOR
+CONDITION i=5,i>=0
+	WRITE (vector[i])
+	i--
+END

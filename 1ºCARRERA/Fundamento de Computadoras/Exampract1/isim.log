@@ -1,0 +1,23 @@
+ISim log file
+Running: C:\Users\migue\OneDrive\Escritorio\1 DE CARRERA\Fundamento de Computadoras\Exampract1\e1_tb_profesores_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/migue/OneDrive/Escritorio/1 DE CARRERA/Fundamento de Computadoras/Exampract1/e1_tb_profesores_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 30 ns, Instance /e1_tb_profesores/ : Warning: Error in the case 2
+at 60 ns, Instance /e1_tb_profesores/ : Warning: Error in the case 5
+at 70 ns, Instance /e1_tb_profesores/ : Warning: Error in the case 6
+at 90 ns, Instance /e1_tb_profesores/ : Warning: Error in the case 8
+at 110 ns, Instance /e1_tb_profesores/ : Warning: Error in the case 10
+at 140 ns, Instance /e1_tb_profesores/ : Warning: Error in the case 13
+at 150 ns, Instance /e1_tb_profesores/ : Warning: Error in the case 14
+at 160 ns, Instance /e1_tb_profesores/ : Warning: Error in the case 15
+at 170 ns: Note: ¡¡simulation is done!! (/e1_tb_profesores/).
+at 170 ns: Note: Number of errors: 8 (/e1_tb_profesores/).

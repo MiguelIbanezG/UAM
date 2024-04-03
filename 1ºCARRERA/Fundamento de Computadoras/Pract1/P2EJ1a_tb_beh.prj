@@ -1,0 +1,4 @@
+vhdl work "p2ej1a.vhf"
+vhdl work "../../../../../Downloads/Testbench 2/p2ej1a_tb.vhd"
+vhdl work "p2ej1b.vhf"
+vhdl work "p2ej2.vhf"

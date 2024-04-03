@@ -1,0 +1,51 @@
+Status reverseWords(char *strout, char *strin) {
+  /* It is MANDATORY that you use a stack to implement this function */
+  /* Failure to do so will result in a FAIL grade */
+
+  /* Es OBLIGATORIO usar una pila para implementar esta función */
+  /* No hacerlo implica un NO APTO */
+
+  /* YOUR CODE HERE - TU CÓDIGO AQUÍ */
+  Stack *s;
+  void *e;
+  int i;
+  char *str3, *str2;
+
+
+  s = stack_init();
+
+  for ( i = 0; i < strlen(strin); i++)
+  {
+
+    if ( strin[i] != '\0')
+    {
+
+      stack_push(s,strin[i]);
+
+    }
+
+    else
+    {
+
+      while (stack_isEmpty(s) == FALSE)
+      {
+        e = stack_pop(s);
+        strcat( strout, e);
+
+      }
+
+    strcat(strout , strin[i] );
+      
+    }
+    
+  }
+
+  while (stack_isEmpty(s) == FALSE)
+  {
+    e = stack_pop(s);
+    strcat(strout ,e);
+  }
+
+  stack_free(s);
+
+  return OK;

@@ -1,0 +1,100 @@
+{C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSSOLUCION.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSSOLUCION.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MicroMIPS
+-- Compiling architecture Test of MicroMIPS
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/ALUMIPSSOLUCION.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/ALUMIPSSOLUCION.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALUMIPS
+-- Compiling architecture Practica of ALUMIPS
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/UnidadControlTbSOLUCION.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/UnidadControlTbSOLUCION.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity UnidadControlTb
+-- Compiling architecture behavior of UnidadControlTb
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSVectoresTbSOLUCION.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSVectoresTbSOLUCION.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MicroMIPSVectoresTb
+-- Compiling architecture Test of MicroMIPSVectoresTb
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemProgMIPSSOLUCION.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemProgMIPSSOLUCION.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MemProgMIPS
+-- Compiling architecture Simple of MemProgMIPS
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemDataVectoresSOLUCION.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemDataVectoresSOLUCION.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MemDataVectores
+-- Compiling architecture Simple of MemDataVectores
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSTbSOLUCION.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MicroMIPSTbSOLUCION.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MicroMIPSTb
+-- Compiling architecture Test of MicroMIPSTb
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/UnidadControlSOLUCION.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/UnidadControlSOLUCION.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity UnidadControl
+-- Compiling architecture behavior of UnidadControl
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/RegsMIPSSOLUCION.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/RegsMIPSSOLUCION.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RegsMIPS
+-- Compiling architecture Practica of RegsMIPS
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemProgVectoresSOLUCION.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemProgVectoresSOLUCION.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MemProgVectores
+-- Compiling architecture Simple of MemProgVectores
+
+} {} {}} {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemDataMIPSSOLUCION.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/migue/OneDrive/Documentos/E.C/Solución (1)/Solución/MemDataMIPSSOLUCION.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity MemDataMIPS
+-- Compiling architecture Simple of MemDataMIPS
+
+} {} {}}

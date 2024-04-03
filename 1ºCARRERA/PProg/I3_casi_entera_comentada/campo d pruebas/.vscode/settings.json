@@ -1,0 +1,29 @@
+{
+    "files.associations": {
+        "space_test.h": "c",
+        "algorithm": "c",
+        "space.h": "c",
+        "die.h": "c",
+        "graphic_engine.h": "c",
+        "command.h": "c",
+        "strings.h": "c",
+        "set.h": "c",
+        "game_reader.h": "c",
+        "game.h": "c",
+        "user_input.h": "c",
+        "object.h": "c",
+        "screen.h": "c",
+        "types.h": "c",
+        "optional": "c",
+        "memory": "c",
+        "functional": "c",
+        "iosfwd": "c",
+        "sstream": "c",
+        "tuple": "c",
+        "typeinfo": "c",
+        "stdio.h": "c",
+        "string.h": "c",
+        "player.h": "c",
+        "random": "c"
+    }
+}

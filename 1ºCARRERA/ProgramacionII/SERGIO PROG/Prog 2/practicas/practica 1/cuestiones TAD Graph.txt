@@ -1,0 +1,4 @@
+
+4)
+    Si, la función "graph_getVertexpositionFromId" se utiliza para encontrar la posición en la array del vértice a partir
+    del id.

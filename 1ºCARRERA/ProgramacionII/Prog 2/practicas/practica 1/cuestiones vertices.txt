@@ -1,0 +1,24 @@
+Cuestiones vértices: Sergio Hidalgo y Miguel Ibáñez
+
+
+1) 
+	archivo compile.sh
+
+
+2)
+	a) TRUE, porque el puntero p es tipo vertex y pasa por referencia a vertex_cmp_ptr, al igualarlo a v, 
+	por lo que tienen el mismo valor y la condición se cumple.
+
+	b) False, porque la variable a es tipo integer y a pesar de que hace una llamada a la memoria de la 
+	función con &, no son el mismo tipo de variable y por tanto, no se cumplirá la condición.
+
+
+3)
+	a) No, porque no se puede hacer una reserva de memoria en el main tomando como tamaño una estructura 
+	que no está en el mismo, o que esta incompleta.
+	
+	b) La reserva de memoria falla porque tras reservar la memoria, el vertex está vacío y por ello devuelve 
+	ERROR.
+
+	c) No es correcta la implementación del código ya que en el vertex.c al reservar memoria en la línea 2 
+	escribe el cast como Vertex * en vez de Vertex**.
