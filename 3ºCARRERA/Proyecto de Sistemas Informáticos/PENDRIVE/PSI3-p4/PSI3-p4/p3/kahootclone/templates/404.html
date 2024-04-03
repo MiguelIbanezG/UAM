@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}
+Kahoot Clone
+{% endblock %}
+
+{% block content %}
+<h2 class="pink">Error 404</h2>
+
+{% if user.is_authenticated %}
+<h4 class="text-dark">does not exist</h4>
+
+{% else %}
+<div class="text-center">
+
+    <button class="btn btn-outline-primary btn-lg" onclick="location.href='{% url 'home' %}'">
+        Return home</button>
+
+</div>
+{% endif %}
+
+{% endblock %}
+
+{% block footer %}
+
+<div class="d-flex flex-row">
+
+    <div class="p-2 d-inline container text-center ">
+        <div class="row">
+            <h4> Contact:</h4>
+
+            <p>ph:(21)123 12 12 43</p>
+            <p>email:sergio.hidalgo@estudiante.uam.es</p>
+        </div>
+    </div>
+
+    <div class="p-2 container text-center d-inline">
+        <div class="row">
+            <h4>Help:</h4>
+
+            <p><u>Unsuscribe</u></p>
+            <p><u>FAQ</u></p>
+
+        </div>
+    </div>
+
+    <div class="p-2 container text-center d-inline">
+        <div class="row">
+            <h4 class>Information:</h4>
+
+            <p><u>About Us</u></p>
+            <p><u>Privacy Policy</u></p>
+
+            <p><u>Terms of Use</u></p>
+
+            <p><u>Affiliates</u></p>
+
+            <p><u>Sitemap</u></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

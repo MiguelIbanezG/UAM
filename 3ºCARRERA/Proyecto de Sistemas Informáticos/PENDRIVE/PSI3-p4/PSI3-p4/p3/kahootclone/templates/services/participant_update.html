@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block header %}
+{% endblock %}
+{% block content %}
+
+{% for participant in participant_list %}
+
+
+<tr>
+    <td><strong>{{ participant.alias }} &nbsp; &nbsp;</strong></td>
+</tr>
+{% endfor %}
+{% endblock %}

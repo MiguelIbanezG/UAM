@@ -1,0 +1,3 @@
+  { nombre: 'Universidad Complutense de Madrid', total: 61935 },
+  { nombre: 'Universidad Autónoma de Madrid', total: 74322 },
+  { nombre: 'Universidad Politécnica de Madrid', total: 61935 }

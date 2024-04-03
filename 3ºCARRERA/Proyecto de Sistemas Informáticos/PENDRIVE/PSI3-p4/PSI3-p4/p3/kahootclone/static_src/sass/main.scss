@@ -1,0 +1,14 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+.title-backg { background-color: $pink-600; }
+.pink { color: $pink-400; }
+.kahoot-backg {  background-color: $green-100; }
+.green {color: $green-600; }
+.grey { background-color: $purple-100; }
+.blue_podium {background-color: $blue-300;}
+.form-horizontal .control-label{
+    text-align: left;
+}
+.pb-10 {
+    padding-bottom: ($spacer * 17.5);
+  }

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h1>{{ game.questionnaire.title }} - {{ game.publicId }}</h1>
+
+{% csrf_token %}
+<p><strong>State:</strong> {{ game.state }}</p>
+
+<h3> Game is going to start </h3>
+
+
+
+{% endblock %}

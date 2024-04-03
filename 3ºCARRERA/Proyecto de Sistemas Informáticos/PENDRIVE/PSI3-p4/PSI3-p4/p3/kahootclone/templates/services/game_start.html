@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block header %}
+{% endblock %}
+{% block inicio %}
+
+
+
+<body class="bg-info ">
+    {% endblock %}
+
+    {% block content %}
+    {% csrf_token %}
+
+
+    <div class="position-absolute top-50 start-50 translate-middle">
+        <div class="container">
+            <div class="row justify-content-md-center ">
+                <div class="col-md-auto ">
+                    <div class="kahoot-backg text-break green text-center">
+                        <h5> Connect to: http://127.0.0.1:8123/models/services/gamejoin/</h5>
+                        with PIN
+                        <h5> {{ game.publicId }}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto text-center ">
+
+                    <div class="text-break">
+                        <p class=""> As soon as you log in, your alias will be displayed here</p>
+
+                        <button class="btn btn-primary" onclick="location.href='{% url 'game-count-down' %}'">
+                            Get Started</button>
+                    </div>
+                    <h3> List of participants </h3>
+
+                    <div class="text-center">
+                        <table id="participants">
+                            <tbody class="text-center">
+                                <tr>
+                                    {% include "services/participant_update.html" %}
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+
+    {% block scripts%}
+
+    <script type="text/javascript">
+        function refresh() {
+            $.ajax({
+                url: "{% url 'game-updateparticipant' publicid=request.session.publicId %}",
+                success: function (data) {
+                    $('#participants').html(data);
+                }
+            });
+        }
+
+
+        $(document).ready(function () {
+            console.log("setting interval");
+            setInterval(refresh, 1000);
+        });
+
+    </script>
+
+    {% endblock %}
+
+    {% block final %}
+</body>
+{% endblock %}

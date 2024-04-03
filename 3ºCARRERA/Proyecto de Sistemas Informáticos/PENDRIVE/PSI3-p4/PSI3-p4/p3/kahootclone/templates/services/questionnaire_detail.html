@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<h2 class="pink">Questionnaire detail</h2>
+<h5> <strong class="text-break">{{ questionnaire.title }}:</strong>
+    <button class="btn btn-outline-success btn-sm" onclick="location.href='{% url 'questionnaire-update' pk=questionnaire.id %}'">
+    Edit title</button>
+    <button class="btn btn-outline-primary btn-sm" onclick="location.href='{% url 'game-create' questionnaireid=questionnaire.id %}'">
+        Play Game</button> 
+ </h5>
+
+{% csrf_token %}
+
+
+
+<div style="margin-left:20px;margin-top:20px">
+    {% if questions %}
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th scope="col">question</th>
+              <th scope="col">No answers</th>
+            </tr>
+          </thead>
+        <tbody>
+            {% for question in questions %}
+
+            <tr>
+                <td><a class="text-break" href="{% url 'question-detail' pk=question.pk %}">{{ question.question}}</a></td>
+                <td>{{ question.answer_set.count }}</td>
+                <td><button class="btn btn-outline-danger btn-sm"
+                        onclick="location.href='{% url 'question-remove' pk=question.pk %}'">
+                        Remove</button>
+                </td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    {%else%}
+        <p>There are no questions for these questionnaire. </p> 
+
+    {% endif %}
+    <br>
+    <button class="btn btn-primary btn" onclick="location.href='{% url 'question-create' questionnaireid=questionnaire.pk %}'">Add new question</button>
+    <button class="btn btn-outline-success btn" onclick="location.href='{% url 'questionnaire-list' %}'">Back to questionnaire list</button>
+
+
+
+
+
+</div>
+
+{%else%}
+
+{% endif %}
+
+{% endblock %}

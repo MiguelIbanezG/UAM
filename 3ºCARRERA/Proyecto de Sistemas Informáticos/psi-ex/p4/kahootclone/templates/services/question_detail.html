@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<h2 class="pink">Question detail</h2>
+<h5> <strong class="text-break">{{ question.question }} ({{ question.answerTime }}):</strong>
+    <button class="btn btn-outline-success btn-sm" onclick="location.href='{% url 'question-update' pk=question.id %}'">
+    Edit question</button>
+ </h5>
+
+{% csrf_token %}
+
+<div style="margin-left:20px;margin-top:20px">
+    {% if question.answer_set.all %}
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th scope="col">answer</th>
+              <th scope="col">correct</th>
+            </tr>
+          </thead>
+        <tbody>
+            {% for answer in question.answer_set.all %}
+
+            <tr>
+                <td class="text-break">{{ answer.answer }}</td>
+                <td>{{ answer.correct }}</td>
+                <td><button class="btn btn-outline-danger btn-sm"
+                        onclick="location.href='{% url 'answer-remove' pk=answer.pk %}'">
+                        Remove</button>
+                    <button class="btn btn-outline-success btn-sm"
+                        onclick="location.href='{% url 'answer-update' pk=answer.pk %}'">
+                        Edit</button>
+                </td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    {%else%}
+        <p>There are no answers for these question. </p> 
+
+    {% endif %}
+    <br>
+
+    {% if question.answer_set.count < 4 %}
+
+    <button class="btn btn-primary btn" onclick="location.href='{% url 'answer-create' questionid=question.id %}'">Add new answer</button>
+
+    {% endif %}
+
+    <button class="btn btn-outline-success btn" onclick="location.href='{% url 'questionnaire-detail' pk=question.questionnaire.id %}'">Back to questionnaire</button>
+
+
+
+
+
+
+</div>
+
+{%else%}
+
+{% endif %}
+
+{% endblock %}
+

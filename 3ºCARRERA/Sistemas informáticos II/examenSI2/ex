@@ -1,0 +1,32 @@
+REVOKE CONNECT ON DATABASE visa FROM public;
+
+SELECT pg_terminate_backend(pg_stat_activity.procpid)
+FROM pg_stat_activity
+WHERE pg_stat_activity.datname = 'visa';
+
+drop database visa;
+sudo service postgresql restart
+sudo systemctl restart postgresql
+
+sh si2fixMAC.sh 2323 4 2
+sudo sh virtualip.sh enp4s0
+sudo chmod 777 *
+
+export J2EE_HOME=/opt/glassfish4/glassfish
+export PATH=/opt/jdk1.8.0_111/bin:${PATH}
+export AS_JAVA=/usr/lib/jvm/java-8-openjdk-amd64
+export JAVA_HOME=/opt/jdk1.8.0_111
+
+asadmin start-domain domain1
+ssh -o HostKeyAlgorithms=ssh-rsa si2@10.6.4.2
+
+asadmin enable-secure-admin
+
+tar -xzvf apache-jmeter-5.2.1.tgz
+
+apache-jmeter-5.2.1/bin/jmeter.sh
+
+psql -U alumnodb -d visa
+sudo -su postgres
+select count(*) from pago;
+select * from pago;

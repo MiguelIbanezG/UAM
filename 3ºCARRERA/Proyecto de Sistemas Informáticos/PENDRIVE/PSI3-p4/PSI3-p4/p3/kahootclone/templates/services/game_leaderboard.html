@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block header %}
+
+
+{% endblock %}
+
+{% block content %}
+
+{% csrf_token %}
+<div class="container h-100 d-flex flex-column fixed-top  ">
+  <div class="mt-1">&nbsp;</div>
+  <div class="row h-75 justify-content-md-center bg-light    ">
+    <h3 class="text-center fw-light">Podium</h3>
+
+    <div class="container text-center align-self-end">
+      <div class="flex-row d-flex align-self-end">
+        {% for p in podium_list %}
+
+        <div class="h-100 col-sm  align-self-end">
+          <p class="fs-3">
+            {{ p.number }}
+          </p>
+
+
+          <div class="blue_podium" style="height: {{ p.class }};">
+
+          </div>
+          <p class="fw-bolder fs-4">
+
+            {{ p.participant.alias }} ({{ p.participant.points }} pts)
+          </p>
+        </div>
+        &nbsp;
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+
+  <br>
+  <div class="container-sm text-center">
+    <br>
+    <button class="btn btn-primary" id="reset" value="reset" onclick="reset()">
+      New Kahoot</button>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block scripts%}
+
+
+
+<script type="text/javascript">
+    window.CSRF_TOKEN = "{{ csrf_token }}";
+    function reset() {
+        $.ajax({
+            type: "POST",
+            url: "{% url 'game-count-down'  %}",
+            data: {csrfmiddlewaretoken: window.CSRF_TOKEN},
+            success: function (result) {
+                console.log(result);
+            },
+        });
+
+     
+    }
+
+</script>
+
+{% endblock %}

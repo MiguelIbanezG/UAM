@@ -1,0 +1,20 @@
+<html>
+    <head>
+    </head>
+    <body>
+        {% if error %}
+        {{ error }}
+        {% else %}
+        Suscripciones del canal {{ nombreCanal }}
+        <table>
+            {% for subs in suscripciones %}
+            <tr>
+                <th>{{ subs.usuario.id }}</th>
+                <td>{{ subs.usuario.nombreUsuario }}</td>
+                <td>{{ subs.fechaDeSuscripcion }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </body>
+</html>

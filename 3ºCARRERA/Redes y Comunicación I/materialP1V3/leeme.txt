@@ -1,0 +1,25 @@
+Practica 1 Redes y Comunicación
+Grupo: 1321
+Giancarlo Lazo y Miguel Ibañez
+Pareja: 06
+
+Normativa de entrega cumplida en su totalidad: 
+	Realizado: Se han realizado varias relecutas del enunciado y hemos hecho cada ejercicio paso a paso.
+Contar paquetes de una traza: 
+	Realizado: El número de paquetes de una traza que aparece al ejecutar nuestro programa es el mismo número de paquetes que indica Wireshark.
+Contar paquetes de la interfaz de red: 
+	Realizado: Nuestro  programa cuenta el número de paquetes de la interfaz de red que se indique como argumento en la terminal, también sabemos que es correcto por
+	la comprobación en Wireshark.
+Almacenar en una traza el tráfico capturado en vivo: 
+	Realizado: Hemos comprobado que todos los bytes de la traza que hemos capturado y es la misma que aparece en Wireshark.
+Modificar fecha correctamente: 
+	Realizado: Hemos modificado cada fecha de cada paquete capturado añdiendo el TIME_OFFSET al header.ts.tv_sec y comporbado fuciona mirando 
+	el tiempo de UNIX. Se compruba con la FOTO 1 que el timestamp de UNIX esta cambiado.
+Imprimir los N primeros bytes de un paquete y validarlo con Wireshark (captura de pantalla): 
+	Realizado: Se imprimen todos los bytes que aparecen en Wireshark. Para imprimir los N primeros bytes hemos creado una lista metiendo los bytes en ella con "list = str(binascii.hexlify(data[:args.nbytes]))", 
+	y realizado un bucle para que los valla imprimiendo de dos en dos con espacios, se imprimen los bytes que se indiquen como argumento, si no se indica se imprimen 14 (default = 14)
+	practica1captura.png y  FOTO 1
+
+
+
+

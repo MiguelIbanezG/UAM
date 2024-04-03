@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}
+Kahoot Clone
+{% endblock %}
+
+{% block content %}
+<h2 class="pink">Kahoot Clone, the 100% engagement plataform.</h2>
+<p>Find and create free gamified quizzes and interactive
+    lessons to engage any learner. Our game-based learining
+    plataform produces user generated multiple-choice quizzes
+    that can be accesed via a web browser,. You may use this
+    platform to review students knowledge, for formative assessment,
+    or a break form traditional classroom activities.</p>
+
+
+{% if user.is_authenticated %}
+<h4 class="pink">Your last questionnaires</h4>
+
+{% if latest_questionnaire_list %}
+<ul>
+    {% csrf_token %}
+
+
+    {% for questionnaire in latest_questionnaire_list %}
+    <li>
+        <a class="text-break" href="{{ questionnaire.get_absolute_url }}">{{ questionnaire.title }}</a>
+    </li>
+
+    <br>
+    {% endfor %}
+</ul>
+{% else %}
+<p>You have no questionnaires.</p>
+{% endif %}
+<div class="text-center">
+    <button class="btn btn-primary btn-lg" onclick="location.href='{% url 'questionnaire-create' %}'">
+        Add New Questionnaire</button>
+    <button class="btn btn-success btn-lg" onclick="location.href='{% url 'questionnaire-list' %}'">
+        List All Your Questionnaires</button>
+
+</div>
+
+
+{% else %}
+<div class="row text-center justify-content-center">
+    <div class=".col-sm-6 col-md-3 ">
+
+        <button class="btn btn-primary btn-lg" onclick="location.href='{% url 'questionnaire-create' %}'">
+            Learn more</button>
+    </div>  
+    <div class=".col-sm-6 col-md-3 ">
+        <button class="btn btn-success btn-lg" onclick="location.href='{% url 'login' %}'">
+            Already have an account, sing in</button>
+    </div>
+
+</div>
+{% endif %}
+
+{% endblock %}
+
+{% block footer %}
+<hr>
+
+<div class="row text-center justify-content-center">
+    <div class=".col-sm-6 col-md-3">
+        <div class="row text-center">
+            <h4> Contact:</h4>
+            <p>ph: (21)123 12 12 43</p>
+            <p>email: sergio.hidalgo@estudiante.uam.es</p>
+        </div>
+    </div>
+    <div class=".col-sm-6 col-md-3 ">
+        <div class=" row text-center">
+            <h4>Help:</h4>
+
+            <p><u>Unsuscribe</u></p>
+            <p><u>FAQ</u></p>
+        </div>
+
+    </div>
+    <div class=".col-sm-6 col-md-3">
+        <div class=" row text-center">
+            <h4 class>Information:</h4>
+
+            <p><u>About Us</u></p>
+            <p><u>Privacy Policy</u></p>
+
+            <p><u>Terms of Use</u></p>
+
+            <p><u>Affiliates</u></p>
+
+            <p><u>Sitemap</u></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

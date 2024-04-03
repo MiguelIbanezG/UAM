@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+
+
+
+{% csrf_token %}
+
+<div class="position-absolute top-50 start-50 translate-middle">
+    <div class="d-flex flex-column text-center ">
+        <div class="kahoot-backg green container">
+            <div class="text-center">
+
+                <h3 class="text-break">Correct Answer:
+                    {% for ans in answer%}
+
+                    {{ ans.answer }}
+
+                    {% endfor %}
+                </h3>
+                <h3>Percentage of correct answers: {{ correctno }}/{{ guessno }} </h3>
+
+
+            </div>
+        </div>
+
+        <br>
+        <div class="d-flex justify-content-center text-break">
+            <button class=" btn-primary w-25 btn-sm" id="next" value="next" onclick="next();">
+                Next Question</button>
+        </div>
+        <br>
+
+        <h3> Participant's Score </h3>
+        {% for participant in participants %}
+
+        <tr>
+            <td>{{ participant.alias }} ({{ participant.points }})</td>
+        </tr>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts%}
+
+
+
+<script type="text/javascript">
+    window.CSRF_TOKEN = "{{ csrf_token }}";
+    function next() {
+        $.ajax({
+            type: "POST",
+            url: "{% url 'game-count-down'  %}",
+            data: {csrfmiddlewaretoken: window.CSRF_TOKEN},
+            success: function (result) {
+                console.log(result);
+            },
+        });
+
+     
+    }
+
+</script>
+
+{% endblock %}

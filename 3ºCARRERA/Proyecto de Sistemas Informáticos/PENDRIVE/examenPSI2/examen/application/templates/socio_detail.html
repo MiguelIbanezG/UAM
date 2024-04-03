@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        Reservas del socio {{ socio.nombreSocio }}
+        <table>
+        <tr >
+            <th> Numero de pista </th>
+            <th> Tipo de pista </th>
+            <th> Dia Reserva </th>
+            <th> Hora Reserva </th>
+        </tr>
+        {% for reserva in reservas %}
+        <tr>
+            <td>{{ reserva.pista.id }}</td>
+            <td>{{ reserva.pista.tipoSuperficie }}</td>
+            <td>{{ reserva.fechaReserva }}</td>
+            <td>{{ reserva.horaReserva }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </body>
+</html>

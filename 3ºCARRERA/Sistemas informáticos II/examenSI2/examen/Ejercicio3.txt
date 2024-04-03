@@ -1,0 +1,158 @@
+Te voy a poner un ejercicio sobre sistemas informaticos y quiero que respondas a las preguntas:
+Se desea configurar un cluster con nombre "ClusterExamen" de acuerdo al siguiente esquema:
+Datos del PC1: 
+Navegador / Jmeter 
+http://si2srv02:4848
+Nombre:si2srv02
+Glassfish Nodo 01
+Server (DAS)
+
+Datos del PC2: 
+Nombre:si2srv01
+Glassfish Nodo 01
+Node: 01
+Instance: 01
+
+Datos del PC3: 
+Nombre:si2srv03
+Glassfish Nodo 02
+Node: 02
+Instance: 02
+Base Datos
+
+Estos han sido los datos de cada ordenador, debes saber que el ClusterExamen esta entre la Instance 01 del PC2 y la Instance 02 del PC3.
+Las IPs de cada PC son:
+si2srv01: 10.1.7.1
+si2srv02: 10.1.7.2
+si2srv03: 10.1.7.3
+
+Con todos estos datos responde a lo suiguiente:
+Desde que PC se deben realizar los comandos de administracion necesarios para configurar y desplegar el cluster.
+
+Que secuencia de comandos es necesaria para crear los nodos cluster, sus instancias, y cluster en si. Supon que las variables AS_ADMIN_USER y AS_ADMINPASSWORDFILE han sido correctamente establecidas, por lo que no es necesatio introducir los datos de autentificacion en cada comando asadmin.
+
+Que valores deben tomar las siguiente variables de configuracion de los ficheros build.properties y postgresql.properties.
+
+Para configurar y desplegar el ClusterExamen, se deben realizar los comandos de administración desde el PC2, ya que es el que tiene la instancia 01, la cual está en el medio del cluster.
+
+La secuencia de comandos necesaria para crear los nodos cluster, sus instancias y el cluster en sí sería la siguiente:
+Crear el nodo 01 en el PC2:
+asadmin create-node-ssh --nodehost si2srv01 --installdir /ruta/glassfish5/node01 si2srv01-node01
+
+Crear la instancia 01 en el nodo 01 del PC2:
+asadmin create-instance --node si2srv01-node01 --systemproperties "cluster.node-affinity=prefer" si2srv01-instance01
+
+Crear el nodo 02 en el PC3:
+asadmin create-node-ssh --nodehost si2srv03 --installdir /ruta/glassfish5/node02 si2srv03-node02
+
+Crear la instancia 02 en el nodo 02 del PC3:
+asadmin create-instance --node si2srv03-node02 --systemproperties "cluster.node-affinity=prefer" si2srv03-instance02
+
+Crear el cluster en la instancia 01 del nodo 01 del PC2:
+asadmin create-cluster --target si2srv01-instance01 ClusterExamen
+
+Agregar la instancia 02 del nodo 02 del PC3 al cluster:
+asadmin add-node-ssh --nodehost si2srv03 --installdir /ruta/glassfish5/node02 si2srv03-node02:si2srv03-instance02 ClusterExamen
+
+
+
+
+Para la variable as.home del fichero build.properties, debería establecerse la ruta al directorio de instalación de Glassfish en el PC2 (si2srv02). Según los datos proporcionados, la ruta podría ser: /ruta/glassfish5/glassfish
+
+Para la variable as.host, debería establecerse la dirección IP del PC2 (si2srv02), que es donde se encuentra el servidor Glassfish y donde se van a realizar los comandos de administración. En este caso, la dirección IP es 10.1.7.2.
+
+Para la variable as.user, debería establecerse el usuario con el que se va a realizar la autenticación en Glassfish. Según los datos proporcionados, el usuario es admin.
+
+Para la variable as.port, debería establecerse el puerto de escucha de Glassfish. Según los datos proporcionados, el puerto es 4848.
+
+Para la variable as.passwordfile, debería establecerse la ruta al archivo que contiene la contraseña del usuario admin. Según los datos proporcionados, la ruta podría ser: ${basedir}/passwordfile.
+
+Para la variable as.target, debería establecerse el servidor Glassfish donde se van a realizar las operaciones de administración. Según los datos proporcionados, el servidor es server, que es el servidor DAS del nodo 01 del PC1 (si2srv02).
+
+
+
+
+Para la variable db.host del fichero postgresql.properties, debería establecerse la dirección IP del servidor de base de datos, que en este caso es el PC2 (si2srv02). Por lo tanto, la dirección IP correcta es 10.1.7.2.
+
+Para la variable db.port, debería establecerse el puerto de escucha de PostgreSQL. Según los datos proporcionados, el puerto es 5432.
+
+Para la variable db.name, debería establecerse el nombre de la base de datos que se va a utilizar en el cluster. En este caso, el nombre es visa.
+
+Para la variable db.user, debería establecerse el nombre de usuario que se va a utilizar para acceder a la base de datos. Según los datos proporcionados, el nombre de usuario es alumnodb.
+
+Para la variable db.password, debería establecerse la contraseña del usuario que se va a utilizar para acceder a la base de datos. Dado que no se ha proporcionado la contraseña en los datos del ejercicio, deberás reemplazar los asteriscos (****) por la contraseña correcta.
+
+La variable db.pool.name se refiere al nombre del pool de conexiones que se va a utilizar. Puede elegirse cualquier nombre que sea significativo. En este caso, el nombre es VisaPool.
+
+La variable db.jdbc.resource.name se refiere al nombre del recurso JDBC que se va a utilizar. Puede elegirse cualquier nombre que sea significativo. En este caso, el nombre es jdbc/VisaDB.
+
+La variable db.url es la URL de conexión a la base de datos. Según los datos proporcionados, la URL es: jdbc:postgresql://10.1.7.2:5432/visa.
+
+Las demás variables no necesitan ser modificadas para la configuración del cluster.
+
+
+
+sisrv01: Server(Das) | DB
+sisrv02: Node 01 | Instance 01
+sisrv03: Node 02 | Instance 02
+
+Desde que PC se deben realizar los comandos de administracion necesarios para configurar y desplegar el cluster:
+Para configurar y desplegar el ClusterExamen, se deben realizar los comandos de administración desde el sisrv01, ya que los nodos como las instancias se crean desde el DAS que es el que se encargara de iniciar y detener instancias remotamente y es el que debe de 
+asegurarse que todos los nodos se “conocen” mutuamente a través de su nombre asociado a la dirección IP.
+
+Que secuencia de comandos es necesaria para crear los nodos cluster, sus instancias, y cluster en si. Supon que las variables AS_ADMIN_USER y AS_ADMINPASSWORDFILE han sido correctamente establecidas, por lo que no es necesatio introducir los datos de autentificacion en cada comando asadmin.
+
+Crear el nodo 01 en el sisrv02:
+asadmin --user admin --passwordfile /opt/SI2/passwordfile create-node-ssh --sshuser si2 --nodehost
+10.X.Y.2 --nodedir /opt/glassfish4 Node01
+
+Crear el nodo 02 en el sisrv03:
+asadmin --user admin --passwordfile /opt/SI2/passwordfile create-node-ssh --sshuser si2 --nodehost
+10.X.Y.3 --nodedir /opt/glassfish4 Node02
+
+Pruebe a listarlos, para ello emplee el siguiente comando:
+asadmin --user admin --passwordfile /opt/SI2/passwordfile list-nodes
+
+A continuación hágales un ping. Para ello emplee el siguiente comando:
+asadmin --user admin --passwordfile /opt/SI2/passwordfile ping-node-ssh Node01
+asadmin --user admin --passwordfile /opt/SI2/passwordfile ping-node-ssh Node02
+
+export AS_ADMIN_USER=admin
+export AS_ADMIN_PASSWORDFILE=/opt/SI2/passwordfile
+
+Crear el cluster:
+asadmin create-cluster SI2Cluster
+Listarlo:
+asadmin list-clusters
+
+Crear dos instancias asociadas a cada uno de los dos nodos anteriormente creados:
+asadmin --user admin --passwordfile /opt/SI2/passwordfile create-instance --cluster SI2Cluster --node
+Node01 Instance01
+asadmin --user admin --passwordfile /opt/SI2/passwordfile create-instance --cluster SI2Cluster --node
+Node02 Instance02
+
+Listar las instancias recién creadas:
+asadmin --user admin --passwordfile /opt/SI2/passwordfile list-instances -l
+Iniciar el cluster:
+asadmin --user admin --passwordfile /opt/SI2/passwordfile start-cluster SI2Cluster
+
+asadmin stop-cluster SI2Cluster
+asadmin start-cluster SI2Cluster
+
+Que valores deben tomar las siguiente variables de configuracion de los ficheros build.properties y postgresql.properties
+
+
+build.properties:
+as.host=10.X.Y.1
+as.target=SI2Cluster
+
+
+postgresql.properties:
+db.host=10.X.Y.1
+db.client.host=10.X.Y.1
+
+
+
+
+
+

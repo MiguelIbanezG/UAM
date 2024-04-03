@@ -1,0 +1,67 @@
+export PYTHONPATH=$PYTHONPATH:../..
+
+         lista = []
+        transitions = []
+        listaAuto = []                                  
+        
+        self.state_counter = 0
+                                                                    
+        nameZero = str(self.state_counter)
+        is_final = False
+        estadoZero = State(nameZero, is_final)
+	
+        listaAuto = automaton.states
+	
+        self.state_counter += 1
+		
+        for estado in listaAuto:
+            estado.name = str(self.state_counter)
+            self.state_counter += 1
+	
+		
+        transitions.append(Transition(None, listaAuto[0].name))
+        estadoZero.add_transitions(transitions)
+        lista.append(estadoZero)
+	
+        transitions.clear()
+	
+        nameFinal = str(self.state_counter)
+        is_final = True
+        estadoFinal = State(nameFinal, is_final)
+	
+        listaAuto[-1].is_final = False
+        transitions.append(Transition(None, nameFinal))
+        listaAuto[-1].add_transitions(transitions)
+	
+        lista.extend(listaAuto)
+	
+        lista.append(estadoFinal)
+	
+        automata = FiniteAutomaton(lista)
+        
+        return automata
+
+      listaAuto = []                                  
+        
+        self.state_counter = 0
+                                                                    
+        is_final = False
+        estadoZero = State("q" + str(self.state_counter), is_final)
+        self.state_counter += 1
+        is_final = True
+        estadoFinal = State("q" + str(self.state_counter), is_final)
+        self.state_counter += 1
+
+        listaAuto = automaton.states
+        
+        inicio = Transition(None, listaAuto[0].name)
+        final = Transition(None, estadoFinal.name)
+        estadoZero.add_transitions([inicio, final])
+
+        for estado in listaAuto:
+            if estado.is_final:
+                estado.is_final = False
+                estado.add_transitions([inicio, final])
+
+        lista = [estadoZero,] + automaton.states + [estadoFinal,]
+        return FiniteAutomaton(lista)

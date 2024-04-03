@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}
+Games P3
+{% endblock %}
+
+{% block content %}
+
+<h1>Games P3</h1>
+{% if user.is_authenticated %}
+Hi {{ user.username }}!
+<h4>Last Questionnaires</h4>
+{% if questionnaire_list %}
+    <ul class="list-group">
+
+    {% for qsne in questionnaire_list %}
+    <li class="list-group-item"> 
+        <a href="{{ qsne.get_absolute_url }}">{{ qsne }}</a>
+
+        <button class="btn btn-success  btn-sm" onclick="location.href='{% url 'questionnaire-update' pk=qsne.pk %}'">Update</button>
+        <button class="btn btn-primary btn-sm" onclick="location.href='{% url 'game-create' pk=qsne.id %}'">Crear
+            Juego</button>
+        <button class="btn btn-danger btn-sm"
+                onclick="location.href='{% url 'questionnaire-remove' pk=qsne.pk %}'">Borrar</button>
+    </li>
+    {% endfor %}
+    
+</ul>
+{% else %}
+<p>There are no questionnaires from this user.</p>
+{% endif %}
+<button class="btn btn-primary " onclick= "location.href='{% url 'questionnaire-create' %}'" >Crear nuevo</button>
+<button class="btn btn-primary " onclick= "location.href='{% url 'questionnaire-list' %}'" >Ver todos</button>
+
+
+
+{% else %}
+<p>You are not logged in</p>
+{% endif %}
+{% endblock content %}

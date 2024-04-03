@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block header %}
+{% endblock %}
+
+{% block inicio %}
+
+<body class="bg-info ">
+    {% endblock %}
+
+    {% block content %}
+    {% csrf_token %}
+    <div class="" id="countdown">
+
+
+        {% include "services/count_update.html" %}
+    </div>
+    <label id="url" value="{% url 'game-count-down' %}"></label>
+    {% endblock %}
+
+
+    {% block scripts%}
+    <script type="text/javascript">
+        var temp = $(this).data("url");
+        function refresh() {
+            $.ajax({
+                url: temp,
+                success: function (data) {
+                    $('#countdown').html(data);
+                }
+            });
+        }
+
+
+        $(document).ready(function () {
+            console.log("setting interval");
+            setInterval(refresh, 1000);
+
+        });
+    </script>
+
+
+
+    {% endblock %}
+
+
+
+
+
+    {% block final %}
+</body>
+{% endblock %}

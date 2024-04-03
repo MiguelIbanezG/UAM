@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<title>Formulario</title>
+</head>
+
+<body>
+<form name="form1" onsubmit="return validarFormulario()" method="post"
+	action="https://postman-echo.com/post">
+	<p id="error"></p>
+	<p>
+	  <label for="nombre">Nombre:</label><input type="text" id="nombre" name="nombre" />
+	</p>
+	<p>
+	  <label for="edad">Edad:</label> <input type="text" id="edad" name="edad" />
+	</p>
+	<p>
+	  <label for="email">Email:</label> <input type="text" id="email" name="email" />
+	</p>
+	<p><input type="submit" value="Enviar consulta" /></p>
+</form>
+
+<script>
+function validarFormulario() {
+
+	// Parrafo donde se muestran los errores
+	let error = document.getElementById("error");
+	let nombre = document.forms["form1"]["nombre"].value;
+
+	// Con trim() eliminamos caracteres en blanco delante y detras
+	if (nombre.trim().length < 2) {
+		error.innerText = "El nombre no puede tener menos de 2 caracteres";
+		return false;
+	}
+
+	// Valor del campo edad del formulario form1
+	let edad = document.forms["form1"]["edad"].value;
+
+	// /^ Comienzo de expresion regular
+	// Secuencia de al menos 1 digito
+	// $/ Fin de la expresion regular
+	let isnum = /^\d+$/.test(edad);
+	if (!isnum) {
+		error.innerText = "La edad tiene que ser un valor numerico";
+		return false;
+	}
+
+	edad = parseInt(edad); // Convertimos la edad en entero
+	if (edad < 1 || edad > 120) {
+		error.innerText = "La edad no puede ser menor de 1 año ni mayor que 120";
+		return false;
+	}
+	// Ver una validacion mas completa en:
+	// https://www.w3resource.com/javascript/form/email-validation.php
+	// Valor del campo email del formulario form1
+	let email = document.forms["form1"]["email"].value;
+
+	// /^ Comienzo de expresion regular
+	// Secuencia de al menos 1 caracter menos @ [^@]+
+	// Un @
+	// Secuencia de al menos 1 caracter menos @ [^@]+
+	// $/ Fin de la expresion regular
+	let isemail = /^[^@]+@[^@]+$/.test(email);
+
+	if (!isemail) {
+		error.innerText = "El email no tiene un formato valido";
+		return false;
+	}
+
+	return true;
+}
+</script>
+</body>
+</html>
+
+Opcion Sergio:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div>FORMULARIO</div>
+    <br>
+    <script type="text/javascript" src="{{url_for('static', filename= 'javascript/name.js')}}"></script>
+    <div>
+
+        <form action="" method="post" onsubmit="combi()" novalidate>
+            <div>
+                <label>Nombre:</label>
+                <input name="nombre" type="text" id="nombre" oninput="validacion()" />
+                <br>
+                <br>
+                <label>Edad:</label>
+                <input name="edad" type="text" id="edad" oninput="validacion()"/>
+                <br>
+                <br>
+                <label>E-mail</label>
+                <input name="email" type="text" id="correo" oninput="validacion()"/>
+                <br>
+                <br>
+                <p id="valid"></p>
+                <input type="submit" value="Enviar consulta"/>
+            </div>
+        </form>
+    </div>
+    {% block content%} {% endblock %}
+</body>
+</html>
+
+
+
+javascript/name.js
+function validacion() {
+    var x = document.getElementById("nombre").value;
+    var y = document.getElementById("edad").value;
+    var z = document.getElementById("correo").value;
+    if (x.length < 2) {
+        document.getElementById("valid").innerHTML = "El nombre debe ser más largo";
+    }
+    else if (y <= 0) {
+        document.getElementById("valid").innerHTML = "La edad no es válida";
+    }
+    else if (!(/[@]/.test(z))) {
+        document.getElementById("valid").innerHTML = "El correo no es válido";
+    }
+    else {
+        document.getElementById("valid").innerHTML = "";
+    }
+}
+
+
+
+
+function combi() {
+    var v = document.getElementById("valid").innerHTML;
+    var x = document.getElementById("nombre").value;
+    var y = document.getElementById("edad").value;
+    var z = document.getElementById("correo").value;
+    
+    if (v === "" && !((x === "") || (y == null) || (z === ""))) {
+        alert("Formulario enviado");
+    } else {
+        event.preventDefault();
+        alert("Error en el formulario");
+
+    }
+}
+
+Ejercicio 9:
+<!DOCTYPE htlm> 
+<html> 
+<head> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+<script> function cargarRespuesta() {
+	var xhttp = new XMLHttpRequest(); 
+	xhttp.onreadystatechange = function () { 
+	// BLOQUE 1 ------------------------------------------------- // 
+	readState == 4 Es que la operacion se ha completado // status == 200 La operacion se ha completado correctamente if (xhttp.readyState == 4 && xhttp.status == 200) { $("#resultado").text("Resultado: " + xhttp.responseText); }//----------------------------------------------------------- }; // BLOQUE 2 ----------------------- let params = "valor1=" + document.forms["Formulario"]["valor1"].value + "&valor2=" + document.forms["Formulario"]["valor2"].value; xhttp.open("GET", "http://127.0.0.1:8800?" + params, true); xhttp.send(); // -------------------------------- }</script> </head> <body> <form name="Formulario"> Valor 1: <input type="text" id="valor1" size="1" /> Valor 2: <input type="text" id="valor2" size="1" /> <button type="button" onclick="cargarRespuesta()">Calcular</button> </form> <div id="resultado">Resultado:</div> </body> </html>

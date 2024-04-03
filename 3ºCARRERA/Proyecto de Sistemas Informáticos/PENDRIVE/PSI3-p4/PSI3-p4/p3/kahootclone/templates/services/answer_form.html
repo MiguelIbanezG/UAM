@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="pink">Update or Create Answer</h2>
+
+  <form class="form-horizontal" action="" method="post">
+    {% csrf_token %}
+    
+    
+
+    <div class="form-group row">
+      
+      <div class="col-sm-7">
+  
+        {{ form.as_p }}
+
+      </div>
+    </div>
+
+    
+    {% if view.kwargs.questionid %}
+    <a href="{% url 'question-detail' pk=view.kwargs.questionid  %}">Cancel</a>
+      
+    {% else %}
+    <a href="{% url 'question-detail' pk=answer.question.id  %}">Cancel</a>
+    {% endif %}
+
+    <button  type="submit"  class="btn btn-danger btn-sm" onclick="submit">
+    Confirm</button>
+
+  </form>
+{% endblock %}

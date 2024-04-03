@@ -1,0 +1,22 @@
+Para que Alicia pueda enviar un correo electrónico a Bernardo, es necesario que siga los siguientes pasos:
+Abrir el cliente de correo nativo.
+Redactar el correo electrónico y especificar la dirección del destinatario (thepunisher@marvel.com) en el campo "Para".
+Escribir el asunto del correo electrónico en el campo correspondiente.
+Redactar el cuerpo del correo electrónico.
+Adjuntar cualquier archivo o documento necesario.
+Verificar la ortografía y la gramática del correo electrónico.
+Hacer clic en el botón "Enviar".
+Para que Bernardo pueda recibir y leer el correo electrónico correctamente, es necesario que su servidor de correo esté en funcionamiento y que el correo electrónico se entregue correctamente. Cuando Alicia envía el correo electrónico, su cliente de correo nativo se comunica con su servidor de correo saliente (SMTP) y envía el correo electrónico a través de Internet. El servidor de correo saliente envía el correo electrónico al servidor de correo entrante (IMAP o POP) de Marvel.com, que es responsable de recibir el correo electrónico y almacenarlo en el buzón de correo de Bernardo. Cuando Bernardo abre su cliente de correo nativo y se conecta al servidor de correo entrante de Marvel.com, puede descargar y leer el correo electrónico enviado por Alicia.
+
+Los protocolos y entidades involucrados en el proceso de envío y recepción de correos electrónicos son los siguientes:
+SMTP (Simple Mail Transfer Protocol): es el protocolo utilizado por el servidor de correo saliente para enviar correos electrónicos a través de Internet.
+IMAP (Internet Message Access Protocol) o POP (Post Office Protocol): son los protocolos utilizados por el servidor de correo entrante para recibir correos electrónicos y permitir que los usuarios descarguen y accedan a ellos desde su cliente de correo nativo.
+Servidor de correo saliente: es el servidor que envía el correo electrónico desde el cliente de correo nativo de Alicia a través de Internet.
+Servidor de correo entrante: es el servidor que recibe el correo electrónico enviado por Alicia y lo almacena en el buzón de correo de Bernardo.
+Cliente de correo nativo: es la aplicación utilizada por Alicia y Bernardo para enviar, recibir y leer correos electrónicos en sus computadoras o dispositivos móviles.
+
+
+
+
+
+Regenerate response

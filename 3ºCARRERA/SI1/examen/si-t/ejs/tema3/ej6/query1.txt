@@ -1,0 +1,16 @@
+  {
+    centros: [
+      { nombre: 'Facultad de Ciencias', alumnos: 12387 },
+      {
+        nombre: 'Facultad de Ciencias Económicas y Empresariales',
+        alumnos: 12387
+      },
+      { nombre: 'Facultad de Derecho', alumnos: 12387 },
+      { nombre: 'Facultad de Filosofía y Letras', alumnos: 12387 },
+      {
+        nombre: 'Facultad de Formación del Profesorado y Educación',
+        alumnos: 12387
+      },
+      { nombre: 'Escuela Politécnica Superior', alumnos: 12387 }
+    ]
+  }

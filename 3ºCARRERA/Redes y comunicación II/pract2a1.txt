@@ -1,0 +1,286 @@
+;**************************************************************************
+; SBM 2023. ESTRUCTURA BÁSICA DE UN PROGRAMA EN ENSAMBLADOR
+;**************************************************************************
+; DEFINICION DEL SEGMENTO DE DATOS
+DATOS SEGMENT
+
+VECTOR1 DB 1h,2h,2h,4h
+VECT0R2 DB 4h,2h,5h,1h
+VECTOR3 DB 3h,2h,4h,1h
+
+ASCII DW 0
+
+VFINAL DB 4 DUP (0)
+
+MENSAJE_ERROR DB "Error: ","$"
+
+MENSAJE_ERROR_1 DB "Error: -> Numeros mayores o menores de 1 o 4", 10, 13, "$"
+MENSAJE_ERROR_2 DB "Error: -> Numeros repetidos", 10, 13, "$"
+MENSAJE_CORRECTO DB " -> Numeros correctos", 10, 13, "$"
+SPACE DB 20h,"$"
+BARRA DB 5Bh,"$"
+BARRA1 DB 5Dh,"$"
+
+
+DATOS ENDS
+;**************************************************************************
+; DEFINICION DEL SEGMENTO DE PILA
+PILA SEGMENT STACK "STACK"
+DB 40H DUP (0) ;ejemplo de inicialización, 64 bytes inicializados a 0
+PILA ENDS
+;**************************************************************************
+; DEFINICION DEL SEGMENTO EXTRA
+EXTRA SEGMENT
+
+EXTRA ENDS
+;**************************************************************************
+; DEFINICION DEL SEGMENTO DE CODIGO
+CODE SEGMENT
+ASSUME CS: CODE, DS: DATOS, ES: EXTRA, SS: PILA
+; COMIENZO DEL PROCEDIMIENTO PRINCIPAL
+MAIN PROC
+; INICIALIZA LOS REGISTROS DE SEGMENTO CON SU VALOR
+MOV AX, DATOS
+MOV DS, AX
+MOV AX, PILA
+MOV SS, AX
+MOV AX, EXTRA
+MOV ES, AX
+MOV SP, 64 ; CARGA EL PUNTERO DE PILA CON EL VALOR MAS ALTO
+; FIN DE LAS INICIALIZACIONES
+; COMIENZO DEL PROGRAMA
+
+
+XOR AH,AH ;Se carga 0 en AH para volver a empear el programa
+
+;Cargamos el valor en AL y llamamos a la funcion para convertirlo en ASCII con los 4 valores
+MOV AL, VECTOR1[0]
+CALL HEXA_ASCII
+PUSH WORD PTR ASCII
+
+MOV AL, VECTOR1[1]
+CALL HEXA_ASCII
+PUSH WORD PTR ASCII
+
+MOV AL, VECTOR1[2]
+CALL HEXA_ASCII
+PUSH WORD PTR ASCII
+
+MOV AL, VECTOR1[3]
+CALL HEXA_ASCII
+PUSH WORD PTR ASCII
+
+;Comprobamos el 1 elemento, Si es menor que 0 salta el error
+MOV BX, SP
+MOV AX, SS:[BX]
+CMP BYTE PTR AX, 30h
+JLE LINE84
+
+;Si es mayor que 4 salta al el error
+MOV BX, SP
+MOV AX, SS:[BX]
+CMP BYTE PTR AX, 34h
+JG ERROR1
+
+;Saca el 1 elemento de la pila y lo mete en el vector final
+POP AX	
+MOV VFINAL[0], AL 
+
+
+;Repetimos con el 2 elemento
+MOV BX, SP
+MOV AX, SS:[BX]
+CMP BYTE PTR AX, 30h
+JLE ERROR1
+
+MOV BX, SP
+MOV AX, SS:[BX]
+CMP BYTE PTR AX, 34h
+JG ERROR1
+
+;Sacamos el 2 elemento de la pila
+POP AX
+MOV VFINAL[1], AL
+
+;Repetimos con el 3 elemento 
+MOV BX, SP
+MOV AX, SS:[BX]
+CMP BYTE PTR AX, 30h
+
+LINE84:
+
+JLE ERROR1
+
+MOV BX, SP
+MOV AX, SS:[BX]
+CMP BYTE PTR AX, 34h
+JG ERROR1
+
+;Sacamos el 3 elemento de la pila
+POP AX
+MOV VFINAL[2], AL
+
+;Repetimos con el 4 elemento 
+MOV BX, SP
+MOV AX, SS:[BX]
+CMP BYTE PTR AX, 30h
+JLE ERROR1
+
+MOV BX, SP
+MOV AX, SS:[BX]
+CMP BYTE PTR AX, 34h
+JG ERROR1
+
+;Sacamos el 4 elemento de la pila
+POP AX
+MOV VFINAL[3], AL
+
+MOV CX, 3 ;ponemos el contado en el final del vector
+MOV DI, 0
+
+
+BUCLE_ERROR_2:
+    CMP CX, 0
+    JE FIN_ERROR_2
+	
+    BUCLE_INTERNO_ERROR_2:
+	
+        MOV SI, CX ; SI = 3
+        MOV AL, VFINAL[DI] 
+        MOV BL, VFINAL[SI]  
+        CMP AL, BL
+        JE ERROR2 ;Salta si son iguales
+        INC DI
+        CMP CX, DI
+        JNE BUCLE_INTERNO_ERROR_2
+		
+    FIN_BUCLE_INTERNO_ERROR_2:
+	
+    DEC CL
+    MOV DI, 0
+    JMP BUCLE_ERROR_2
+	
+FIN_ERROR_2:
+
+
+;Imprime que el vector es correcto
+MOV DX, OFFSET MENSAJE_CORRECTO
+MOV AH, 09h
+INT 21h
+JMP FIN
+
+ERROR1: ;Imprime que el vector tiene numero maypres de 4 o menores de 1	
+CALL MATRIZ_ASCII
+;Imprimo la barra
+MOV DX, OFFSET BARRA
+MOV AH, 09H
+INT 21H
+MOV SI, 0
+
+    BUCLE_1:
+        CMP SI, 4
+        JE FIN_BUCLE_1
+			
+		;Imprimo el espacio
+        MOV DX, OFFSET SPACE
+        MOV AH, 09H
+        INT 21H
+			
+		;Imprimo 1 valor de la matriz
+        MOV DL, VECTOR1[SI]
+        MOV AH, 06H
+        INT 21H
+			
+		;Imprimo espacio
+        MOV DX, OFFSET SPACE
+        MOV AH, 09H
+        INT 21H
+			
+        INC SI
+        JMP BUCLE_1
+			
+    FIN_BUCLE_1:
+		MOV DX, OFFSET BARRA1
+		MOV AH, 09H
+		INT 21H
+		MOV SI, 0
+		
+		MOV DX, OFFSET MENSAJE_ERROR_1
+		MOV AH, 09h
+		INT 21h
+		JMP FIN
+
+
+ERROR2: ;Imprime que el vector tiene numeros repetidoS
+CALL MATRIZ_ASCII
+MOV DX, OFFSET BARRA
+MOV AH, 09H
+INT 21H
+MOV SI, 0
+
+    BUCLE_2:
+        CMP SI, 4
+        JE FIN_BUCLE_2
+			
+		;Imprimo el espacio
+        MOV DX, OFFSET SPACE
+        MOV AH, 09H
+        INT 21H
+			
+		;Imprimo 1 valor de la matriz
+        MOV DL, VECTOR1[SI]
+        MOV AH, 06H
+        INT 21H
+			
+		;Imprimo espacio
+        MOV DX, OFFSET SPACE
+        MOV AH, 09H
+        INT 21H
+			
+        INC SI
+        JMP BUCLE_2
+			
+    FIN_BUCLE_2:
+		MOV DX, OFFSET BARRA1
+		MOV AH, 09H
+		INT 21H
+		MOV SI, 0
+	
+		MOV DX, OFFSET MENSAJE_ERROR_2
+		MOV AH, 09h
+		INT 21h
+		JMP FIN
+
+;FIN DEL PROGRAMA
+FIN:
+MOV AX, 4C00H
+INT 21H
+MAIN ENDP
+
+
+;Recibe un entero y los transforma en ASCII, DX:BX siendo DX el segmento y BX el offset
+HEXA_ASCII PROC 
+    ADD AX, 30h
+    MOV ASCII, AX
+    MOV DX, SEG ASCII
+    MOV BX, OFFSET ASCII
+    RET
+HEXA_ASCII ENDP
+
+MATRIZ_ASCII PROC
+    MOV BX, 0
+    BUCLE:
+        MOV AL, VECTOR1[BX]
+        ADD AL, 30H
+        MOV VECTOR1[BX], AL
+        INC BX
+        CMP BX, 16
+        JNE BUCLE
+    RET
+MATRIZ_ASCII ENDP
+
+
+; FIN DEL SEGMENTO DE CODIGO
+CODE ENDS
+; FIN DEL PROGRAMA INDICANDO DONDE COMIENZA LA EJECUCION
+END MAIN 

@@ -1,0 +1,32 @@
+sudo apt install python3-pip
+
+virtualenv p1_env --python=python3.9
+source p1_env/bin/activate
+
+pip3 install django~=4.0
+
+sudo pip3 install virtualenvwrapper
+
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
+source ~/.bashrc
+
+django-admin startproject examen
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver
+
+python3 manage.py startapp application
+
+dropdb -U alumnodb -h localhost examen
+createdb -U alumnodb -h localhost examen
+python3 manage.py runserver
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py createsuperuser
+python3 manage.py populate

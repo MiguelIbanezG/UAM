@@ -1,0 +1,10 @@
+a) creacion.bash
+b) Presenta una cardinalidad N - N en relación actor - películas, al tener
+un actor varias películas y una película varios actores.
+c) Para satisfacer las Formas normales, y porque es la manera más rápida
+de establecer una relación entre las tablas actor y película (sin 
+tener todos los atributos en una misma tabla).
+d) Porque reparto hace referencia a un atributo de actor y a otro de película
+(sus ids) así que no puede referenciarlos si no han sido creados.
+e) Por el mismo motivo que el anterior, solo que esta vez es para no dejar 
+referencias a un atributo de otra tabla que ha sido borrado (borraEstado.sql).

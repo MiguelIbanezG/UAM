@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h1>{{ questionnaire.title }} - {{ questionnaire.user.username }}</h1>
+
+{% csrf_token %}
+<p><strong>Updated:</strong> {{ questionnaire.updated_at }}</p>
+
+<button class="btn btn-success  btn-sm"
+    onclick="location.href='{% url 'questionnaire-update' pk=questionnaire.pk %}'">Update</button>
+<button class="btn btn-primary  btn-sm" onclick="location.href='{% url 'game-create' pk=questionnaire.id %}'">Crear
+    Juego</button>
+<button class="btn btn-danger  btn-sm"
+    onclick="location.href='{% url 'questionnaire-remove' pk=questionnaire.pk %}'">Borrar</button>
+
+
+{% if questions %}
+<div style="margin-left:20px;margin-top:20px">
+    <h4>Questions:</h4>
+    <ul class="list-group">
+        {% for question in questions %}
+
+        <li class="list-group-item">
+            <a href="{% url 'question-detail' pk=question.pk %}">{{ question}}</a>
+            <button class="btn btn-danger  btn-sm"
+                onclick="location.href='{% url 'question-remove' pk=question.pk %}'">Borrar</button>
+            <button class="btn btn-success btn-sm"
+                onclick="location.href='{% url 'question-update' pk=question.pk %}'">Update</button>
+
+
+
+        </li>
+    </ul>
+    {%endfor%}
+
+{%else%}
+<p>There are no questions from this questionnaire.</p>
+
+{%endif%}
+    
+    <button class="btn btn-primary"
+        onclick="location.href='{% url 'question-create' questionnaireid=questionnaire.pk %}'">Añadir</button>
+</div>
+
+
+
+
+
+
+{% endblock %}

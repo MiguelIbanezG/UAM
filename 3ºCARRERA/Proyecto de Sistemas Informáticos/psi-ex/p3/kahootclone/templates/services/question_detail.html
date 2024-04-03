@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+{% csrf_token %}
+
+<h1>{{ question.questionnaire.title }}</h1>
+<h2> {{ question.question }}</h2>
+
+
+<p><strong>Updated:</strong> {{ question.updated_at }}</p>
+
+<button class="btn btn-danger btn-sm" onclick="location.href='{% url 'question-remove' pk=question.pk %}'">Borrar</button>
+<button class="btn btn-success btn-sm" onclick="location.href='{% url 'question-update' pk=question.pk %}'">Update</button>
+
+<div style="margin-left:20px;margin-top:20px">
+    <h4>Answers:</h4>
+
+{% if question.answer_set.all  %}
+
+<ul class="list-group">
+    {% for answer in question.answer_set.all %}
+
+    <li class="list-group-item">
+        <a>{{answer}}</a>
+
+        <button class="btn btn-danger btn-sm" onclick="location.href='{% url 'answer-remove' pk=answer.pk %}'">Borrar</button>
+        <button class="btn btn-success btn-sm" onclick="location.href='{% url 'answer-update' pk=answer.pk %}'">Update</button>
+
+    </li>
+
+    {%endfor%}
+</ul>
+{%else%}
+
+<p>There are no answers from this question.</p>
+{%endif%}
+
+    <button class="btn btn-primary" onclick="location.href='{% url 'answer-create' questionid=question.pk %}'">Añadir</button>
+
+
+
+</div>
+
+
+{% endblock %}

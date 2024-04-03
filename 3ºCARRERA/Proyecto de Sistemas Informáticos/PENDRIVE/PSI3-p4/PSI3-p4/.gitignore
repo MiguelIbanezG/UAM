@@ -1,0 +1,11 @@
+/p1_env
+/p2_env
+/enunciado
+*.pyc
+.vscode
+
+# Text backup files
+*.bak
+.env
+# Database
+*.sqlite3

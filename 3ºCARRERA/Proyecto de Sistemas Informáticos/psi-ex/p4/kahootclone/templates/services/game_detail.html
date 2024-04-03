@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<h2 class="pink">Game detail</h2>
+<h5> <strong class="text-break">{{ game.publicId }}:</strong>
+    <button class="btn btn-outline-danger btn-sm" onclick="location.href='{% url 'game-detail' publicId=game.publicId %}'">
+        Delete </button>
+ </h5>
+<h7 class="text-break">{{ game.questionnaire.title }}</h7>
+
+{% csrf_token %}
+
+<div style="margin-left:20px;margin-top:20px">
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th scope="col">participants</th>
+            </tr>
+          </thead>
+        <tbody>
+            {% for participant in game.participant_set.all %}
+
+            <tr>
+                <td class="text-break">{{ participant.alias }}</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    {%else%}
+
+    {% endif %}
+
+
+
+
+
+
+
+</div>
+
+
+
+{% endblock %}
+

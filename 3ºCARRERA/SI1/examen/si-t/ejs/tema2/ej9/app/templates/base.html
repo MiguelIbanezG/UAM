@@ -1,0 +1,39 @@
+<!DOCTYPE htlm>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    <script>
+        function cargarRespuesta() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                // In local files, status is 0 upon success in Mozilla Firefox
+                if (xhttp.readyState === XMLHttpRequest.DONE) {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("resultado").innerHTML = xhttp.responseText;
+                    }
+                }
+            };
+
+            const method = "GET";
+            const url = "{{ url_for('calc') }}" + "?valor1=" + document.getElementById("valor1").value + "&valor2=" + document.getElementById("valor2").value;
+            xhttp.open(method, url, true);
+
+            xhttp.send("valor1=1");
+
+        }
+    </script>
+</head>
+
+<body>
+    <form name="Formulario">
+        Valor 1: <input type="text" id="valor1" size=1 />
+        Valor 2: <input type="text" id="valor2" size=1 />
+        <button type="button" onclick="cargarRespuesta()">Calcular</button>
+    </form>
+    <div id="resultado">Resultado: </div>
+    <p id="total"></p>
+</body>
+
+</html>

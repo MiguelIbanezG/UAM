@@ -1,0 +1,7 @@
+Sergio Hidalgo y Miguel Ibañez
+
+Kahoot Render: https://psip4api.onrender.com/
+KahootApi Render: https://psip4api.onrender.com/api/
+VueClient Render: https://psip4api.onrender.com
+
+Base de datos:postgres://alumnodb:7Dj3kvZKYVOy@ep-restless-cloud-825030.eu-central-1.aws.neon.tech/psip3

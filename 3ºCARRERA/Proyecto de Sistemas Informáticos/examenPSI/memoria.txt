@@ -1,0 +1,778 @@
+Primero activamo el entorno virtual:
+virtualenv p1_env --python=python3.9
+source p1_env/bin/activate
+
+Instalamos con el entorno activado:
+pip3 install django~=4.0
+Instalaciones:
+ pip install psycopg2
+ pip install -r requirements.txt
+ 
+
+
+1. Crea un proyecto llamado project en Django. Dentro del proyecto crea una aplicación llamada application.
+
+Creamos el proyecto de django dentro de la carpeta examenPSI:
+django-admin startproject examen
+
+Creamo la aplicacion dentro de la carpeta examen:
+django-admin startapp  application
+
+
+
+
+2. Crea una base de datos en PostgreSQL para la persistencia de datos. La base
+de datos debe llamarse examen y debe ser accesible usando la cadena postgres:
+//alumnodb:alumnodb@localhost:5432/examen.
+
+Creamos la base de datos en Postgres:
+Opcion 1: sudo -su postgres | createdb -U alumnodb -h localhost examen
+Opcion 2: sudo -su postgres | psql | CREATE DATABASE examen WITH OWNER alumnodb;
+Para crear el usuario: sudo -su postgres | psql | CREATE USER alumnodb WITH PASSWORD 'alumnodb';
+
+sudo apt-get install postgresql postgresql-contrib
+sudo su - postgres
+psql
+CREATE DATABASE examen;
+CREATE USER alumnodb WITH PASSWORD 'alumnodb';
+GRANT ALL PRIVILEGES ON DATABASE examen TO alumnodb
+
+
+
+
+3. Crea el modelo de datos y configura el proyecto para que los modelos puedan ser
+accedidos utilizando el sistema de administraci´on de Django (http://localhost:
+8001/admin/).
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver 8001
+
+
+
+examenPSI/examen/application/models.py:
+from django.db import models
+    
+class Canal(models.Model):
+    nombreCanal = models.CharField(max_length=100)
+
+    def __str__(self):
+        """String for representing the Model object."""
+        return self.nombreCanal
+
+class Usuario(models.Model):
+    nombreUsuario = models.CharField(max_length=100)
+
+    def __str__(self):
+        """String for representing the Model object."""
+        return self.nombreUsuario
+    
+class Suscripcion(models.Model):
+    canal = models.ForeignKey(Canal, on_delete=models.CASCADE)
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    fechaDeSuscripcion = models.DateField(auto_now_add=True)
+    
+examenPSI/examen/examen/settings.py : 
+INSTALLED_APPS = [ 'application.apps.ApplicationConfig']
+DATABASES = {
+   'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'examen',
+        'USER': 'alumnodb',
+        'PASSWORD': 'alumnodb',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
+DATABASES = {
+}
+
+POSTGRESQL_URL = 'postgres://alumnodb:alumnodb@localhost/examen'
+
+db_from_env = dj_database_url.config(default=POSTGRESQL_URL, conn_max_age=500)
+
+DATABASES['default'] = db_from_env
+
+
+TIME_ZONE = 'Europe/Madrid'
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
+
+
+
+
+
+
+4. Escribe un script llamado populate (que se ejecute utilizando el comando ”python manage.py populate ”) que, al ejecutarse como comando Django, inserte lossiguientes datos en la base de datos utilizando las facilidades ORM ofrecidas por Django.
+usuario (1001,’antonio2985’)
+usuario (1002,’respetaCamiones124’)
+usuario (1003,’asierUR’)
+canal (1001,’elxokasTV’)
+canal (1002,’ibai’)
+canal (1003,’playz’)
+suscripcion (1001,1001,1001,’05-04-2023’)
+suscripcion (1002,1001,1002, ’11-04-2023’)
+suscripcion (1003,1003,1003, ’12-04-2023’)
+
+Añadimos en:
+
+examenPSI/examen/examen/populate.py:
+from application.models import Canal, Usuario, Suscripcion
+
+def main():
+    
+    antonio = Usuario(id=1001, nombreUsuario='antonio2985')
+    respeta = Usuario(id=1002, nombreUsuario='respetaCamiones124')
+    asier = Usuario(id=1003, nombreUsuario='asierUR')
+    antonio.save()
+    respeta.save()
+    asier.save()
+
+    xokas = Canal(id=1001, nombreCanal='elxokasTV')
+    ibai = Canal(id=1002, nombreCanal='ibai')
+    play = Canal(id=1003, nombreCanal='playz')
+    xokas.save()
+    ibai.save()
+    play.save()
+
+    suscripcion = Suscripcion(id=1001, canal=xokas, usuario=antonio, fechaDeSuscripcion='2023-04-05')
+    suscripcion1 = Suscripcion(id=1002, canal=ibai, usuario=respeta, fechaDeSuscripcion='2023-04-11')
+    suscripcion2 = Suscripcion(id=1003, canal=play, usuario=asier, fechaDeSuscripcion='2023-04-12')
+    suscripcion.save()
+    suscripcion1.save()
+    suscripcion2.save()
+
+
+    
+
+def populate():
+    antonio = Usuario.objects.create(id=1001, nombreUsuario='antonio2985')
+    respeta_camiones = Usuario.objects.create(id=1002, nombreUsuario='respetaCamiones124')
+    asier = Usuario.objects.create(id=1003, nombreUsuario='asierUR')
+
+    elxokas = Canal.objects.create(id=1001, nombreCanal='elxokasTV')
+    ibai = Canal.objects.create(id=1002, nombreCanal='ibai')
+    playz = Canal.objects.create(id=1003, nombreCanal='playz')
+
+    suscripcion1 = Suscripcion.objects.create(id=1001, canal=elxokas, usuario=antonio, fechaDeSuscripcion=date(2023, 4, 5))
+    suscripcion2 = Suscripcion.objects.create(id=1002, canal=elxokas, usuario=respeta_camiones, fechaDeSuscripcion=date(2023, 4, 11))
+    suscripcion3 = Suscripcion.objects.create(id=1003, canal=playz, usuario=asier, fechaDeSuscripcion=date(2023, 4, 12))
+
+if __name__ == '__main__':
+    populate()
+    
+def run():
+    Usuario.objects.create(id=1001, nombreUsuario='antonio2985')
+    Usuario.objects.create(id=1002, nombreUsuario='respetaCamiones124')
+    Usuario.objects.create(id=1003, nombreUsuario='asierUR')
+
+    Canal.objects.create(id=1001, nombreCanal='elxokasTV')
+    Canal.objects.create(id=1002, nombreCanal='ibai')
+    Canal.objects.create(id=1003, nombreCanal='playz')
+
+    Suscripcion.objects.create(id=1001, canal=Canal.objects.get(id=1001), usuario=Usuario.objects.get(id=1001), fechaDeSuscripcion=datetime.strptime('05-04-2023', '%d-%m-%Y').date())
+    Suscripcion.objects.create(id=1002, canal=Canal.objects.get(id=1001), usuario=Usuario.objects.get(id=1002), fechaDeSuscripcion=datetime.strptime('11-04-2023', '%d-%m-%Y').date())
+    Suscripcion.objects.create(id=1003, canal=Canal.objects.get(id=1003), usuario=Usuario.objects.get(id=1003), fechaDeSuscripcion=datetime.strptime('12-04-2023', '%d-%m-%Y').date())
+    
+        languages = [
+        {'name': 'English'},
+        {'name': 'Spanish'}
+    ]
+
+    genres = [
+        {'name': 'Horror'},
+        {'name': 'Thriller'},
+        {'name': 'Science Fiction'},
+        {'name': 'Historical'}
+    ]
+
+    authors = [
+        {
+            'first_name': 'Stephen',
+            'last_name': 'King',
+            'date_of_birth': '1947-09-21',
+            'date_of_death': ''
+        },nombreUsuario
+        {
+            'first_name': 'Isaac',
+            'last_name': 'Asimov',
+            'date_of_birth': '1920-01-02',
+            'date_of_death': '1992-05-06'
+        }
+    ]
+for lan in languages:
+        lang = Language(name=lan['name'])
+        lang.save()
+
+    for gen in genres:
+        genr = Genre(name=gen['name'])
+        genr.save()
+
+    for aut in authors:
+        if not aut['date_of_death']:
+            dod = None
+        else:
+            dod = aut['date_of_death']
+        auth = Author(first_name=aut['first_name'], last_name=aut['last_name'], date_of_birth=aut['date_of_birth'], date_of_death=dod)
+        auth.save()
+        
+examenPSI/examen/application/admin.py:
+from .models import Canal, Usuario, Suscripcion
+# Register your models here.
+admin.site.register(Canal)
+admin.site.register(Usuario)
+admin.site.register(Suscripcion)
+
+examenPSI/examen/examen/manage.py:
+if __name__ == '__main__':
+    if sys.argv[1] == 'populate':
+        print("Starting application population script...")
+        from populate import main
+        print("Done!")
+    
+    main()
+
+
+
+
+
+
+
+
+
+5. Puebla la base de datos a través del comando populate, asi mismo activa la interfaz
+de administración utilizando como nombre de usuario y password alumnodb.
+
+python manage.py createsuperuser
+python manage.py makemigrations
+python manage.py migrate
+python manage.py populate.py
+python manage.py runserver 8001
+
+
+
+
+
+
+
+
+
+
+6. Utilizando el template canal .html incluido en el Anexo A, crea una p´agina web accesible en la direccion $PROJECT URL/application/canal/<int:PK>, de forma que devuelva una lista con todos las suscripciones de un canal con identificador
+PK. Nota: canal .html no debe modificarse. Si la base de datos no contiene ning´un
+canal con el identificador proporcionado, se debe informar al usuario a trav´es de
+la variable error.
+	
+Crea un avista en views.py para que funcione este html
+    <html>
+    <head>
+    </head>
+    <body>
+        {% if error %}
+        {{ error }}
+        {% else %}
+        Suscripciones del canal {{ nombreCanal }}
+        <table>
+            {% for subs in suscripciones %}
+            <tr>
+                <th>{{ subs.usuario.id }}</th>
+                <td>{{ subs.usuario.nombreUsuario }}</td>
+                <td>{{ subs.fechaDeSuscripcion }}</td>
+            </tr>
+            { % end for %}
+        </table>
+        { % end if %}
+    </body>
+</html>
+
+
+
+Añadir en:
+examenPSI/examen/application/templates:
+El fichero canal.html
+
+examenPSI/examen/examen/urls.py:
+urlpatterns = [
+    path('admin/', admin.site.urls),
+]
+urlpatterns += [
+    path('application/', include('application.urls')),
+]
+
+examenPSI/examen/application/urls.py:
+urlpatterns = [
+    path('canal/<int:PK>/', views.canal, name='canal'),
+]
+
+examenPSI/examen/application/views.py:
+def canal(request, PK):
+    canal = get_object_or_404(Canal, pk=PK)
+    suscripciones = Suscripcion.objects.filter(canal=canal)
+    context = {'nombreCanal': canal.nombreCanal, 'suscripciones': suscripciones}
+    return render(request, 'canal.html', context)
+    
+def canal(request, PK):
+    try:
+        canal = Canal.objects.get(id=PK)
+        suscripciones = Suscripcion.objects.filter(canal=canal)
+        nombreCanal = canal.nombreCanal
+    except Canal.DoesNotExist:
+        error = "El canal no existe"
+        return render(request, 'canal.html', {'error': error})
+
+    return render(request, 'canal.html', {'suscripciones': suscripciones, 'nombreCanal': nombreCanal})
+
+
+
+Para poder ejecutar python3 manage.py populate:
+examenPSI/examen/manage.py:
+if __name__ == '__main__':
+    if sys.argv[1] == 'populate':
+        print("Starting application population script...")
+        from populate import main
+        print("Done!")
+    main()
+
+
+
+
+
+
+
+7. Creación de un API REST utilizando Django. Crea una aplicación api en el proyecto Django creado en los apartados anteriores y desarrolla en ella un API que acepte peticiones de lectura (GET), creación (POST), actualización (PUT) y borrado de datos (DELETE). El API debe devolver datos en formato JSON y además ser accesible desde el navegador a través de la dirección $PROJECT URL/api/v1.
+
+
+python manage.py startapp api
+
+crear el api/serializers.py:
+class CanalSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Canal
+        fields = '__all__'
+
+class SuscripcionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Suscripcion
+        fields = '__all__'
+
+class UsuarioSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Usuario
+        # fields = ['id', 'nombre', 'descripcion', 'precio']
+        fields = '__all__'
+
+Copiar los ficheros de application a api:
+admin.py
+urls.py
+En viwes.py:
+class CanalViewSet(viewsets.ModelViewSet):
+    queryset = Canal.objects.all()
+    serializer_class = CanalSerializer
+
+    def create(self, request, *args, **kwargs):
+        serializer = CanalSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def update(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = CanalSerializer(instance, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class UsuarioViewSet(viewsets.ModelViewSet):
+    queryset = Usuario.objects.all()
+    serializer_class = UsuarioSerializer
+
+    def create(self, request, *args, **kwargs):
+        serializer = UsuarioSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def update(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = UsuarioSerializer(instance, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class SuscripcionViewSet(viewsets.ModelViewSet):
+    queryset = Suscripcion.objects.all()
+    serializer_class = SuscripcionSerializer
+
+    def create(self, request, *args, **kwargs):
+        serializer = SuscripcionSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def update(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = SuscripcionSerializer(instance, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        self.perform_destroy(instance)
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+en examen/urls.py:
+router = routers.DefaultRouter()
+# En el router vamos agnadiendo los endpoints a los viewsets
+router.register('canal', views.CanalViewSet)
+router.register('usuario', views.UsuarioViewSet)
+router.register('suscripcion', views.SuscripcionViewSet)
+
+urlpatterns = [
+    path('api/v1/', include(router.urls)),
+    path('admin/', admin.site.urls),
+]
+
+urlpatterns += [
+    path('application/', include('application.urls')),
+]
+
+En examen/settings.py:
+INSTALLED_APPS = [
+    'api.apps.ApiConfig',
+    'rest_framework',
+    'corsheaders',
+]
+REST_FRAMEWORK = {'DEFAULT_PERMISSION_CLASSES': [
+'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+],
+}
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = [
+'http://localhost:3000',
+]
+
+
+
+
+8. Crea un proyecto project vue en Vue.js que acceda al API creada en el apartado
+anterior y muestre en su p´agina principal un resumen de los usuarios, canales y
+suscripciones existentes. Para facilitar la visualizaci´on puedes utilizar tres tablas
+distintas, una para cada categor´ıa (usuarios, canales y suscripciones).
+
+
+Mirar settings.py:
+CORS_ORIGIN_ALLOW_ALL = DEBUG
+
+CORS_ORIGIN_WHITELIST = [
+    'http://127.0.0.1:3000',
+    'http://localhost:3000'
+]
+    
+    
+    
+CORS_WHITELIST=os.getenv('CORS_WHITELIST')
+
+if (CORS_WHITELIST):
+    CORS_ORIGIN_WHITELIST.append(CORS_WHITELIST)
+
+
+npm install vue@3.2.27
+npm init vue@3.2 tutorial-vue
+
+cd project_vue
+  npm install
+  npm run dev
+
+project_vue/App.vue:
+<template>
+  <header>
+
+    <div>
+      <h1>Resumen</h1>
+      <users-table :users="users" />
+      <channels-table :channels="channels" />
+      <subscriptions-table :subscriptions="subscriptions" />
+    </div>
+  </header>
+
+  <main>
+    <v-app id="app" class="container">
+      <div class="position-absolute top-50 start-50 translate-middle">
+        <div class="col-md-12">
+            <router-view></router-view>
+        </div>
+      </div>
+   </v-app>
+  </main>
+
+
+</template>
+
+<script>
+
+import Canal from '@/components/Canal.vue'
+import Usuario from '@/components/Usuario.vue'
+import Suscripcion from '@/components/Suscripcion.vue'
+
+
+export default {
+  name: 'app',
+  components: {
+    Canal,
+    Usuario,
+    Suscripcion
+  },
+  
+  data() {
+    return {
+      users: [],
+      channels: [],
+      subscriptions: [],
+    };
+
+  },
+  mounted: function () {
+    axios
+      .get('http://localhost:3000/usuarios')
+      .then(response => (this.users = response.data))
+      .catch(error => console.log(error));
+    axios
+      .get('http://localhost:3000/canales')
+      .then(response => (this.channels = response.data))
+      .catch(error => console.log(error));
+    axios
+      .get('http://localhost:3000/suscripciones')
+      .then(response => (this.subscriptions = response.data))
+      .catch(error => console.log(error));
+  },
+  methods: {
+   
+    timerFun() {
+      let self = this;
+
+      this.timer = setInterval(function () {
+        self.get_game();
+      }, 1000);
+    },
+  }
+}
+</script>
+
+
+project_vue/components/Usuario.vue:
+<template>
+    <div>
+      <h2>Lista de Usuarios</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="usuario in usuarios" :key="usuario.id">
+            <td>{{ usuario.id }}</td>
+            <td>{{ usuario.nombreUsuario }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </template>
+  
+  <script>
+  import axios from 'axios';
+  
+  export default {
+    name: 'Usuario',
+    data() {
+      return {
+        usuarios: [],
+      };
+    },
+    mounted() {
+      axios
+        .get('http://localhost:8000/api/usuarios/')
+        .then(response => {
+          this.usuarios = response.data;
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    },
+  };
+  </script>
+
+
+project_vue/components/Canal.vue:
+<template>
+    <div>
+      <h2>Lista de Canales</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="canal in canales" :key="canal.id">
+            <td>{{ canal.id }}</td>
+            <td>{{ canal.nombreCanal }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </template>
+  
+  <script>
+  import axios from 'axios';
+  
+  export default {
+    name: 'Canal',
+    data() {
+      return {
+        canales: [],
+      };
+    },
+    mounted() {
+      axios
+        .get('http://localhost:8000/api/canales/')
+        .then(response => {
+          this.canales = response.data;
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    },
+  };
+  </script>
+  
+  
+  
+project_vue/components/Suscripcion.vue:
+<template>
+    <div>
+      <h2>Lista de Usuarios</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="usuario in usuarios" :key="usuario.id">
+            <td>{{ usuario.id }}</td>
+            <td>{{ usuario.nombreUsuario }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </template>
+  
+  <script>
+  import axios from 'axios';
+  
+  export default {
+    name: 'Usuario',
+    data() {
+      return {
+        usuarios: [],
+      };
+    },
+    mounted() {
+      axios
+        .get('http://localhost:8000/api/usuarios/')
+        .then(response => {
+          this.usuarios = response.data;
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    },
+  };
+  </script>
+
+
+
+
+
+
+9. Crea un test (a ejecutarse con la orden python manage.py test application .tests)
+que:
+borre todos los canales, usuarios y suscripciones
+cree el usuario (1001, ’jordi’)
+cree el usuario (1002, ’nacho’)
+cree el canal (1001, ’wildproject’)
+cree la suscripcion (1001,1001,1001,’08-05-2023’)
+cree la suscripcion (1002,1001,1002,’07-05-2023’)
+acceda a la vista relacionada con la URL $PROJECT URL/application/canal/<int:>
+con el identificador de canal 1001
+compruebe que las suscripciones proporcionadas son las correctas
+    
+from django.test import TestCase
+
+# Create your tests here.
+from django.test import TestCase, Client
+from django.urls import reverse
+from datetime import date
+
+from .models import Canal, Usuario, Suscripcion
+
+
+class TestViews(TestCase):
+
+    def setUp(self):
+        self.client = Client()
+
+    def test_canal_view(self):
+        # borra todos los canales, usuarios y suscripciones
+        Canal.objects.all().delete()
+        Usuario.objects.all().delete()
+        Suscripcion.objects.all().delete()
+
+        # crea los objetos necesarios
+        user_jordi = Usuario.objects.create(id=1001, nombreUsuario='jordi')
+        user_nacho = Usuario.objects.create(id=1002, nombreUsuario='nacho')
+        canal = Canal.objects.create(id=1001, nombreCanal='wildproject')
+        Suscripcion.objects.create(usuario=user_jordi, canal=canal, fechaDeSuscripcion=date(2023, 5, 8))
+        Suscripcion.objects.create(usuario=user_nacho, canal=canal, fechaDeSuscripcion=date(2023, 5, 7))
+
+        # accede a la vista de canal con id 1001
+        response = self.client.get(reverse('canal', args=[1001]))
+
+        # comprueba que las suscripciones son correctas
+        suscripciones = response.context['suscripciones']
+        self.assertEqual(len(suscripciones), 2)
+        self.assertEqual(suscripciones[0].usuario, user_jordi)
+        self.assertEqual(suscripciones[1].usuario, user_nacho)
+    
+    
+    
+    
+    
+
+

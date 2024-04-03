@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block header %}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+{% if question %}
+<div class="container h-100 d-flex flex-column fixed-top ">
+    <div class="mt-1">&nbsp;</div>
+
+    <div class="row h-50 justify-content-md-center grey   ">
+
+        <div class="col-lg ">
+            <div class=" text-break">
+
+                <div class="text-center">
+                    <h2 class="text-break"> {{ question.question }} </h2>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mb-5"></div>
+
+    <div class="row justify-content-md">
+        {% for answer in answer_list %}
+
+        {% if answer.extra %}
+        <div class=" {{ answer.extra }} "></div>
+        <div class="mb-1"></div>
+        {% endif %}
+
+        <div class="col {{ answer.class }} ">
+            <h8 class="text-break">{{ answer.answer.answer }}</h8>
+            <div class="mb-5">&nbsp;</div>
+
+        </div>
+        &nbsp;
+        {% endfor %}
+    </div>
+</div>
+
+{% endif %}
+
+
+{% endblock %}

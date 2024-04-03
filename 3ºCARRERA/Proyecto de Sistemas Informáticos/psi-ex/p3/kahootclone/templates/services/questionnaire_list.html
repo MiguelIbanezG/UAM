@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if questionnaire_list %}
+    {% csrf_token %}
+    <ul class="list-group">
+
+    {% for questionnaire in questionnaire_list %}
+    <li class="list-group-item">
+        <a href="{{ questionnaire.get_absolute_url }}">{{ questionnaire}}</a>
+
+        <button class="btn btn-success  btn-sm" onclick="location.href='{% url 'questionnaire-update' pk=questionnaire.pk %}'">Update</button>
+        <button class="btn btn-primary  btn-sm" onclick="location.href='{% url 'game-create' pk=questionnaire.id %}'">Crear
+            Juego</button>
+        <button class="btn btn-danger  btn-sm"
+                onclick="location.href='{% url 'questionnaire-remove' pk=questionnaire.pk %}'">Borrar</button>
+
+    </li>
+    <br>
+    {% endfor %}
+
+</ul>
+{% else %}
+<p>There are no questionnaires from this user .</p>
+{% endif %}
+<button class="btn btn-primary" onclick="location.href='{% url 'questionnaire-create' %}'">Crear nuevo</button>
+
+{% endblock %}

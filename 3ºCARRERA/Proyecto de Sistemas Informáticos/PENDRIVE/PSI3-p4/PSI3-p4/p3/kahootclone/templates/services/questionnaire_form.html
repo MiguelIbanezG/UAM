@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="pink">Create or Update Questionnaire title</h2>
+
+  <form class="form-horizontal" action="" method="post">
+    {% csrf_token %}
+    
+    
+
+    <div class="form-group row">
+      
+      <div class="col-sm-7">
+  
+        {{ form.as_p }}
+
+      </div>
+    </div>
+
+    
+    <a href="{% url 'questionnaire-list'%}">Cancel</a>
+
+
+    <button  type="submit"  class="btn btn-danger btn-sm" onclick="submit">
+    Confirm</button>
+
+  </form>
+{% endblock %}

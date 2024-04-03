@@ -1,0 +1,30 @@
+Giancarlo Lazo Y Miguel Ibáñez
+
+Normativa de entrega cumplida en su totalidad: Realizado: Se han leido los todos los apartados de la practica y se han realizados pasa por paso.
+
+Fichero leeme.txt bien explicado: Realizado.
+
+Recibir tramas Ethernet, realizar comprobaciones y llamar correctamente a la función de callback de nivel superior: Realizado: 
+
+Enviar correctamente peticiones ARP: Realizado
+Se ha comprobado que se envian las peticiones ARP correctamente mediante el uso de mininet, al poner la IP de h2 en h1
+realiza una petición ARP preguntando por la MAC de h2. FOTO1 Y FOTO2
+
+Procesar correctamente peticiones ARP recibidas: Realizado
+De la misma manera se ha comprobado que las peticiones ARP se procesa correctamente mediante el uso de mininet. FOTO1 Y FOTO2
+
+Enviar correctamente respuestas ARP: Raelizado
+Procesar correctamente respuestas ARP: Realizado
+Las respuestas ARP se envian y se procesan correctamente ya que la respuesta de h2 a la petición ARP es la MAC de h2,
+y sale correctamente. FOTO1 y FOTO2
+
+Manejo correcto de la caché ARP: Realizado
+La cache ARP funciona correctamente, cuando abrimos la cache con P vemos que se ha guardado la relacion entre la IP y la MAC
+(mapeo entre IP destino y MAC destino), cuando volvemos a poner la direccion IP de h2, vemos que ya no necesia pasar por el procedimiento ARP
+si no que usa la Cache.
+
+Uso correcto de Locks: Realizado
+
+Realiza correctamente el ARP gratuito: Realizado
+Sabemos que el ARP gratuito se realiza correctamente ya que cuando cambiamos la IP de h1 con el comando "h1 ifconfig h1-eth0 10.0.0.2 netmask 255.255.255.0"
+de manera qu etenga la misma IP que h2, y ejecutamos el script en la terminal h1, el ARP gratuito falla al tener las 2 interfaces la misma IP. FOTO3
