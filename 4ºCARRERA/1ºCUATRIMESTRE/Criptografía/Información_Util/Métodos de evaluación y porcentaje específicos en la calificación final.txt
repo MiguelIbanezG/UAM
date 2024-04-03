@@ -1,0 +1,16 @@
+Nota final de la Asignatura (NF): NF=0.4*NP + 0.60*NT
+NT: Nota Teoría, NP: Nota Prácticas.
+Valor mínimo exigido de NT para el cálculo anterior: 5.
+Valor mínimo exigido de NP para el cálculo anterior: 5.
+En caso que no se cumplan los dos puntos anteriores la nota se calculará cómo: (0,3*Mín(5,NP) + 0,7*Mín(5,NT)).
+Nota de Teoría (NT) es la que resulta de:
+La calificación de la prueba final (55%).
+La calificación de tres pruebas de evaluación continua (5%+5%+35%=45%).
+Las 3 pruebas de evaluación continua serán: (a) Entregas de tareas de evaluación continua propuestas en clase (5%), (b) entregas de problemas de las hojas propuestas (5%). El último día de entrega para estás tareas será la última semana antes de finalizar las clases. (c) Examen intermedio (35%). La fecha del examen intermedio se avisará en clase con antelación. El examen intermedio puede ser eliminatorio con nota mayor o igual a 6 puntos. En este caso la nota obtenida en el parcial se mapea a la parte correspondiente del examen final (con esta posibilidad el examen final cuenta el 90 % de la nota de teoría incluida la nota del parcial mapeada). No obstante la calificación de problemas y tareas de evaluación continua solo se contabilizará si sube la nota de teoría, es decir: nota_teoría= MAX(nota_examenes, nota_examenes*.9+nota_ejercicios_y_tareas_eva_cont*0.1)
+Nota Final de Prácticas (NP): Media ponderada de las calificaciones de las prácticas.
+Prácticas a realizar: P1, P2, P3.
+Todas las prácticas son de carácter obligatorio para superar la asignatura.
+Todas las prácticas se revisarán en los laboratorios individualmente.
+Otras consideraciones:
+Los alumnos deberán presentarse a las diferentes pruebas debidamente identificados mediante el DNI o un documento acreditativo equivalente.
+NOTA: Para más detalles sobre la evaluación de la asignatura consultar la guía de la mism
