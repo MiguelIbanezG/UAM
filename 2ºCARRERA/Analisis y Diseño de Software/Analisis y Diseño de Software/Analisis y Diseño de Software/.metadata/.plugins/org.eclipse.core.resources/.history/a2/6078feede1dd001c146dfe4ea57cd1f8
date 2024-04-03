@@ -1,0 +1,5 @@
+package zapato;
+
+public enum Color {
+
+}

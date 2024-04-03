@@ -1,0 +1,24 @@
+
+public class Red {
+	private String nombre;
+	private int id;
+	private int contador;
+	Red red;
+	
+	public Red(String nombre, Red red) {
+		this.nombre = nombre;
+		this.id = contador++;
+		this.red = red;
+	}
+	public Red(String nombre) {
+		this.nombre = nombre;
+		this.id = contador++;
+	}
+	
+	@Override public String toString() {
+		return "Equipo" + nombre + "(id:" + id + ")"
+	}
+	
+	
+
+}

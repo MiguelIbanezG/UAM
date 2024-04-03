@@ -1,0 +1,92 @@
+Indicate the size of the board
+Indicate the maximum turns
+Indicate the number of wall tokens per user
+Error: the token WA can not be placed in position 2,2 because: the cell contains a token that cannot be overwritten
+Starting turn 1
+N1  --  --  --  --  
+--  --  --  --  --  
+EN  --  WA  --  EN  
+--  --  --  --  --  
+--  --  --  --  N2  
+
+1: points 1.0 last cell: 0,0
+2: points 1.0 last cell: 4,4
+Turn 1
+Player 1 enter the coordinates of the new token:
+N1  --  --  --  --  
+--  N1  --  --  --  
+EN  --  WA  --  EN  
+--  --  --  --  --  
+--  --  --  --  N2  
+
+1: points 2.0 last cell: 1,1
+2: points 1.0 last cell: 4,4
+Turn 1
+Player 2 enter the coordinates of the new token:
+N1  --  --  --  --  
+--  N1  --  --  --  
+EN  --  WA  --  EN  
+--  --  --  --  N2  
+--  --  --  --  N2  
+
+1: points 2.0 last cell: 1,1
+2: points 2.0 last cell: 3,4
+Starting turn 2
+N1  --  --  --  --  
+--  N1  --  --  WA  
+EN  --  --  --  EN  
+WA  --  --  --  N2  
+--  --  --  --  N2  
+
+1: points 2.0 last cell: 1,1
+2: points 2.0 last cell: 3,4
+Turn 2
+Player 1 enter the coordinates of the new token:
+N1  --  --  --  --  
+EN  N1  --  N1  WA  
+N1  N1  N1  N1  N1  
+WA  EN  --  N1  N1  
+--  --  --  --  N2  
+
+1: points 10.0 last cell: 2,0
+2: points 2.0 last cell: 3,4
+Turn 2
+Player 2 enter the coordinates of the new token:
+N1  --  --  --  --  
+EN  N1  --  N1  WA  
+N1  N1  N1  N1  N1  
+WA  EN  --  N1  N1  
+--  --  --  --  N2  
+
+1: points 10.0 last cell: 2,0
+2: points 5.0 last cell: 2,4
+Starting turn 3
+N1  --  --  --  --  
+EN  N1  --  N1  WA  
+N1  N1  N1  N1  N1  
+WA  EN  --  N1  N1  
+--  --  --  --  N2  
+
+1: points 10.0 last cell: 2,0
+2: points 5.0 last cell: 2,4
+Turn 3
+Player 1 enter the coordinates of the new token:
+N1  N1  --  --  --  
+EN  N1  EN  N1  WA  
+N1  N1  N1  N1  N1  
+WA  N1  --  N1  N1  
+--  N1  --  --  N2  
+
+1: points 13.0 last cell: 3,1
+2: points 5.0 last cell: 2,4
+Turn 3
+Player 2 enter the coordinates of the new token:
+N1  N1  --  --  --  
+EN  N1  EN  N1  WA  
+N1  N1  N1  N1  N1  
+WA  N1  --  N1  N1  
+--  N1  --  --  N2  
+
+1: points 13.0 last cell: 3,1
+2: points 6.0 last cell: 1,3
+The winer is player 1: points 13.0 last cell: 3,1

@@ -1,0 +1,24 @@
+
+public class MonitorRed {
+ public static void main (String... args ) {
+	 
+	 Red redUAM = new Red( "UAM" ); // Red de primer nivel con nombre UAM
+	 Red redEPS = new Red( "EPS" , redUAM ); // subred EPS dentro de la red UAM
+	 Red redCiencias = new Red( "Ciencias" ); // Red de primer nivel con nombre Ciencias
+	 
+	 Ordenador PCeps1 = new Ordenador( "Escher" , redEPS , SistemaOperativo.MACOS ); // Ordenador Escher en red EPS
+	 Ordenador PCeps2 = new Ordenador( "Godel" , redEPS , SistemaOperativo.WINDOWS ); // Ordenador Godel en red EPS
+	 Ordenador PCuam = new Ordenador( "Bach" , redUAM , SistemaOperativo.UBUNTU ); // Ordenador Bach en red UAM
+	
+	 Ordenador PCciencias = new Ordenador( "Turing" , redCiencias , SistemaOperativo.UBUNTU ); // Ordenador en Ciencias
+ try {
+	 PCeps1.enviarMensaje( redEPS , "Mensaje de prueba a EPS" ); // De Escher a toda la EPS
+	 System.out.println( "=======================" );
+	 PCeps2.enviarMensaje( redUAM , "Otro mensaje a toda la UAM" ); // De Godel a toda la EPS
+	 System.out.println( "=======================" );
+	 PCeps2.enviarMensaje( PCciencias , "Mensaje a Turing" ); // Falla: Turing no es alcanzable
+ } catch (NoAlcanzableExcepcion e ) {
+	 System.out.println( e );
+ 
+ }
+}

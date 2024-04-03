@@ -1,0 +1,18 @@
+
+public class Ordenador {
+	
+	private String nombre;
+	private int id;
+	private int contador;
+	
+	public Ordenador(String nombre) {
+		this.nombre = nombre;
+		this.id = contador++;
+	}
+
+	public void enviarMensaje(Ordenador pCciencias, String string) {
+		
+		
+	}
+
+}

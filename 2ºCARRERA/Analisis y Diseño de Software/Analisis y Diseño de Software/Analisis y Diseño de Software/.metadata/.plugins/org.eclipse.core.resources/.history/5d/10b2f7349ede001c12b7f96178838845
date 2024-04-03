@@ -1,0 +1,4 @@
+
+public interface Emparejable {
+	boolean afinCon(Emparejable m ); //debe ser reflexiva: x.afinCon(y) igual que y.afinCon(x)
+}

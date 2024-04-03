@@ -1,0 +1,5 @@
+N1 true
+F1 false
+EN true
+WA false
+M2 true

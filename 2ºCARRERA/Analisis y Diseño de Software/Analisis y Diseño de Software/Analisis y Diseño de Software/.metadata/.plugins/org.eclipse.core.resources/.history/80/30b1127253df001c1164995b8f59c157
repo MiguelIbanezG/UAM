@@ -1,0 +1,19 @@
+
+public class Main {
+	MapRegion r1 = new MapRegion("España", new Coordinates(40.4165, -3.70256));
+	MapRegion r2 = new MapRegion("Comunidad de Madrid");
+	MapRegion r3 = new MapRegion("Cataluña");
+	MapPoint p1 = new MapPoint("Madrid", new Coordinates(40.4165, -3.70256) );
+	MapPoint p2 = new MapPoint("Alcobendas", new Coordinates(40.54746, -3.64197));
+	MapPoint p3 = new MapPoint("Getafe", new Coordinates(40.30571, -3.73295));
+	MapPoint p4 = new MapPoint("Barcelona", new Coordinates(41.38879, 2.15899));
+	r1.addLocation(r2).addLocation(r3);
+	r2.addLocation(p1).addLocation(p2).addLocation(p3);
+	r3.addLocation(p4);
+	System.out.println("Coordenadas de " + r1.getName() + ": " + r1.getCoordinates());
+	System.out.println("Coordenadas de " + r2.getName() + ": " + r2.getCoordinates());
+	System.out.println("Distancia entre " + p1.getName() + " y " + p2.getName() + ": " + p1.distance(p2));
+	System.out.println("Distancia entre " + r2.getName() + " y " + r3.getName() + ": " + r2.distance(r3));
+	System.out.print(r1);
+
+}

@@ -1,0 +1,21 @@
+package zapato;
+
+public class ZapatoTester {
+	
+	private static void testHashSet(List<Zapato> lista) {
+			Set<Zapato> pers = new HashSet<Zapato>(lista);
+			System.out.println(pers);
+	}
+	
+	
+	private static void testLinkedHashSet(List<Zapato> lista) {
+		Set<Zapato> pers = new LinkedHashSet<Zapato>(lista);
+		System.out.println(pers);
+	}
+	
+	private static void testTreeSet(List<Zapato> lista) {
+			SortedSet<Zapato> pers = new TreeSet<Zapato>(lista);
+			System.out.println(pers);
+	}
+	
+}

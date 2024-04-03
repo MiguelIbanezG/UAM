@@ -1,0 +1,21 @@
+FAR:
+1º +6
+char* +4
+int* +4
+long* +4
+char +2
+int +2
+long
+mov ax, [bp+6] ; AX <= Parte baja de n
+mov dx, [bp+8] ; DX <= Parte alta de n
+
+NEAR:
+1º +4
+char* +2
+int* +2
+long* +2
+char +2
+int +2
+long
+mov ax, [bp+6] ; AX <= Parte baja de n
+mov dx, [bp+8] ; DX <= Parte alta de n

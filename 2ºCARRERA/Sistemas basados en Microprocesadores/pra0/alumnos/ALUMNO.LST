@@ -1,0 +1,122 @@
+Turbo Assembler	 Version 2.0	    02/17/23 17:18:15	    Page 1
+alumno.asm
+
+
+
+      1				     ;_______________________________________________________________
+      2				     ; DEFINICION DEL SEGMENTO DE DATOS
+      3	0000			     DATOS SEGMENT
+      4	0000  1B 5B 32 4A 24		     CLR_PANT	     DB	     1BH,"[2","J$"
+      5	0005  1B 34 3B 32 37 66	54+	     CUR_MICRO	     DB	     1BH,"4;27fTECNOLOGIA DE COMPUTADORES$"
+      6	      45 43 4E 4F 4C 4F	47+
+      7	      49 41 20 44 45 20	43+
+      8	      4F 4D 50 55 54 41	44+
+      9	      4F 52 45 53 24
+     10	0026  1B 5B 31 35 3B 31	66+	     PREG_NOM	     DB	     1BH,"[15;1fESCRIBE	TU NOMBRE? $"
+     11	      45 53 43 52 49 42	45+
+     12	      20 54 55 20 4E 4F	4D+
+     13	      42 52 45 3F 20 24
+     14	0041  50*(00)			     NOMBRE	     DB	     80	DUP (0)
+     15	0091  1B 5B 32 32 3B 31	66+	     TEXTO	     DB	     1BH,"[22;1fDON","$"
+     16	      44 4F 4E 24
+     17	009C  20 45 53 20 41 4C	55+	     TEXTO2	     DB	     " ES ALUMNO DE 2º CURSO DE	"
+     18	      4D 4E 4F 20 44 45	20+
+     19	      32 BA 20 43 55 52	53+
+     20	      4F 20 44 45 20
+     21	00B6  49 4E 47 45 4E 49	45+			     DB	     "INGENIERIA INFORMATICA",13,10,"$"
+     22	      52 49 41 20 49 4E	46+
+     23	      4F 52 4D 41 54 49	43+
+     24	      41 0D 0A 24
+     25	00CF			     DATOS ENDS
+     26				     ;_______________________________________________________________
+     27				     ; DEFINICION DEL SEGMENTO DE PILA
+     28	0000			     PILA SEGMENT STACK	"STACK"
+     29	0000  40*(00)			     DB	40H DUP	(0)
+     30	0040			     PILA ENDS
+     31				     ;_______________________________________________________________
+     32				     ; DEFINICION DEL SEGMENTO DE CODIGO
+     33	0000			     CODE SEGMENT
+     34				     ASSUME CS:CODE,DS:DATOS,SS:PILA
+     35				     ; COMIENZO	DEL PROCEDIMIENTO PRINCIPAL (START)
+     36	0000			     START PROC	FAR
+     37				     ;INICIALIZACION DE	LOS REGISTROS DE SEGMENTO
+     38	0000  B8 0000s			     MOV AX,DATOS
+     39	0003  8E D8			     MOV DS,AX	     ;FIN DE LAS INICIALIZACIONES
+     40
+     41	0005  B4 09			     MOV AH,9	     ; BORRA LA	PANTALLA
+     42	0007  BA 0000r			     MOV DX, OFFSET CLR_PANT
+     43	000A  CD 21			     INT 21H
+     44
+     45	000C  BA 0005r			     MOV DX,OFFSET CUR_MICRO	     ;ESCRIBE "CURSO ...
+     46	000F  CD 21			     INT 21H
+     47
+     48	0011  BA 0026r			     MOV DX,OFFSET PREG_NOM	     ;MUESTRA "ESCRIBE ...
+     49	0014  CD 21			     INT 21H
+     50
+     51	0016  B4 0A			     MOV AH,0AH			     ;ALMACENA EL NOMBRE TECLEADO
+     52	0018  BA 0041r			     MOV DX,OFFSET NOMBRE
+     53
+     54	001B  C6 06 0041r 3C		     MOV NOMBRE[0],60		     ;MAXIMO NUMERO DE CARACTERES
+     55	0020  CD 21			     INT 21H
+     56
+     57	0022  B4 09			     MOV AH,9			     ;ESCRIBE "DON ...
+Turbo Assembler	 Version 2.0	    02/17/23 17:18:15	    Page 2
+alumno.asm
+
+
+
+     58	0024  BA 0091r			     MOV DX, OFFSET TEXTO
+     59	0027  CD 21			     INT 21H
+     60
+     61	0029  BB 0000		     moV BX,0
+     62	002C			     OTRO:
+     63	002C  8A 97 0043r		     MOV DL,NOMBRE[BX+2]	     ;ESCRIBIR UN CARACTER DEL NOMBRE
+     64	0030  B4 02			     MOV AH,2
+     65	0032  CD 21			     INT 21H
+     66
+     67	0034  43			     INC BX
+     68	0035  3A 1E 0042r		     CMP BL, NOMBRE[1]		     ;COMPARA CON EL NUMERO DE CARACTERES
+     69	0039  75 F1			     JNE OTRO
+     70
+     71	003B  BA 009Cr			     MOV DX, OFFSET TEXTO2	     ; ESCRIBE "ES ALUMNO ...
+     72	003E  B4 09			     MOV AH,9
+     73	0040  CD 21			     INT 21H
+     74
+     75	0042  B8 4C00			     MOV AX,4C00H		     ; FIN DE PROGRAMA Y VUELTA	AL DOS
+     76	0045  CD 21			     INT 21H
+     77	0047			     START ENDP
+     78				     ;FIN DEL SEGMENTO DE CODIGO
+     79	0047			     CODE ENDS
+     80				     ;FIN DE PROGRAMA INDICANDO	DONDE COMIENZA LA EJECUCION
+     81				     END START
+Turbo Assembler	 Version 2.0	    02/17/23 17:18:15	    Page 3
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "02/17/23"
+??FILENAME			  Text	 "alumno  "
+??TIME				  Text	 "17:18:15"
+??VERSION			  Number 0200
+@CPU				  Text	 0101H
+@CURSEG				  Text	 CODE
+@FILENAME			  Text	 ALUMNO
+@WORDSIZE			  Text	 2
+CLR_PANT			  Byte	 DATOS:0000
+CUR_MICRO			  Byte	 DATOS:0005
+NOMBRE				  Byte	 DATOS:0041
+OTRO				  Near	 CODE:002C
+PREG_NOM			  Byte	 DATOS:0026
+START				  Far	 CODE:0000
+TEXTO				  Byte	 DATOS:0091
+TEXTO2				  Byte	 DATOS:009C
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+CODE				  16  0047 Para	  none
+DATOS				  16  00CF Para	  none
+PILA				  16  0040 Para	  Stack	  STACK
+

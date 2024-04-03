@@ -1,0 +1,24 @@
+Music System with states:
+[State[starting: Starting the music system], State[CD], State[Tuner], State[off]]
+Music System with states:
+[State[starting: Starting the music system], State[CD], State[Tuner], State[off]]
+StateMachine with states:
+[State[s0]]
+Music System with states:
+[State[starting: Starting the music system], State[CD], State[Tuner], State[off]]
+Music System with states:
+[State[starting: Starting the music system], State[CD], State[Tuner], State[off]]
+StateMachine with states:
+[State[s0]]
+Music System with states:
+[State[starting: Starting the music system], State[CD], State[Tuner], State[off]]
+Music System with states:
+[State[starting: Starting the music system], State[CD], State[Tuner], State[off]]
+StateMachine with states:
+[State[s0]]
+Music System with states:
+[State[starting: Starting the music system], State[CD], State[Tuner], State[off]]
+Music System with states:
+[State[starting: Starting the music system], State[CD], State[Tuner], State[off]]
+StateMachine with states:
+[State[s0]]

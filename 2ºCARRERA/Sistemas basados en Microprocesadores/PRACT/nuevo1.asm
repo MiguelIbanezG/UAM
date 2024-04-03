@@ -1,0 +1,432 @@
+;**************************************************************************
+; SBM 2022. ESTRUCTURA BÁSICA DE UN PROGRAMA EN ENSAMBLADOR
+;**************************************************************************
+; DEFINICION DEL SEGMENTO DE DATOS
+DATOS SEGMENT
+MATRIZ DB 1,5,4,3,3,4,5,4,5,6
+RESULTADO DW 6 DUP (0)
+FRASE DB "ESCOGE LA MATRIZ QUE QUIERES HACE, 0)MATRIZ", '$'
+NOMBRE DB 60 DUP (0)
+DETERMINANTE DW 0
+FLAG DB 0
+VALOR DB 0
+RELL DB 0
+DIVI DB 10
+CONT1 DW 0
+CONT2 DW 0
+MATRIZ1 DB "                                 ", '$'
+MATRIZ2 DB "|A|=                             ", '$'
+MATRIZ3 DB "                                 ", '$'
+DATOS ENDS
+;**************************************************************************
+; DEFINICION DEL SEGMENTO DE PILA
+PILA SEGMENT STACK "STACK"
+DB 40H DUP (0) ;ejemplo de inicialización, 64 bytes inicializados a 0
+PILA ENDS
+;**************************************************************************
+; DEFINICION DEL SEGMENTO EXTRA
+EXTRA SEGMENT
+RESULT DW 0,0 ;ejemplo de inicialización. 2 PALABRAS (4 BYTES)
+EXTRA ENDS
+;**************************************************************************
+; DEFINICION DEL SEGMENTO DE CODIGO
+CODE SEGMENT
+ASSUME CS: CODE, DS: DATOS, ES: EXTRA, SS: PILA
+; COMIENZO DEL PROCEDIMIENTO PRINCIPAL
+INICIO PROC
+; INICIALIZA LOS REGISTROS DE SEGMENTO CON SU VALOR
+MOV AX, DATOS
+MOV DS, AX
+MOV AX, PILA
+MOV SS, AX
+MOV AX, EXTRA
+MOV ES, AX
+MOV SP, 64 ; CARGA EL PUNTERO DE PILA CON EL VALOR MAS ALTO
+; FIN DE LAS INICIALIZACIONES
+; COMIENZO DEL PROGRAMA
+
+
+mov dx, offset FRASE ; DX : offset al inicio del texto a imprimir
+mov ah, 9 ; Número de función = 9 (imprimir string)
+int 21h 
+
+MOV AH,0AH ;Función captura de teclado
+MOV DX,OFFSET NOMBRE ;Area de memoria reservada = etiqueta NOMBRE
+MOV NOMBRE[0],60 ;Lectura de caracteres máxima=60
+INT 21H
+
+
+mov ah, 2 ; Número de función = 2
+mov dl, 10 ; Se desea imprimir la letra A
+int 21h 
+
+mov ah, 2 ; Número de función = 2
+mov dl, NOMBRE[2] ; Se desea imprimir la letra A
+int 21h 
+
+CMP NOMBRE[2], 48 
+JE PREDEF
+
+FIN:
+mov ax, 4C00h ; Fin de programa
+int 21h 
+
+PREDEF: 
+CALL RESULTED
+CALL MATRIZAA
+JMP FIN
+
+
+RESULTED PROC NEAR
+
+
+	MOV AX,0
+	MOV AL, MATRIZ[0]
+	IMUL MATRIZ[4]
+	IMUL MATRIZ[8]
+	MOV RESULTADO[0], AX
+	
+	MOV AX,0
+	MOV AL, MATRIZ[1]
+	IMUL MATRIZ[5]
+	IMUL MATRIZ[6]
+	MOV RESULTADO[2], AX
+	
+	MOV AX,0
+	MOV AL, MATRIZ[3]
+	IMUL MATRIZ[7]
+	IMUL MATRIZ[2]
+	MOV RESULTADO[4], AX
+	
+	MOV AX,0
+	MOV AL, MATRIZ[2]
+	IMUL MATRIZ[4]
+	IMUL MATRIZ[6]
+	MOV RESULTADO[6], AX
+	
+	MOV AX,0
+	MOV AL, MATRIZ[3]
+	IMUL MATRIZ[1]
+	IMUL MATRIZ[8]
+	MOV RESULTADO[8], AX
+	
+	MOV AX,0
+	MOV AL, MATRIZ[7]
+	IMUL MATRIZ[5]
+	IMUL MATRIZ[0]
+	MOV RESULTADO[10], AX
+	
+	MOV AX,0
+	ADD AX, RESULTADO[0]
+	ADD AX, RESULTADO[2]
+	ADD AX, RESULTADO[4]
+	SUB AX, RESULTADO[6]
+	SUB AX, RESULTADO[8]
+	SUB AX, RESULTADO[10]
+	
+	MOV DETERMINANTE, AX
+	
+	RET
+
+
+RESULTED ENDP
+
+MATRIZAA PROC NEAR
+
+	MOV CONT1,2
+	MOV CONT2,20
+	
+	MOV SI, CONT2
+	MOV MATRIZ1[SI], 124
+	DEC CONT2
+	
+	INIC_BUCLE:
+	MOV SI, CONT1
+	MOV AH, MATRIZ[SI]
+	MOV VALOR, AH
+	CALL BUCLE1
+	CMP CONT1,0
+	JE FUERA
+	DEC CONT1
+	JMP INIC_BUCLE
+	
+	FUERA:
+	MOV SI, CONT2
+	MOV MATRIZ1[SI], 124
+	DEC CONT2
+	
+	mov ah, 2 ; Número de función = 2
+	mov dl, 10 ; Se desea imprimir la letra A
+	int 21h 
+	
+	mov dx, offset MATRIZ1 ; DX : offset al inicio del texto a imprimir
+	mov ah, 9 ; Número de función = 9 (imprimir string)
+	int 21h
+	
+	MOV CONT1,5
+	MOV CONT2,20
+	
+	MOV SI, CONT2
+	MOV MATRIZ2[SI], 124
+	DEC CONT2
+	
+	INIC_BUCLE2:
+	CMP CONT1, 2
+	JE FUERA2
+	MOV SI, CONT1
+	MOV AH, MATRIZ[SI]
+	MOV VALOR, AH
+	CALL BUCLE2
+	DEC CONT1
+	JMP INIC_BUCLE2
+	
+	FUERA2:
+	MOV SI, CONT2
+	MOV MATRIZ2[SI], 124
+	DEC CONT2
+	
+	MOV CONT2, 26
+	MOV SI, 21
+	MOV MATRIZ2[SI],61
+	
+	CALL BUCLE_DET
+	
+	mov ah, 2 ; Número de función = 2
+	mov dl, 10 ; 
+	int 21h 
+	
+	mov dx, offset MATRIZ2 ; DX : offset al inicio del texto a imprimir
+	mov ah, 9 ; Número de función = 9 (imprimir string)
+	int 21h
+	
+	MOV CONT1,8
+	MOV CONT2,20
+	
+	MOV SI, CONT2
+	MOV MATRIZ3[SI], 124
+	DEC CONT2
+	
+	INIC_BUCLE3:
+	CMP CONT1, 5
+	JE FUERA3
+	MOV SI, CONT1
+	MOV AH, MATRIZ[SI]
+	MOV VALOR, AH
+	CALL BUCLE3
+	DEC CONT1
+	JMP INIC_BUCLE3
+	
+	FUERA3:
+	MOV SI, CONT2
+	MOV MATRIZ3[SI], 124
+	DEC CONT2
+	
+	mov ah, 2 ; Número de función = 2
+	mov dl, 10 ; Se desea imprimir la letra A
+	int 21h 
+	
+	mov dx, offset MATRIZ3 ; DX : offset al inicio del texto a imprimir
+	mov ah, 9 ; Número de función = 9 (imprimir string)
+	int 21h
+	
+	RET
+	
+MATRIZAA ENDP
+
+BUCLE1 PROC NEAR
+
+	MOV FLAG,0
+	MOV AX, 0
+	ADD AL, VALOR
+	JS NEGAT
+	VOLVER:
+	
+	INICIO_BUCLE:
+	MOV AX, WORD PTR VALOR
+	DIV DIVI
+	ADD AH,48
+	MOV SI,CONT2
+	MOV MATRIZ1[SI],AH
+	MOV VALOR, AL
+	DEC CONT2
+	CMP AL,0
+	JE SALIR
+	JMP INICIO_BUCLE
+	
+	SALIR:
+	CMP FLAG,1
+	JE SIGNO
+	
+	RETURN:
+	MOV SI, CONT2
+	MOV MATRIZ1[SI],32
+	DEC CONT2
+	
+	
+	RET
+	
+	NEGAT:
+	MOV FLAG,1
+	NEG VALOR
+	JMP VOLVER
+	
+	SIGNO:
+	MOV SI, CONT2
+	MOV MATRIZ1[SI],45
+	DEC CONT2
+	JMP RETURN
+	
+BUCLE1 ENDP
+
+BUCLE2 PROC NEAR
+
+	MOV FLAG,0
+	MOV AX, 0
+	ADD AL, VALOR
+	JS NEGAT2
+	VOLVER2:
+	
+	INICIO_BUCLE2:
+	MOV AX, WORD PTR VALOR
+	DIV DIVI
+	ADD AH,48
+	MOV SI,CONT2
+	MOV MATRIZ2[SI],AH
+	MOV VALOR, AL
+	DEC CONT2
+	CMP AL,0
+	JE SALIR2
+	JMP INICIO_BUCLE2
+	
+	SALIR2:
+	CMP FLAG,1
+	JE SIGNO2
+	
+	RETURN2:
+	MOV SI, CONT2
+	MOV MATRIZ1[SI],32
+	DEC CONT2
+	
+	
+	RET
+	
+	NEGAT2:
+	MOV FLAG,1
+	NEG VALOR
+	JMP VOLVER2
+	
+	SIGNO2:
+	MOV SI, CONT2
+	MOV MATRIZ2[SI],45
+	DEC CONT2
+	JMP RETURN2
+	
+BUCLE2 ENDP
+
+BUCLE3 PROC NEAR
+
+	MOV FLAG,0
+	MOV AX, 0
+	ADD AL, VALOR
+	JS NEGAT3
+	VOLVER3:
+	
+	INICIO_BUCLE3:
+	MOV AX, WORD PTR VALOR
+	DIV DIVI
+	ADD AH,48
+	MOV SI,CONT2
+	MOV MATRIZ3[SI],AH
+	MOV VALOR, AL
+	DEC CONT2
+	CMP AL,0
+	JE SALIR3
+	JMP INICIO_BUCLE3
+	
+	SALIR3:
+	CMP FLAG,1
+	JE SIGNO3
+	
+	RETURN3:
+	MOV SI, CONT2
+	MOV MATRIZ3[SI],32
+	DEC CONT2
+	
+	
+	RET
+	
+	NEGAT3:
+	MOV FLAG,1
+	NEG VALOR
+	JMP VOLVER3
+	
+	SIGNO3:
+	MOV SI, CONT2
+	MOV MATRIZ3[SI],45
+	DEC CONT2
+	JMP RETURN3
+	
+BUCLE3 ENDP
+
+BUCLE_DET PROC NEAR
+
+	MOV FLAG,0
+	MOV AX, 0
+	ADD AL, VALOR
+	JS NEGAT4
+	VOLVER4:
+	
+	MOV AX, DETERMINANTE
+	DIV DIVI
+	ADD AH,48
+	MOV SI,CONT2
+	MOV MATRIZ2[SI],AH
+	MOV VALOR, AL
+	DEC CONT2
+	CMP AL,0
+	JE SALIR4
+	
+	INICIO_BUCLE4:
+	MOV AX, WORD PTR VALOR
+	DIV DIVI
+	ADD AH,48
+	MOV SI,CONT2
+	MOV MATRIZ2[SI],AH
+	MOV VALOR, AL
+	DEC CONT2
+	CMP AL,0
+	JE SALIR4
+	JMP INICIO_BUCLE4
+	
+	SALIR4:
+	CMP FLAG,1
+	JE SIGNO4
+	
+	RETURN4:
+	MOV SI, CONT2
+	MOV MATRIZ2[SI],32
+	DEC CONT2
+	
+	
+	RET
+	
+	NEGAT4:
+	MOV FLAG,1
+	NEG DETERMINANTE
+	JMP VOLVER4
+	
+	SIGNO4:
+	MOV SI, CONT2
+	MOV MATRIZ2[SI],45
+	DEC CONT2
+	JMP RETURN4
+	
+	
+BUCLE_DET ENDP
+	
+
+INICIO ENDP
+; FIN DEL SEGMENTO DE CODIGO
+CODE ENDS
+; FIN DEL PROGRAMA INDICANDO DONDE COMIENZA LA EJECUCION
+END INICIO 

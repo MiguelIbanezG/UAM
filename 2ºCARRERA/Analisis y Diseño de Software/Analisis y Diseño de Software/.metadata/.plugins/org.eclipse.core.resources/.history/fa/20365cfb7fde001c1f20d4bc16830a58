@@ -1,0 +1,10 @@
+package zapato;
+
+public class Zapato {
+	private int num;
+	private String modelo;
+	public Color color;
+	
+	
+
+}

@@ -1,0 +1,11 @@
+Dadas las siguientes clases Java, se pide completar los espacios señalados (cuando sea necesario hacerlo) para que el método
+main produzca la salida indicada abajo. El propósito de la clase ConexionesAereas es almacenar, en orden alfabético, los
+nombres de las aerolíneas que ofrecen vuelos directos entre cada dos aeropuertos dados. Para cada trayecto directo entre dos
+aeropuertos, debe evitarse almacenar por duplicado la misma información para el trayecto en sentido inverso, es decir,
+intercambiando aeropuerto origen y aeropuerto destino. Además, según muestra la salida esperada del programa, la información de
+todas las conexiones aéreas almacenadas se mostrará ordenada por los trayectos directos almacenados (primero por aeropuerto de
+origen y después por aeropuerto de destino), y las aerolíneas que sirven cada trayecto, también han de presentarse por orden
+alfabético. La clase ConexionesAereas debe también tener un método para borrar una aerolínea de un trayecto.
+
+FlaiJai borrado
+{(CDG<>JFK)=[SubidonFree], (MAD<>BCN)=[EspaFlai, NeverCrash], (MAD<>JFK)=[EspaFlai, NeverCrash]}

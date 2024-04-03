@@ -1,0 +1,159 @@
+Ejercicios Estructuras de datos
+Miguel Ibáñez González
+
+1.
+a.
+
+CREATE SCHEMA follow AUTHORIZATION miguel
+
+CREATE TABLE usuario (
+    "nick" text NOT NULL,
+    "nombre" text NOT NULL,
+    "email" text NOT NULL, 
+);
+
+b.
+ALTER TABLE usuario ADD CONSTRAINT "usuario_pkey" PRIMARY KEY ("nick");
+
+c.
+INSERT INTO usuario VALUES ('luis','Luis','luis@gmail.com');
+INSERT INTO usuario VALUES ('nuria','Nuria','nuria@gmail.com');
+INSERT INTO usuario VALUES ('maria','Maria','maria@gmail.com');
+INSERT INTO usuario VALUES ('nicola','Nicolas','nicolas@gmail.com');
+INSERT INTO usuario VALUES ('juan','Juan','juan@gmail.com');
+INSERT INTO usuario VALUES ('pedro','Pedro','pedro@gmail.com');
+INSERT INTO usuario VALUES ('alba','Alba','alba@gmail.com');
+
+2.
+select
+	u.nick
+from
+	usuario u1n join usuario u2 on
+
+3.
+CREATE TABLE aeropuerto (
+    "codigo" char(3) NOT NULL,
+    "ciudad" text NOT NULL
+);
+
+CREATE TABLE aerolinea (
+    "codigo" char(3) NOT NULL,
+    "nombre" text NOT NULL
+);
+
+CREATE TABLE vuelo (
+    "linea" char(3) NOT NULL,
+    "numero" char(3) NOT NULL,
+    "origen" char(3) NOT NULL, 
+    "destino" char(3) NOT NULL,
+    "plazas" integer NOT NULL,
+    "salida" time
+);
+
+CREATE TABLE pasajero (
+    "dni" char(3) NOT NULL,
+    "nombre" text NOT NULL
+);
+
+CREATE TABLE reserva (
+    "dni" char(3) NOT NULL,
+    "linea" char(3) NOT NULL,
+    "numero" char(3) NOT NULL,
+    "fecha" date NOT NULL,
+    "precio" integer NOT NULL
+);
+
+INSERT INTO aeropuerto VALUES ('MAD','Madrid');
+INSERT INTO aeropuerto VALUES ('LGW','Londres');
+INSERT INTO aeropuerto VALUES ('LHR','Londres');
+
+INSERT INTO aerolinea VALUES ('IBE','Iberia');
+INSERT INTO aerolinea VALUES ('LFT','Lufthansa');
+INSERT INTO aerolinea VALUES ('UAE','Emirates');
+
+INSERT INTO pasajero VALUES ('123','Maria');
+INSERT INTO pasajero VALUES ('456','Pedro');
+INSERT INTO pasajero VALUES ('789','Isabel');
+
+INSERT INTO vuelo VALUES ('IBE','356','MAD','LHR',250,'10:30:00');
+INSERT INTO vuelo VALUES ('UAE','123','MAD','LHR',200,'11:30:00');
+INSERT INTO vuelo VALUES ('IBE','246','MAD','CDG',100,'15:45:00');
+
+INSERT INTO reserva VALUES ('789','IBE','356','2017-01-11',210);
+INSERT INTO reserva VALUES ('789','IBE','357','2017-01-11',200);
+INSERT INTO reserva VALUES ('123','IBE','246','2020-12-10',170);
+
+
+ALTER TABLE vuelo ADD CONSTRAINT "vuelo_pkey" PRIMARY KEY ("linea","numero");
+ALTER TABLE aeropuerto ADD CONSTRAINT "aeropuerto_pkey" PRIMARY KEY ("codigo");
+ALTER TABLE aerolinea ADD CONSTRAINT "codigo_pkey" PRIMARY KEY ("codigo");
+ALTER TABLE pasajero ADD CONSTRAINT "pasajero_pkey" PRIMARY KEY ("dni");
+ALTER TABLE reserva ADD CONSTRAINT "reserva_pkey" PRIMARY KEY ("dni","linea","numero","fecha");
+
+
+ALTER TABLE vuelo ADD CONSTRAINT "vuelo_origen_fkey" FOREIGN KEY ("origen") REFERENCES aeropuerto("codigo");
+ALTER TABLE vuelo ADD CONSTRAINT "vuelo_destino_fkey" FOREIGN KEY ("destino") REFERENCES aeropuerto("codigo");
+ALTER TABLE vuelo ADD CONSTRAINT "vuelo_linea_fkey" FOREIGN KEY ("linea") REFERENCES aerolinea("codigo");
+ALTER TABLE reserva ADD CONSTRAINT "reserva_linea_numero_fkey" FOREIGN KEY ("linea","numero") REFERENCES vuelo("linea","numero");
+ALTER TABLE reserva ADD CONSTRAINT "reserva_dni_fkey" FOREIGN KEY ("dni") REFERENCES pasajero("dni");
+
+4.
+
+5.
+
+a.
+select
+	*
+from
+	vuelo v join aeropuerto a on v.origen=a.codigo
+where 
+	a.ciudad='Paris'
+	
+
+b.
+select 
+	* 
+from
+	vuelo v join aeropuerto a on v.origen=a.codigo
+	join aeropuerto a2 on v.destino=a2.codigo
+where 
+	a.ciudad='Madrid' and a2.ciudad='Paris' and v.salida>='00:00:00' and v.salida<'12:00:00'
+
+c.
+select 
+	p.nombre, r.fecha, v.salida 
+from 
+	reserva r join pasajero p on r.dni=p.dni
+	join vuelo v on r.linea=v.linea and r.numero=v.numero
+	join aeropuerto a on v.origen = a.codigo 
+	join aeropuerto a2 on v.destino = a2.codigo 
+where 
+	a.ciudad = 'Londres' and a2.ciudad = 'Paris'
+
+d.
+select   
+	 distinct p.nombre
+from 
+	reserva r join pasajero p on r.dni=p.dni
+	join vuelo v on r.linea=v.linea and r.numero=v.numero
+	join aeropuerto a on v.origen = a.codigo 
+	join aeropuerto a2 on v.destino = a2.codigo 
+where 
+	(a.ciudad = 'Londres' and a2.ciudad = 'Paris') or
+	(a.ciudad='Paris' and a2.ciudad='Londres')
+
+e.
+select 
+	DISTINCT s1.nombre nombre, s1.fecha fecha
+from 
+(select 
+	p.dni dni, p.nombre nombre, r.fecha fecha, v.origen origen, v.destino destino
+from 
+	reserva r join pasajero p on r.dni=p.dni
+	join vuelo v on r.linea=v.linea and r.numero=v.numero) as s1 JOIN
+(select 
+	p.dni dni, p.nombre nombre, r.fecha fecha, v.origen origen, v.destino destino
+from 
+	reserva r join pasajero p on r.dni=p.dni
+	join vuelo v on r.linea=v.linea and r.numero=v.numero) as s2
+on s1.dni=s2.dni and s1.fecha=s2.fecha and s1.origen=s2.destino

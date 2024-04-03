@@ -1,0 +1,19 @@
+
+public class Ejercicio1 {
+ public static void main(String[] args) {
+	 ConexionesAereas c = new ConexionesAereas();
+	 c.add( new TrayectoDirecto( Aeropuerto.MAD, Aeropuerto.JFK ), "NeverCrash" );
+	 c.add( new TrayectoDirecto( Aeropuerto.JFK, Aeropuerto.MAD ), "NeverCrash" );
+	 c.add( new TrayectoDirecto( Aeropuerto.MAD, Aeropuerto.JFK ), "EspaFlai" );
+	 c.add( new TrayectoDirecto( Aeropuerto.MAD, Aeropuerto.BCN ), "NeverCrash" );
+	 c.add( new TrayectoDirecto( Aeropuerto.BCN, Aeropuerto.MAD ), "EspaFlai" );
+	 c.add( new TrayectoDirecto( Aeropuerto.CDG, Aeropuerto.JFK ), "SubidonFree" );
+	 c.add( new TrayectoDirecto( Aeropuerto.JFK, Aeropuerto.CDG ), "FlaiJai" );
+	 c.add( new TrayectoDirecto( Aeropuerto.MAD, Aeropuerto.BCN ), "EspaFlai" );
+	 c.add( new TrayectoDirecto( Aeropuerto.BCN, Aeropuerto.MAD ), "EspaFlai" );
+
+	 if (c.remove(new TrayectoDirecto( Aeropuerto.JFK, Aeropuerto.CDG ), "FlaiJai"))
+		 System.out.println("FlaiJai borrado");
+	 System.out.println(c);
+ } // end main
+} // end clase Ejercicio1

@@ -1,0 +1,22 @@
+all: prueba.exe
+
+prueba.exe: prueba.obj instala.com trian.obj
+	
+	tcc -v -ml -Lc:\compila\tc\lib prueba.obj trian.obj 
+	
+prueba.obj: prueba.c
+
+	tcc -c -v -ml -Ic:\compila\tc\include prueba.c
+
+trian.obj: trian.asm
+
+	tasm /zi /ml trian.asm,,trian.lst 
+
+instala.com: instala.obj
+
+	tlink /t instala.obj,,trian.lst
+
+instala.obj: instala.asm
+
+	tasm /zi /ml instala.asm
+

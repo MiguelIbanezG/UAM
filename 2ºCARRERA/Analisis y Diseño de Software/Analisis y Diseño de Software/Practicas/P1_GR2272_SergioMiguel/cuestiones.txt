@@ -1,0 +1,60 @@
+
+	3-a) Ejecuta el programa con distintos tipos de parámetros (numéricos o no, negativos, etc.)
+		
+		Cuando se ejecuta con un número natural, muestra todos los divisores de dicho número.
+
+		Al ejecutarse con números negativos, no muestra ningún divisor propio, la solución 
+		es cambiar el bucle de los divisores poniendo condiciones para dichos números.
+				
+                            
+                    int flag = 0;
+                    if (n < 0) {
+                        n = -n;
+                        flag ++;
+                    }
+
+                    for (int i = 1; i < n; i++)
+                        if (n % i == 0)
+                            if (flag == 1) {
+                                this.divisores.add(-i);
+                                
+                            }
+                            else
+                            {
+                                this.divisores.add(i);   
+                            }
+                    
+                
+		
+	
+
+	    No permite números racionales como entrada, para solucionar esto, se deben cambiar los
+		tipos int por double.
+										
+		
+		
+	3-b) Ejecuta el programa sin parámetros
+		
+		Cuando se ejecuta sin parámetros, se pide un parámetro (para poder hallar sus divisores).
+		
+	3-c) Ejecuta el programa con más de un parámetro
+			
+		Halla los divisores de todos los parámetros.
+				
+
+
+	4-a) ¿Son los números perfectos amigos de sí mismos? 
+		
+		Sí, porque al dar la suma el mismo número y ser ambos el mismo
+		número, se cumplen ambas condiciones. Ejemplo con el 6:
+		
+		Los divisores propios de 6 son: [1, 2, 3]
+		Los divisores propios de 6 son: [1, 2, 3]
+		6 es un número perfecto
+		6 es un número perfecto
+		6 y 6 son amigos
+
+	4-b) Los métodos esPerfecto y esAmigo ¿son de clase o de objeto?
+		
+		Es un objeto porque es una cualidad de la clase divisores,
+

@@ -1,0 +1,13 @@
+
+public class Red {
+	private String nombre;
+	private int id;
+	private int contador;
+	
+	public Red(String nombre) {
+		this.nombre = nombre;
+		this.id = contador++;
+	}
+	
+
+}

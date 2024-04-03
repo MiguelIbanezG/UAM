@@ -1,0 +1,22 @@
+
+public class Ordenador {
+	
+	private String nombre;
+	private int id;
+	private int contador;
+	public Red red;
+	public SistemaOperativo sistema;
+	
+	public Ordenador(String nombre, Red red, SistemaOperativo sistema) {
+		this.nombre = nombre;
+		this.id = contador++;
+		this.red = red;
+		this.sistema = sistema;
+	}
+
+	public void enviarMensaje(Red red, String string) {
+		
+		
+	}
+
+}

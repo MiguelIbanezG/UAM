@@ -1,0 +1,8 @@
+import java.util.List;
+
+public class MapRegion extends Localizacion {
+	
+	protected List<Localizacion> local;
+	
+
+}

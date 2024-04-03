@@ -1,0 +1,17 @@
+package zapato;
+
+public static void main(String[] args) {
+	
+	List<Zapato> zaps = Arrays.asList( new Zapato(34, "Kawasaki", Color.BLANCO),
+										new Zapato(43, "Adidas", Color.ROJO),
+										new Zapato(45, "Piccolino", Color.NEGRO),
+										new Zapato(43, "Adidas", Color.ROJO),
+										new Zapato(37, "Adidas", Color.ROJO));
+				// Evitar repeticion
+	testHashSet(zaps);
+	testLinkedHashSet(zaps);
+	// ordena por modelo, numero y color
+	testTreeSet(zaps);
+	}
+
+enum Color { BLANCO, NEGRO, ROJO }

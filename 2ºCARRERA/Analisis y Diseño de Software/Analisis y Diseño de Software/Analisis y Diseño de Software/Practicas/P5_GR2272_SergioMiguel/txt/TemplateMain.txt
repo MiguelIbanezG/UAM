@@ -1,0 +1,20 @@
+Dear Mary,
+How are you today?
+Since you were born on 2001-01-01, you are 21 years old.
+
+Dear Paul,
+How are you today?
+Since you were born on 2014-06-19, you are 7 years old.
+
+Dear Peter,
+How are you today?
+Since you were born on 2005-10-12, you are 16 years old.
+
+Dear Peter,
+How are you today?
+Since you were born on 1974-04-01, you are 48 years old.
+
+Dear Jude,
+How are you today?
+Since you were born on 2018-05-05, you are 3 years old.
+

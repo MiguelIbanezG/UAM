@@ -1,0 +1,14 @@
+
+public class Localizacion extends Coordinates {
+	
+
+	private String nombre;
+	public MapRegion region;
+	
+	public Localizacion(String nombre, int latitud, int longitud, MapRegion region) {
+		super(latitud, longitud);
+		this.nombre = nombre;
+		this.region = region;
+	}
+
+}

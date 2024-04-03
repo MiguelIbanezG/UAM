@@ -1,0 +1,69 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>59</x><y>387</y><w>189</w><h>108</h></coordinates><panel_attributes>Intent
+--
+- name: String
+- answer: String
+--
++ replies (String s): Intent
++ matches (String s): boolean 
++ process(String s): Intent</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>59</x><y>549</y><w>387</w><h>207</h></coordinates><panel_attributes>ContextIntent&lt;C&gt;
+--
+- function: Function&lt;ContextIntent&lt;C&gt;, C&gt;
+- predicates: Map&lt;String, Predicate&lt;String&gt;&gt;
+- functions: Map&lt;String, Function&lt;String, Object&gt;&gt; 
+- parameters: Map&lt;String, Object&gt;
+--
++ resultObject (Function&lt;ContextIntent&lt;C&gt;, C&gt; function): ContextIntent&lt;C&gt;
++  withParameter(String name, Predicate&lt;String&gt; predicate, 
+    Function&lt;String, Object&gt; function): ContextIntent&lt;C&gt;
++ process(String s): ContextIntent&lt;C&gt;
++ matches(String s): boolean
++ findPhrase(String s):  StructuredPhrase
++ replies(String s): ContextIntent&lt;C&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>149</x><y>486</y><w>27</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>59</x><y>27</y><w>288</w><h>108</h></coordinates><panel_attributes>ChatbotBuilder&lt;C&gt;
+--
+
+--
++ withIntent(Intent intent): ChatbotBuilder&lt;C&gt;
++ withFallback(String fallback): ChatbotBuilder&lt;C&gt;
++ build():  Chatbot&lt;C&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>383</x><y>135</y><w>180</w><h>54</h></coordinates><panel_attributes>ChitChatChatbotBuilder&lt;C&gt;
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>338</x><y>81</y><w>162</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;160;10;160;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>59</x><y>189</y><w>288</w><h>126</h></coordinates><panel_attributes>Chatbot&lt;C&gt;
+--
+- name: String
+- fallback: String
+- object: C
+--
++ withIntent(Intent intent): Chatbot&lt;C&gt;
++ withFallback(String fallback): Chatbot&lt;C&gt;
++ reactTo():  Chatbot&lt;C&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>104</x><y>126</y><w>72</w><h>81</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+
+m2= chatbox</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>113</x><y>306</y><w>63</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+
+m2= intents</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>239</x><y>414</y><w>108</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+
+m2= phrases</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>329</x><y>396</y><w>234</w><h>108</h></coordinates><panel_attributes>StructuredPhrase
+--
+- phrase: String
+- parameters: Map&lt;String, Object&gt;
+--
++ with (String s): StructuredPhrase
++ with (String s, Object o): StructuredPhrase
++ setting(String s): StructuredPhrase 
++ process(String s): Intent</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>257</x><y>792</y><w>90</w><h>90</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+CoffeeType
+--
++ CAPUCCINO
++ AMERICANO 
++ ESPRESSO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>158</x><y>828</y><w>117</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+
+m2= ct</panel_attributes><additional_attributes>10;20;111;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>59</x><y>819</y><w>108</w><h>63</h></coordinates><panel_attributes>CoffeeOrder
+--
+- num: int
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>95</x><y>747</y><w>63</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;
+
+m2= object</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element></diagram>

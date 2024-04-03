@@ -1,0 +1,13 @@
+
+public class Coordinates {
+	
+	public int latitud;
+	public int longitud;
+	
+	public Coordinates(int latitud, int longitud) {
+		this.longitud = longitud;
+		this.latitud = latitud;
+		
+	}
+
+}

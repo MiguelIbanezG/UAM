@@ -1,0 +1,7 @@
+all: determ.exe
+
+determ.exe: determ.obj
+	tlink /v determ.obj
+
+determ.obj: determ.asm
+	tasm /zi determ.asm,,determ.lst

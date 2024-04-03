@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/mnt/c/Users/Miguel/Documents/2ºCUATRIMESTRE/Analisis y Diseño de Software/Practicas/P3_GR2272_SergioMiguel'
+make: Leaving directory '/mnt/c/Users/Miguel/Documents/2ºCUATRIMESTRE/Analisis y Diseño de Software/Practicas/P3_GR2272_SergioMiguel'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

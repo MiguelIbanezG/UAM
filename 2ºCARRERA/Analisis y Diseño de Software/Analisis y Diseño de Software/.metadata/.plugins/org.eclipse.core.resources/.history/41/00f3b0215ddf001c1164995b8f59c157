@@ -1,0 +1,9 @@
+
+public interface Combatiente {
+
+	public Combatiente add(Combatiente combatiente);
+	
+		
+	
+
+}

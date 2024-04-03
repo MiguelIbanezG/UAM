@@ -1,0 +1,59 @@
+Starting turn 1
+N1  --  --  --  --  
+--  --  --  WA  EN  
+--  --  --  --  --  
+EN  WA  --  --  --  
+--  --  --  --  N2  
+
+1: points 1.0 last cell: 0,0
+2: points 1.0 last cell: 4,4
+Turn 1
+Player 1 enter the coordinates of the new token:
+N1  --  --  --  --  
+--  N1  --  WA  EN  
+--  --  --  --  --  
+EN  WA  --  --  --  
+--  --  --  --  N2  
+
+1: points 2.0 last cell: 1,1
+2: points 1.0 last cell: 4,4
+Turn 1
+Player 2 enter the coordinates of the new token:
+N1  --  --  --  --  
+--  N1  --  WA  EN  
+--  --  --  --  --  
+EN  WA  --  N2  --  
+--  --  --  --  N2  
+
+1: points 2.0 last cell: 1,1
+2: points 2.0 last cell: 3,3
+Starting turn 2
+N1  WA  --  --  --  
+--  N1  --  --  EN  
+--  --  --  --  --  
+EN  --  --  N2  --  
+--  --  --  WA  N2  
+
+1: points 2.0 last cell: 1,1
+2: points 2.0 last cell: 3,3
+Turn 2
+Player 1 enter the coordinates of the new token:
+N1  WA  --  --  --  
+--  N1  --  --  EN  
+N1  --  --  --  --  
+EN  --  --  N2  --  
+--  --  --  WA  N2  
+
+1: points 3.0 last cell: 2,0
+2: points 2.0 last cell: 3,3
+Turn 2
+Player 2 enter the coordinates of the new token:
+N1  WA  --  --  --  
+--  N1  --  --  EN  
+N1  --  --  --  --  
+EN  --  --  N2  M2  
+--  --  --  WA  N2  
+
+1: points 3.0 last cell: 2,0
+2: points 5.0 last cell: 3,4
+The winer is player 2: points 5.0 last cell: 3,4

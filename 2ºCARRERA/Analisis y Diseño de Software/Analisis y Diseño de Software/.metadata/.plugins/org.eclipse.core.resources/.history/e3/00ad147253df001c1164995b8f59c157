@@ -1,0 +1,13 @@
+import java.util.List;
+
+public class MapRegion extends Localizacion {
+	
+	protected List<Localizacion> local;
+	
+	public MapRegion(String nombre, Coordinates cordenadas) {
+		super(nombre, latitud, longitud, region);
+		this.local.add(region);
+	}
+	
+
+}

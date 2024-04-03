@@ -1,0 +1,195 @@
+Turbo Assembler	 Version 2.0	    04/21/22 17:05:39	    Page 1
+pract3a.ASM
+
+
+
+      1	0000			     PRAC3A SEGMENT BYTE PUBLIC	'CODE'
+      2
+      3				     PUBLIC _imparPositivo, _calculaDigito, _siguientePrimo
+      4				     ASSUME CS:	PRAC3A
+      5
+      6
+      7	0000			     _imparPositivo PROC FAR
+      8	0000  55		     PUSH BP
+      9	0001  8B EC		     MOV BP, SP
+     10	0003  52		     PUSH DX ; salvar registros	a usar
+     11	0004  8B 46 06		     MOV AX, [BP + 6] ;	recuperar datos
+     12
+     13				     ;impares acaban en	1
+     14				     ;pares acaban en 0
+     15
+     16	0007  3D 0000		     cmp AX, 0
+     17	000A  7C 08		     jl	NEGA ;si es negativo
+     18
+     19
+     20	000C  BA 0001		     MOV DX, 1
+     21	000F  23 C2		     AND AX, DX	 ;si acaba en 0	devolverá 0 en	AX, si acaba en	1, 1
+     22	0011  EB 04 90		     JMP FIN
+     23
+     24	0014			     NEGA:
+     25	0014  B8 0000		     MOV AX, 0 ;mover a	AX el 0	al ser negativo
+     26
+     27	0017			     FIN:
+     28	0017  5A 5D		     POP DX BP ;recuperar registros usados
+     29	0019  CB		     ret
+     30	001A			     _imparPositivo ENDP
+     31
+     32
+     33	001A			     _calculaDigito PROC FAR
+     34	001A  55		     PUSH BP
+     35	001B  8B EC		     MOV BP, SP
+     36	001D  52 51 57 56	     PUSH DX CX	DI SI
+     37
+     38	0021  8B 46 06		     MOV AX, [BP + 6]; variables
+     39	0024  8B 76 08		     MOV SI, [BP + 8]
+     40
+     41
+     42	0027  BF 0000		     MOV DI, 0;	contador
+     43
+     44	002A  B9 000A		     MOV CX, 10	; divisor
+     45
+     46	002D  3D 0000		     CMP AX, 0
+     47	0030  7C 13		     JL	NEGA2 ;	si es negativo
+     48
+     49	0032			     LOOP_L: ; bucle de	division para seleccionar el númerod
+     50
+     51	0032  33 D2		     XOR DX, DX	; reseteo de DX
+     52
+     53	0034  F7 F1		     DIV CX; división de AX entre CX, en AX-->AX/CX, en DX-->AX%CX
+     54
+     55	0036  3B F7		     CMP SI, DI; contador de posición y contador actual
+     56	0038  74 03		     JE	END_L
+     57
+Turbo Assembler	 Version 2.0	    04/21/22 17:05:39	    Page 2
+pract3a.ASM
+
+
+
+     58	003A			     CONT:
+     59	003A  47		     INC DI
+     60	003B  EB F5		     JMP LOOP_L
+     61
+     62
+     63	003D			     END_L:
+     64
+     65	003D  8B C2		     MOV AX, DX; se pone el módulo de la división en AX
+     66
+     67	003F  5E 5F 59 5A 5D	     POP SI DI CX DX BP;recuperar registros usados
+     68
+     69	0044  CB		     RET
+     70
+     71	0045			     NEGA2:
+     72
+     73	0045  F7 D8		     NEG AX ; se invierte la flag de AX
+     74	0047  EB E9		     JMP LOOP_L
+     75
+     76	0049			     _calculaDigito ENDP
+     77
+     78
+     79	0049			     _siguientePrimo PROC FAR
+     80
+     81	0049  55		     PUSH BP
+     82	004A  8B EC		     MOV BP, SP
+     83	004C  8B 5E 06		     MOV BX, [BP + 6]
+     84	004F  52 53 51		     PUSH DX BX	CX
+     85
+     86
+     87
+     88	0052			     LOOP_P:
+     89
+     90	0052  43		     INC BX
+     91	0053  B9 0002		     MOV CX, 2;	siempre	que empice el bucle, CX	será 2	(el primer primo)
+     92
+     93	0056			     COMP:
+     94	0056  8B C3		     MOV AX, BX; se mueve el número tras el incremento	a AX
+     95
+     96
+     97	0058  3B C1		     CMP AX, CX; se compara para ver si	es el mismo(al ser CX siempre primo se habrá terminado)
+     98	005A  74 22		     JE	END_P
+     99
+    100
+    101	005C  33 D2		     XOR DX, DX; limpieza de DX	para la	división
+    102	005E  F7 F1		     DIV CX
+    103
+    104	0060  41		     INC CX; incremento	de 1 a CX (para	que sea	3)
+    105
+    106	0061  EB 11 90		     JMP TEST_N
+    107
+    108	0064			     COMP2:
+    109
+    110
+    111	0064  8B C3		     MOV AX, BX	; toda esta parte es igual que la anterior
+    112
+    113	0066  3B C1		     CMP AX, CX
+    114	0068  74 14		     JE	END_P
+Turbo Assembler	 Version 2.0	    04/21/22 17:05:39	    Page 3
+pract3a.ASM
+
+
+
+    115
+    116	006A  33 D2		     XOR DX, DX
+    117	006C  F7 F1		     DIV CX
+    118
+    119	006E  83 C1 02		     ADD CX, 2 ; salvo el incremento que es de 2 en vez	de 1
+    120
+    121	0071  EB 01 90		     JMP TEST_N
+    122
+    123
+    124
+    125	0074			     TEST_N:
+    126
+    127	0074  83 FA 00		     CMP DX, 0;	si el resto de la división es 0 no es primo
+    128	0077  74 D9		     JE	LOOP_P
+    129
+    130	0079  83 F9 09		     CMP CX, 9;	si cx es menor o igual que 9 continua
+    131	007C  7E E6		     JLE COMP2
+    132
+    133	007E			     END_P:
+    134
+    135	007E  8B C3		     MOV AX, BX
+    136
+    137	0080  59 5B 5A 5D	     POP CX BX DX BP
+    138	0084  CB		     RET
+    139	0085			     _siguientePrimo ENDP
+    140
+    141
+    142
+    143
+    144	0085			     PRAC3A ENDS ; FIN DEL SEGMENTO DE CODIGO
+    145				     END ; FIN DE pract3a.asm
+Turbo Assembler	 Version 2.0	    04/21/22 17:05:39	    Page 4
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??date				  Text	 "04/21/22"
+??filename			  Text	 "pract3a "
+??time				  Text	 "17:05:39"
+??version			  Number 0200
+@Cpu				  Text	 0101H
+@FileName			  Text	 pract3a
+@WordSize			  Text	 2
+@curseg				  Text	 PRAC3A
+COMP				  Near	 PRAC3A:0056
+COMP2				  Near	 PRAC3A:0064
+CONT				  Near	 PRAC3A:003A
+END_L				  Near	 PRAC3A:003D
+END_P				  Near	 PRAC3A:007E
+FIN				  Near	 PRAC3A:0017
+LOOP_L				  Near	 PRAC3A:0032
+LOOP_P				  Near	 PRAC3A:0052
+NEGA				  Near	 PRAC3A:0014
+NEGA2				  Near	 PRAC3A:0045
+TEST_N				  Near	 PRAC3A:0074
+_calculaDigito			  Far	 PRAC3A:001A
+_imparPositivo			  Far	 PRAC3A:0000
+_siguientePrimo			  Far	 PRAC3A:0049
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+PRAC3A				  16  0085 Byte	  Public  CODE
+

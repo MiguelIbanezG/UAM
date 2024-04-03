@@ -1,0 +1,36 @@
+Transitions from: starting: [---->On]
+Transitions from: On: [--power-->off]
+Transitions from: off: [--power-->starting]
+
+Music System with states:
+[State[starting: Starting the music system], State[On] with states: {[State[CD], State[Tuner]]}], State[off]]
+
+off--power-->starting
+starting====>Tuner
+Tuner--mode-->CD
+CD--mode-->Tuner
+Tuner--power-->off
+Transitions from: starting: [---->On]
+Transitions from: On: [--power-->off]
+Transitions from: off: [--power-->starting]
+
+Music System with states:
+[State[starting: Starting the music system], State[On] with states: {[State[CD], State[Tuner]]}], State[off]]
+
+off--power-->starting
+starting====>Tuner
+Tuner--mode-->CD
+CD--mode-->Tuner
+Tuner--power-->off
+Transitions from: starting: [---->On]
+Transitions from: On: [--power-->off]
+Transitions from: off: [--power-->starting]
+
+Music System with states:
+[State[starting: Starting the music system], State[On] with states: {[State[CD], State[Tuner]]}], State[off]]
+
+off--power-->starting
+starting====>Tuner
+Tuner--mode-->CD
+CD--mode-->Tuner
+Tuner--power-->off

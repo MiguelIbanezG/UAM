@@ -1,0 +1,18 @@
+off--power-->starting
+starting====>Tuner
+Tuner--mode-->CD
+CD--mode-->Tuner
+Tuner--power-->off
+Error: invalid event foo
+off--power-->starting
+starting====>Tuner
+Tuner--mode-->CD
+CD--mode-->Tuner
+Tuner--power-->off
+Error: invalid event foo
+off--power-->starting
+starting====>Tuner
+Tuner--mode-->CD
+CD--mode-->Tuner
+Tuner--power-->off
+Error: invalid event foo

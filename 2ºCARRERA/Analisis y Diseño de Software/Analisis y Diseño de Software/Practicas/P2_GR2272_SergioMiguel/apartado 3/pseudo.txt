@@ -1,0 +1,26 @@
+a)
+public Int get_media_estudiantes()
+{
+    Int i, notas
+
+   for(i : this.num_estudiantes)
+   {
+    
+    notas = notas + get_nota1(this.estudiante(i));
+    notas = notas + get_nota2(this.estudiante(i));
+    notas = notas + get_nota3(this.estudiante(i));
+   }
+
+   return notas;
+}
+
+b)
+public void print_asignaturas()
+{
+    int i
+
+    for (i : this.num_asignaturas)
+    {
+        print("Nombre: "+this.nombre_asignatura(i)+" Media: " + this.get_media_estudiantes(i))
+    }
+}

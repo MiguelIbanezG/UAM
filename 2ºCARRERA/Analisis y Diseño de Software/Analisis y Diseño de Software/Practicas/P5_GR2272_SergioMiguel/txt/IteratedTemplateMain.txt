@@ -1,0 +1,14 @@
+Dear Mary,
+How are you today?
+Since you were born on 2001-01-01, you are 21 years old.
+
+
+
+Dear Peter,
+How are you today?
+Since you were born on 1957-04-01, you are 65 years old.
+Contact us if thinking about retirement...
+... and greetings to your mascots:
+  Ey Felix, you are a nice cat!
+  Ey Chirps, you are a nice canary!
+

@@ -1,0 +1,18 @@
+
+public class ConexionesAereas {
+ private Map<TrayectoDirecto, Set<String>> conexiones = new TreeMap<TrayectoDirecto,Set<String>>();
+
+public void add(TrayectoDirecto trayecto, String aerolinea) {
+ if (! conexiones.containsKey(trayecto)) conexiones.put(trayecto, new TreeSet<String>());
+ conexiones.get(trayecto).add(aerolinea);
+ }
+
+public String toString() { return conexiones.toString(); }
+// AÑADIDO SOLO EN VERSION DE NO CONTINUA *************************
+public boolean remove(TrayectoDirecto trayecto, String aerolinea) {
+ if (conexiones.containsKey(trayecto))
+ return conexiones.get(trayecto).remove(aerolinea);
+ return false;
+ }
+// *****************************************************************
+}

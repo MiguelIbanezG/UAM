@@ -1,0 +1,7 @@
+
+public class TrayectoDirecto { // completar la clase (1) si es necesario
+	private Aeropuerto origen, destino;
+	public Aeropuerto getOrigen() { return origen; }
+	public Aeropuerto getDestino() { return destino; }
+	public String toString() { return "(" + origen + "<>" + destino + ")"; }
+}

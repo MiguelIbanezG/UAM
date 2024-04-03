@@ -1,0 +1,208 @@
+Turbo Assembler	 Version 2.0	    04/21/22 17:13:07	    Page 1
+pract3b.ASM
+
+
+
+      1	0000			     PRAC3B SEGMENT BYTE PUBLIC	'CODE'
+      2				     PUBLIC _encuentraSubcadena, _calculaSegundoDC
+      3				     ASSUME CS:	PRAC3B
+      4
+      5	0000			     _encuentraSubcadena PROC FAR
+      6	0000  55			 PUSH BP
+      7	0001  8B EC			 MOV BP, SP
+      8	0003  56 53 57 06 1E		 PUSH SI BX DI ES DS ; salvar registros	a usar
+      9
+     10	0008  C5 76 06			 LDS SI, [BP+6]
+     11	000B  C4 7E 0A			 LES DI, [BP+10]
+     12	000E  B8 FFFF			 MOV AX,-1
+     13
+     14
+     15	0011			     LOOPSUB:
+     16
+     17	0011  80 3C 00		     CMP  BYTE PTR [SI], 0
+     18	0014  74 22		     JZ	ENDSUB
+     19
+     20	0016  26: 8A 1D		     MOV BL, ES:[DI]
+     21	0019  38 1C		     CMP  BYTE PTR [SI], BL
+     22	001B  75 12		     JNZ NOTEQSUB
+     23
+     24	001D  2B 76 06		     SUB SI, OFFSET [BP	+6]
+     25	0020  8B C6		     MOV AX, SI
+     26	0022  03 76 06		     ADD SI, OFFSET [BP+6]
+     27
+     28	0025  47		     INC DI
+     29	0026  46		     INC SI
+     30
+     31	0027  26: 80 3D	00	     CMP BYTE PTR ES:[DI], 0
+     32	002B  74 0B		     JZ	ENDSUB
+     33
+     34	002D  EB E2		     JMP LOOPSUB
+     35
+     36
+     37	002F			     NOTEQSUB:
+     38	002F  B8 FFFF		     MOV AX, -1
+     39	0032  46		     INC SI
+     40	0033  8B 7E 0A		     MOV DI, OFFSET[BP+10]
+     41
+     42	0036  EB D9		     JMP LOOPSUB
+     43
+     44
+     45	0038			     ENDSUB:
+     46	0038  1F 07 5F 5B 5E	     POP DS ES DI BX SI	; Recuperar registros usados
+     47	003D  5D		     POP BP
+     48	003E  CB		     ret
+     49	003F			     _encuentraSubcadena ENDP
+     50
+     51
+     52	003F			     _calculaSegundoDC PROC FAR
+     53	003F  55			 PUSH BP
+     54	0040  8B EC			 MOV BP, SP
+     55	0042  53 57 06 1E 51 52		 PUSH BX DI ES DS CX DX; salvar	registros a usar
+     56
+     57	0048  C5 7E 06			 LDS DI, [BP + 6]
+Turbo Assembler	 Version 2.0	    04/21/22 17:13:07	    Page 2
+pract3b.ASM
+
+
+
+     58
+     59	004B  BA 0000			 MOV DX, 0
+     60	004E  B7 01			 MOV BH, 1
+     61
+     62	0050				 LOOPCALC: ; bucle de suma y multiplicación
+     63
+     64	0050  8A 1D			 MOV BL, DS:[DI] ; caracter actual
+     65
+     66	0052  80 EB 30			 SUB BL, 30H ; paso de asci a numero
+     67
+     68	0055  8A CB			 MOV CL, BL
+     69
+     70	0057  8B C1			 MOV AX, CX ; se mueve para ser	multiplicado por BH (el	numero en cuestion)
+     71	0059  F6 E7			 MUL BH
+     72
+     73	005B  02 D0			 ADD DL, AL ; se añade	el resultado a DL (para	poder seguir operando con AX)
+     74
+     75
+     76	005D  47			 INC DI	; se incrementa	en 1 la	posicion del string
+     77
+     78
+     79	005E  80 FF 01			 CMP BH, 1 ; aqui se elige cual	es el numero que se necesita (si es igual salta	a la
+     80	0061  74 30			 JE EXCEPT2 ; etiqueta que lo cambiará	por el siguiente)
+     81	0063  80 FF 02			 CMP BH, 2
+     82	0066  74 2F			 JE EXCEPT4
+     83	0068  80 FF 04			 CMP BH, 4
+     84	006B  74 2E			 JE EXCEPT8
+     85	006D  80 FF 08			 CMP BH, 8
+     86	0070  74 2D			 JE EXCEPT5
+     87	0072  80 FF 05			 CMP BH, 5
+     88	0075  74 2C			 JE EXCEPT10
+     89	0077  80 FF 0A			 CMP BH, 10
+     90	007A  74 2B			 JE EXCEPT9
+     91	007C  80 FF 09			 CMP BH, 9
+     92	007F  74 2A			 JE EXCEPT7
+     93	0081  80 FF 07			 CMP BH, 7
+     94	0084  74 29			 JE EXCEPT3
+     95	0086  80 FF 03			 CMP BH, 3
+     96	0089  74 28			 JE EXCEPT6
+     97
+     98	008B  80 FF 06			 CMP BH, 6
+     99	008E  75 C0			 JNE LOOPCALC
+    100	0090  EB 25 90			 JMP FINCALC
+    101
+    102
+    103	0093				 EXCEPT2:
+    104	0093  B7 02			 MOV BH, 2
+    105	0095  EB B9			 JMP LOOPCALC
+    106	0097				 EXCEPT4:
+    107	0097  B7 04			 MOV BH, 4
+    108	0099  EB B5			 JMP LOOPCALC
+    109	009B				 EXCEPT8:
+    110	009B  B7 08			 MOV BH, 8
+    111	009D  EB B1			 JMP LOOPCALC
+    112	009F				 EXCEPT5:
+    113	009F  B7 05			 MOV BH, 5
+    114	00A1  EB AD			 JMP LOOPCALC
+Turbo Assembler	 Version 2.0	    04/21/22 17:13:07	    Page 3
+pract3b.ASM
+
+
+
+    115	00A3				 EXCEPT10:
+    116	00A3  B7 0A			 MOV BH, 10
+    117	00A5  EB A9			 JMP LOOPCALC
+    118	00A7				 EXCEPT9:
+    119	00A7  B7 09			 MOV BH, 9
+    120	00A9  EB A5			 JMP LOOPCALC
+    121	00AB				 EXCEPT7:
+    122	00AB  B7 07			 MOV BH, 7
+    123	00AD  EB A1			 JMP LOOPCALC
+    124	00AF				 EXCEPT3:
+    125	00AF  B7 03			 MOV BH, 3
+    126	00B1  EB 9D			 JMP LOOPCALC
+    127	00B3				 EXCEPT6:
+    128	00B3  B7 06			 MOV BH, 6
+    129	00B5  EB 99			 JMP LOOPCALC
+    130
+    131	00B7				 FINCALC:
+    132	00B7  8B C2			 MOV AX, DX ; se mueve el resultado a AX
+    133
+    134	00B9  BB 000B			 MOV BX, 11
+    135	00BC  33 D2			 XOR DX, DX
+    136
+    137	00BE  F7 F3			 DIV BX	; se divide entre 11
+    138
+    139	00C0  8B C2			 MOV AX, DX ; se pasa el modulo	a ax
+    140
+    141	00C2  2B D8			 SUB BX, AX ; se resta 11
+    142
+    143	00C4  83 FB 0A			 CMP BX, 10
+    144	00C7  75 03			 JNE FINALFINAL	; si es	10 pasara a ser	1
+    145	00C9  BB 0001			 MOV BX, 1
+    146
+    147	00CC				 FINALFINAL:
+    148	00CC  8B C3			 MOV AX, BX
+    149	00CE  5A 59 1F 07 5F 5B		 POP DX	CX DS ES DI BX ; Recuperar registros usados
+    150	00D4  5D			 POP BP
+    151	00D5  CB			 ret
+    152	00D6			     _calculaSegundoDC ENDP
+    153
+    154	00D6			     PRAC3B ENDS ; FIN DEL SEGMENTO DE CODIGO
+    155				     END ; FIN DE pract3a.asm
+Turbo Assembler	 Version 2.0	    04/21/22 17:13:07	    Page 4
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??date				  Text	 "04/21/22"
+??filename			  Text	 "pract3b "
+??time				  Text	 "17:13:07"
+??version			  Number 0200
+@Cpu				  Text	 0101H
+@FileName			  Text	 pract3b
+@WordSize			  Text	 2
+@curseg				  Text	 PRAC3B
+ENDSUB				  Near	 PRAC3B:0038
+EXCEPT10			  Near	 PRAC3B:00A3
+EXCEPT2				  Near	 PRAC3B:0093
+EXCEPT3				  Near	 PRAC3B:00AF
+EXCEPT4				  Near	 PRAC3B:0097
+EXCEPT5				  Near	 PRAC3B:009F
+EXCEPT6				  Near	 PRAC3B:00B3
+EXCEPT7				  Near	 PRAC3B:00AB
+EXCEPT8				  Near	 PRAC3B:009B
+EXCEPT9				  Near	 PRAC3B:00A7
+FINALFINAL			  Near	 PRAC3B:00CC
+FINCALC				  Near	 PRAC3B:00B7
+LOOPCALC			  Near	 PRAC3B:0050
+LOOPSUB				  Near	 PRAC3B:0011
+NOTEQSUB			  Near	 PRAC3B:002F
+_calculaSegundoDC		  Far	 PRAC3B:003F
+_encuentraSubcadena		  Far	 PRAC3B:0000
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+PRAC3B				  16  00D6 Byte	  Public  CODE
+

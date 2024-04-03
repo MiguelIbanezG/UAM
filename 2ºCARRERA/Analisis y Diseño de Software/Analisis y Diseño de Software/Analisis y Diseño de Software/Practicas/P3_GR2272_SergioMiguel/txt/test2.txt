@@ -1,0 +1,24 @@
+false
+false
+Transitions from: starting: [---->Tuner]
+Transitions from: CD: [--mode-->Tuner, --power-->off]
+Transitions from: Tuner: [--mode-->CD, --power-->off]
+Transitions from: off: [--power-->starting]
+false
+false
+Transitions from: starting: [---->Tuner]
+Transitions from: CD: [--mode-->Tuner, --power-->off]
+Transitions from: Tuner: [--mode-->CD, --power-->off]
+Transitions from: off: [--power-->starting]
+false
+false
+Transitions from: starting: [---->Tuner]
+Transitions from: CD: [--mode-->Tuner, --power-->off]
+Transitions from: Tuner: [--mode-->CD, --power-->off]
+Transitions from: off: [--power-->starting]
+false
+false
+Transitions from: starting: [---->Tuner]
+Transitions from: CD: [--mode-->Tuner, --power-->off]
+Transitions from: Tuner: [--mode-->CD, --power-->off]
+Transitions from: off: [--power-->starting]

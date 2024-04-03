@@ -1,0 +1,39 @@
+ejecutar con FILE  xxxxxxxxx.log
+
+UNA LINEA:
+gnuplot
+
+set term png
+
+set output ‘yyyyyyyy.png’
+
+plot “xxxxxxxx.log” using Nº title ‘TITUTLO’ with lines
+
+VARIAS LINEAS
+gnuplot
+
+set term png
+
+set output ‘yyyyyyyy.png’
+
+plot “xxxxxxxx.log” using Nº title ‘TITUTLO’ with lines,\
+“xxxxxxxx.log” using Nº title ‘TITUTLO’ with lines,\
+“xxxxxxxx.log” using Nº title ‘TITUTLO’ with lines
+
+VARIAS LÍNEAS Y VARIAS FUNCIONES
+gnuplot
+
+set term png
+
+set output ‘yyyyyyyy.png’
+
+plot “xxxxxxxx.log” using Nº title ‘TITUTLO’ with lines,\
+“xxxxxxxx.log” using Nº title ‘TITUTLO’ with lines,\
+“xxxxxxxx.log” using Nº title ‘TITUTLO’ with lines,\
+“aaaaaa.log” using Nº title ‘TITUTLO’ with lines,\
+“aaaaaaa.log” using Nº title ‘TITUTLO’ with lines,\
+“aaaaaaa.log” using Nº title ‘TITUTLO’ with lines
+
+
+HISTOGRAMA, ejemplo:
+set term png; set output 'numeros.png'; plot 'numeros.tmp.txt' smooth frequency with boxes

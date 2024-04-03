@@ -1,0 +1,136 @@
+Turbo Assembler	 Version 2.0	    04/20/22 23:35:24	    Page 1
+pract3b.ASM
+
+
+
+      1	0000			     PRAC3B SEGMENT BYTE PUBLIC	'CODE'
+      2				     PUBLIC _encuentraSubcadena
+      3				     PUBLIC _calculaSegundoDC
+      4				     ASSUME CS:	PRAC3B
+      5	0000			     _encuentraSubcadena PROC FAR
+      6	0000  55			 PUSH BP
+      7	0001  8B EC			 MOV BP, SP
+      8	0003  56 53 57 06 1E		 PUSH SI BX DI ES DS ; salvar registros	a usar
+      9
+     10	0008  C5 76 06			 LDS SI, [BP+6]	  ; Cogemos al puntero *string en DS:SI
+     11	000B  C4 7E 0A			 LES DI, [BP+10]  ; Cogemos al puntero *substr en ES:DI
+     12	000E  B8 FFFF			 MOV AX,-1
+     13
+     14	0011			     WHILE1:
+     15	0011  80 3C 00			 CMP  BYTE PTR [SI], 0	    ; str[i] ==	'\0' ?
+     16	0014  74 24			 JZ FIN
+     17
+     18	0016  26: 8A 1D			 MOV BL, ES:[DI]
+     19	0019  38 1C			 CMP  BYTE PTR [SI], BL	    ; str[i] ==	substr[j] ?
+     20	001B  75 14			 JNZ NOIGUAL
+     21	001D  47			 INC DI			    ; j++
+     22	001E  26: 80 3D	00		 CMP  BYTE PTR ES:[DI],	0   ; Hemos acabado la substring ?
+     23	0022  74 16			 JZ FIN			    ; Si es así AX -> posición
+     24	0024  3D FFFF			 CMP AX, -1		    ; tmp == -1	?
+     25	0027  75 05			 JNZ NORESET
+     26	0029  8B C6			 MOV AX, SI		    ; tmp = i
+     27	002B  2B 46 06			 SUB AX, [BP+6]
+     28	002E			     NORESET:
+     29	002E  EB 07 90			 JMP IGUAL
+     30	0031			     NOIGUAL:
+     31	0031  B8 FFFF			 MOV AX,-1
+     32	0034  8B 56 0A			 MOV DX, [BP+10]	     ; Recarga de la pila a la "j"
+     33	0037			     IGUAL:
+     34
+     35	0037  46			 INC SI
+     36	0038  EB D7			 JMP WHILE1
+     37	003A			     FIN:
+     38	003A  80 3D 00			 CMP BYTE PTR [DI], 0
+     39	003D  74 03			 JZ OK			     ; Caso extremo de str="a" y substr="aBZ"
+     40	003F  B8 FFFF			 MOV AX,-1
+     41	0042			     OK:
+     42	0042  1F 07 5F 5B 5E		 POP DS	ES DI BX SI  ; Recuperar registros usados
+     43	0047  5D			 POP BP
+     44	0048  CB			 RET
+     45	0049			     _encuentraSubcadena ENDP
+     46	0049  0001 0002	0004 0008 +  TABLA DW 1, 2, 4, 8, 5, 10, 9, 7, 3, 6
+     47	      0005 000A	0009 0007 +
+     48	      0003 0006
+     49	005D			     _calculaSegundoDC PROC FAR
+     50	005D  55			 PUSH BP
+     51	005E  8B EC			 MOV BP,SP
+     52	0060  06 51 53 52 57 56		 PUSH ES CX BX DX DI SI
+     53					 ; CARGA DE DATOS
+     54	0066  C4 7E 06			 LES DI,[BP+6]	     ; ES:DI puntero char* en FAR
+     55	0069  BE 0049r			 MOV SI,OFFSET TABLA ; CS:SI puntero a la tabla
+     56	006C  33 C0			 XOR AX,AX	     ; Limpiampos al acumulador	y contador
+     57	006E  33 C9			 XOR CX,CX
+Turbo Assembler	 Version 2.0	    04/20/22 23:35:24	    Page 2
+pract3b.ASM
+
+
+
+     58	0070			     WHILE_MUL:
+     59	0070  26: 8A 05			 MOV AL,ES:[DI]
+     60	0073  2C 30			 SUB AL,30h		 ; Convertir de	ASCII a	dígito
+     61	0075  2E: F7 24			 MUL WORD PTR CS:[SI]
+     62	0078  50			 PUSH AX
+     63	0079  33 C0			 XOR AX,AX
+     64	007B  47			 INC DI
+     65	007C  83 C6 02			 ADD SI,2		 ; De 2	en 2 pq	WORD
+     66	007F  41			 INC CX
+     67	0080  83 F9 0A			 CMP CX,10
+     68	0083  75 EB			 JNE WHILE_MUL
+     69
+     70	0085  8B F4			 MOV SI,SP	 ; Para	que apunte al principio	de la pila
+     71	0087			     WHILE_SUM:
+     72	0087  36: 03 04			 ADD AX, SS:[SI]
+     73	008A  83 C6 02			 ADD SI,2
+     74	008D  49			 DEC CX
+     75	008E  75 F7			 JNZ WHILE_SUM
+     76	0090  83 C4 14			 ADD SP,10*2	     ; Rebalanceo del stack
+     77
+     78	0093  33 D2			 XOR DX,DX	     ; Preparamos a DX
+     79	0095  BB 000B			 MOV BX,11
+     80	0098  F7 F3			 DIV BX		     ; DX:AX entre BX -> Modulo	en DX
+     81	009A  2B DA			 SUB BX,DX	     ; 11 - (SUMA % 11)
+     82
+     83	009C  83 FB 0A			 CMP BX,10
+     84	009F  75 03			 JNE NODIEZ	     ; if (BX == 10) ->	si no continúa
+     85	00A1  BB 0001			 MOV BX,1
+     86	00A4			     NODIEZ:
+     87	00A4  93			 XCHG AX,BX
+     88	00A5  5E 5F 5A 5B 59 07		 POP SI	DI DX BX CX ES
+     89	00AB  5D			 POP BP
+     90	00AC  CB			 RET
+     91	00AD			     _calculaSegundoDC ENDP
+     92	00AD			     PRAC3B ENDS ; FIN DEL SEGMENTO DE CODIGO
+     93				     END
+Turbo Assembler	 Version 2.0	    04/20/22 23:35:24	    Page 3
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??date				  Text	 "04/20/22"
+??filename			  Text	 "pract3b "
+??time				  Text	 "23:35:24"
+??version			  Number 0200
+@Cpu				  Text	 0101H
+@FileName			  Text	 pract3b
+@WordSize			  Text	 2
+@curseg				  Text	 PRAC3B
+FIN				  Near	 PRAC3B:003A
+IGUAL				  Near	 PRAC3B:0037
+NODIEZ				  Near	 PRAC3B:00A4
+NOIGUAL				  Near	 PRAC3B:0031
+NORESET				  Near	 PRAC3B:002E
+OK				  Near	 PRAC3B:0042
+TABLA				  Word	 PRAC3B:0049
+WHILE1				  Near	 PRAC3B:0011
+WHILE_MUL			  Near	 PRAC3B:0070
+WHILE_SUM			  Near	 PRAC3B:0087
+_calculaSegundoDC		  Far	 PRAC3B:005D
+_encuentraSubcadena		  Far	 PRAC3B:0000
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+PRAC3B				  16  00AD Byte	  Public  CODE
+
