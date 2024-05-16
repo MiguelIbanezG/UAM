@@ -1,0 +1,42 @@
+El siguiente listado incluye los proyectos sugeridos para la práctica Proyecto. Te invitamos a sugerir tu propio proyecto o elegir una de los propuestos.
+
+
+
+Proyecto Básico
+
+Se trata de realizar el proyecto básico propuesto por la asignatura. Los detalles del proyecto se explicarán en clase y el material se encuentra a continuación en Moodle.
+
+
+
+Lenguajes de programación
+
+Se trataría de emplear nuevos lenguajes o modelos de programación, y aplicarlos a algunos de los algoritmos vistos en las prácticas o a nuevos algoritmos.
+
+OpenCL
+OpenMPI
+
+
+Aplicaciones y algoritmos
+
+Se trataría de aplicar los modelos de programación aprendidos en la asignatura a nuevos algoritmos o aplicaciones.
+
+CUDA by Example
+El libro describe la implementación en CUDA de diferentes algoritmos. Puede ser interesante implementar alguno/s de ellos en GPU y obtener resultados de rendimiento. También pueden implementarse en otro modelos de programación.
+
+Link al libro: http://www.mat.unimi.it/users/sansotte/cuda/CUDA_by_Example.pdf
+
+Análisis numérico
+Considere su algoritmo numérico favorito (eliminación gaussiana, solucionador de ecuaciones diferenciales, etc.) y diseñe un nuevo algoritmo paralelo.
+
+Números al azar
+Las simulaciones secuenciales suelen utilizar un único generador de números aleatorios. ¿Qué debe hacer una simulación paralela en este contexto? Algunas propiedades deseables son:
+
+    1. Cada proceso debe extraer una secuencia de números aleatorios distinta.
+
+    2. Repetibilidad entre ejecuciones paralelas cuando se usa la misma semilla aleatoria.
+
+    3. Repetibilidad al comparar una ejecución en paralelo con n procesos y una ejecución paralela con solo 1 proceso, cuando se usa la misma semilla aleatoria.
+
+    4. Repetibilidad entre la simulación paralelizada y la simulación secuencial original (sin modificar).
+
+Las soluciones que satisfacen 1, 2 y 3 son relativamente fáciles. Sin embargo, no es trivial, ya que distintas ejecuciones paralelas pueden reordenar las tareas individuales, según la velocidad de los procesos de trabajo. Si la tarea 5 se ejecuta antes que la tarea 4, ¿se puede seguir manteniendo la repetibilidad de los resultados? Uno envía una nueva semilla o estado aleatorio a cada proceso, junto con cada tarea. Sin embargo, ¿existe una base teórica para garantizar que el uso de múltiples semillas aleatorias satisfaga la propiedad de pseudoaleatoriedad de un solo generador? Además, ¿existe una forma eficiente de capturar el objetivo número 4?

@@ -1,0 +1,56 @@
+﻿Utilizadas recientemente
+Item,Category,Path,Date Last Accessed,Windows User,Evidence Location,Timezone
+cmd,Start-Run Commands,,,Administrator,Copia-0:\Users\Administrator\NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU\a,+2:00
+
+Programas instalados
+Program Name,Install Path,Date Installed,Windows User,Evidence Location,Timezone
+F-Response,,"08/08/2018, 2:04:27",N/A,Copia-0:\Windows\System32\Config\SOFTWARE\Classes\Installer\Products\4426A68C51154BF44953CE9A1D7E200A,+2:00
+F-Response,C:\windows\SysWOW64\,"07/08/2018, 2:00:00",N/A,Copia-0:\Windows\System32\Config\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{C86A6244-5115-4FB4-9435-ECA9D1E702A0},+2:00
+Notepad++ (64-bit x64),,"16/07/2018, 19:18:12",N/A,Copia-0:\Windows\System32\Config\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Notepad++,+2:00
+Microsoft .NET Framework 4.5.2,,"12/07/2018, 12:16:44",N/A,Copia-0:\Windows\System32\Config\SOFTWARE\Classes\Installer\Products\6414876250E69FF3395387C6C7F05BEB,+2:00
+Update for Microsoft .NET Framework 4.5.2 (KB4040977),,"12/07/2018, 12:16:19",N/A,Copia-0:\Windows\System32\Config\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{92FB6C44-E685-45AD-9B20-CADF4CABA132}.KB4040977,+2:00
+Update for Microsoft .NET Framework 4.5.2 (KB4338417),,"12/07/2018, 12:10:22",N/A,Copia-0:\Windows\System32\Config\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{92FB6C44-E685-45AD-9B20-CADF4CABA132}.KB4338417,+2:00
+Microsoft .NET Framework 4.5.2,,"12/07/2018, 2:00:00",N/A,Copia-0:\Windows\System32\Config\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{26784146-6E05-3FF9-9335-786C7C0FB5BE},+2:00
+Google Update Helper,,"12/07/2018, 1:54:10",N/A,Copia-0:\Windows\System32\Config\SOFTWARE\Classes\Installer\Products\A089CE062ADB6BC44A720BA745894BAC,+2:00
+Google Update Helper,,"11/07/2018, 2:00:00",N/A,Copia-0:\Windows\System32\Config\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{60EC980A-BDA2-4CB6-A427-B07A5498B4CA},+2:00
+
+Registros de eventos
+Item,Event Channel,Event Time,Event ID,Event Record ID,User ID (Linux),Event Information,User,Evidence Location,Timezone
+Service Status Changed,System,"09/08/2018, 1:58:16",7036,16800,,Application Experience service entered the running state,,Copia-0:\Windows\System32\winevt\Logs\System.evtx,+2:00
+
+UserAssist
+Item,Date Last Used,Count,Windows User,Evidence Location,Timezone
+C:\Users\mpowers\Desktop\sub-win-x64_104.148.109.124_5682_3262.exe,"08/08/2018, 23:37:04",2,mpowers,Copia-0:\Users\mpowers\NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}\Count\P:\Hfref\zcbjref\Qrfxgbc\fho-jva-k64_104.148.109.124_5682_3262.rkr,+2:00
+
+Jump Lists
+Item,System,Entry ID,Date Accessed,Windows User,Evidence Location,Timezone
+::{26EE0668-A00A-44D7-9371-BEB064C98683}\3\::{8E908FC9-BECC-40F6-915B-F4CA0E70D03D}\Advanced,,5,"08/08/2018, 22:26:34",Administrator,Copia-0:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations\7e4dca80246863e3.automaticDestinations-ms,+2:00
+
+Shellbags
+Item,Path,Date Created,Date Modified,Date Accessed,Registry Location,Timezone
+release,Desktop\My Computer ({20d04fe0-3aea-1069-a2d8-08002b30309d})\C:\M4Projects\project_0x02\treceiver\target\release,,"16/02/4012, 10:01:00",,Copia-0:\Users\mpowers\AppData\Local\Microsoft\Windows\UsrClass.DAT\Local Settings\Software\Microsoft\Windows\Shell\BagMRU\1\0\2\0\0\0\0,+2:00
+
+Descargas
+File Name,Source URL,Downloaded To,File Size,Date Download Started,Date Download Ended,Browser,Username,Profile,Evidence Location,Timezone
+desktop.ini,,Copia-0:\Users\mpowers\Downloads,282 Bytes,"16/07/2018, 19:04:55","16/07/2018, 19:04:55",Unknown,mpowers,,Copia-0:\Users\mpowers\Downloads\desktop.ini,+2:00
+
+Historial del navegador
+Title,URL,Date Last Accessed,Visit Count,Browser,Username,Profile,Evidence Location,Timezone
+javascript:try{external.ExecuteSelectionMenuItem('Stop')}catch(err){UpdateState()},javascript:try{external.ExecuteSelectionMenuItem('Stop')}catch(err){UpdateState()},"08/08/2018, 2:16:20",1,Internet Explorer,mpowers,,Copia-0:\Users\mpowers\AppData\Local\Microsoft\Windows\WebCache\WebCacheV01.dat,+2:00
+
+Marcadores
+Item,URL,Date Added,Browser,Windows User,Profile,Evidence Location,Timezone
+Web Slice Gallery,http://go.microsoft.com/fwlink/?LinkId=121315,"16/07/2018, 19:04:58",Internet Explorer,mpowers,,Copia-0:\Users\mpowers\Favorites\Links\Web Slice Gallery.url,+2:00
+
+Cookies
+Host,Path,Name,Value,Date Created,Date Last Accessed,Expiry Date,Browser,Username,Profile,Evidence Location,Timezone
+.yahoo.com,/,B,"Could not decrypt, please enter password for Windows user: mpowers","07/08/2018, 22:11:11","07/08/2018, 22:20:56","07/08/2019, 22:11:11",Chrome,mpowers,Default,Copia-0:\Users\mpowers\AppData\Local\Google\Chrome\User Data\Default\Cookies,+2:00
+
+USB
+Item,Device Type,Product ID,Serial Number,Revision,Date Last Connected,Date First Connected,Event Type,Date Connected/Disconnected,Evidence Location,Timezone
+"Adomax Technology Co., Ltd (VID_0627) PID_0001",USB Input Device,PID_0001,42,REV_0000,"08/08/2018, 17:19:04",,-,-,Copia-0:\Windows\System32\Config\SYSTEM\ControlSet001\Enum\USB\VID_0627&PID_0001\42,+2:00
+
+Volúmenes montados
+Item,Mounted Volume,Location Volume,File Location,Timezone
+C: b71fbcd6-e620-11e6-a8ef-806e6f6e6963,C: b71fbcd6-e620-11e6-a8ef-806e6f6e6963,MountedDevices\\DosDevices\C:,Copia-0:\Windows\System32\Config\SYSTEM\MountedDevices\\??\Volume{b71fbcd6-e620-11e6-a8ef-806e6f6e6963},+2:00
+
