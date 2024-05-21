@@ -1,0 +1,11 @@
+Problema 1
+No habria que hacer negociacion
+Hay que hacer diap 23 tema 3 (todos)
+Gestión -> (hasta gestion de requisitos) No porque ya tienen que estar hechas, son de predesarrollo
+	Hay que hacer gestion de requisitos, gestión de riesgos (ya estan hechos, pero hay que confirmar que no ocurran), grestion de personal, gestion de analisis de presupuestos, asignar tareas, recurros de desarrollo, coordinación y relacionees con clientes
+Coordinacion _> todos
+Dirección técnica-> identificar aspectos tecnicos no resueltos
+Se pueden priorizar, meter en mem
+
+Problema 2
+Especificar cualidades de jefe de proyecto

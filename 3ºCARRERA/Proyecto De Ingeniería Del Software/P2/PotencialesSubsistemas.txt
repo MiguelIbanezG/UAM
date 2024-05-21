@@ -1,0 +1,18 @@
+Subsistemas:
+
+Valoraciones
+
+Gestion de usuarios
+
+Servicio de reservas (General)
+
+Busqueda en el sistema
+
+Lista de espera
+
+Sistema de comunicaciones
+
+Sistema del foro
+
+Gestión de pagos
+

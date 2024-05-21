@@ -1,0 +1,66 @@
+PROBLEMA 1
+
+Punto de Funcion en C = 105
+Errores por funcion = 2
+Coste estimado = 900
+
+Datos : 4
+Entrada de datos : 5
+Funciones Distribuidas : 3
+Reusabilidad : 3
+Instalacion en lugares distintos : 3
+Procesos Complejos : 2
+Rendimiento : 1
+
+TOTAL = 20
+Factor de ajuste = 0.85
+PF ajustados = 117 PFA
+Nº De lineas en C 12285
+Coste 105300
+Errores 234
+
+----------------------------------------------
+PROBLEMA 2
+
+Entradas => Diccionario Personalizado && Documento
+Salidas => Informe Texto && Informe Gráfico && Errores
+Consultas => Palabras Procesadas && Errores Cometidos
+Ficheros Lógicos Internos => Diccionario de la Aplicación
+Ficheros Lógicos Externos => R.I.P.
+
+PF sin ajustar = 41 PFSA
+
+Diseño para la eficiencia del usuario final : 2
+Comunicación de Datos : 2
+Entrada de Datos Online : 3
+Reusabilidad : 5
+Facilidad de Instalación : 5
+Facilidad de Operación : 5
+
+TOTAL => 25
+FA => 0.9
+PFA => 37
+Nº Lineas de Codigo en C => 3885
+Coste => 33300
+
+----------------------------------------------
+PROBLEMA 3
+
+Entradas Externas => 4
+Ficheros Lógicos Internos => 3
+
+Java
+Coste estimado por punto de función
+
+Instalación en lugares distintos : 3
+Facilidad de operación : 2
+Eficiencia del usuario final : 3
+Facilidad de Instalación : 5
+Entradas Online de Datos : 2
+Comunicación de Datos : 3
+
+PF = 74
+TDI = 18
+AF = 0.83
+PFA = 61 PF
+Coste = 45750€
